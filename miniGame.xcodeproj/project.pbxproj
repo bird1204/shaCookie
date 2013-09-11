@@ -472,75 +472,14 @@
 		02A9171B170207BC00F2E55F /* miniGame */ = {
 			isa = PBXGroup;
 			children = (
-				491AE83A175FAD4800E4121C /* homepage1.png */,
-				491AE83B175FAD4800E4121C /* homepage2-1.png */,
-				02A99DBB174F612800F576E2 /* 564.png */,
-				02A99DB9174F602900F576E2 /* 123.png */,
-				02A99DB7174F5FC500F576E2 /* backgrond.png */,
-				02A99DB1174F5B5900F576E2 /* background-big.png */,
-				02A99DAF174F496C00F576E2 /* gamebaby.png */,
-				02A99DAD174F492700F576E2 /* gamepan.png */,
-				02A99DA8174F450600F576E2 /* game.png */,
-				02AE7871174F211500DDCBDA /* 蒜香烤土司.jpg */,
-				02AE7872174F211500DDCBDA /* 銀杏百合蝦球.jpg */,
-				02A67CA7174BE3DE00BCD095 /* Property List.plist */,
-				02A67C9F174BE3C900BCD095 /* Cell 2.jpg */,
-				02A67CA0174BE3C900BCD095 /* Cell 3.jpg */,
-				02A67CA1174BE3CA00BCD095 /* Cell 4.jpg */,
-				02A99DB5174F5D2E00F576E2 /* 001.png */,
-				02A68B6317037A3900B34828 /* Reachability */,
-				02A68B01170357F700B34828 /* JSON */,
-				02A68B00170357DA00B34828 /* ASIHTTPRequest */,
-				02A68B6B170380B300B34828 /* blackhole.png */,
 				02A91724170207BC00F2E55F /* AppDelegate.h */,
 				02A91725170207BC00F2E55F /* AppDelegate.m */,
+				4984C51C17DF17D300EDE6B1 /* logical */,
+				02A9171C170207BC00F2E55F /* Supporting Files */,
 				02A9172D170207BC00F2E55F /* ViewController.h */,
 				02A9172E170207BC00F2E55F /* ViewController.m */,
 				02A91730170207BC00F2E55F /* ViewController.xib */,
-				02A9171C170207BC00F2E55F /* Supporting Files */,
-				02A68AF817034A8300B34828 /* JsonViewController.h */,
-				02A68AF917034A8300B34828 /* JsonViewController.m */,
-				02A68AFA17034A8300B34828 /* JsonViewController.xib */,
-				02A68AFD17034C5600B34828 /* RecipeInfo.h */,
-				02A68AFE17034C5600B34828 /* RecipeInfo.m */,
-				02A68B2E17035EDF00B34828 /* Person.h */,
-				02A68B2F17035EDF00B34828 /* Person.m */,
-				02A68B3117035F5F00B34828 /* WebList.h */,
-				02A68B3217035F9F00B34828 /* WebJsonDataGetter.h */,
-				02A68B3317035F9F00B34828 /* WebJsonDataGetter.m */,
-				0202E7871704CA7200B0CD51 /* testViewController.h */,
-				0202E7881704CA7200B0CD51 /* testViewController.m */,
-				491AE846175FB7F900E4121C /* materialViewController.h */,
-				491AE847175FB7F900E4121C /* materialViewController.m */,
-				491AE848175FB7FA00E4121C /* materialViewController.xib */,
-				0202E7891704CA7200B0CD51 /* testViewController.xib */,
-				023F8A1617089BDD00283A71 /* MBProgressHUD.h */,
-				023F8A1717089BDD00283A71 /* MBProgressHUD.m */,
-				02A67C6F174BDA1800BCD095 /* CVCell.h */,
-				02A67C70174BDA1800BCD095 /* CVCell.m */,
-				02A67C71174BDA1800BCD095 /* CVCell.xib */,
-				02A67C79174BDC6200BCD095 /* mainTabViewController.h */,
-				02A67C7A174BDC6200BCD095 /* mainTabViewController.m */,
-				02A67C7B174BDC6200BCD095 /* mainTabViewController.xib */,
-				02A67C83174BDECA00BCD095 /* Recipes.h */,
-				02A67C84174BDECA00BCD095 /* Recipes.m */,
-				02A67C86174BDF0500BCD095 /* PlsitRead.h */,
-				02A67C87174BDF0500BCD095 /* PlsitRead.m */,
-				02A67C89174BE05F00BCD095 /* refViewController.h */,
-				02A67C8A174BE05F00BCD095 /* refViewController.m */,
-				02A67C8B174BE05F00BCD095 /* refViewController.xib */,
-				02A67C93174BE21100BCD095 /* menuViewController.h */,
-				02A67C94174BE21100BCD095 /* menuViewController.m */,
-				02A67C95174BE21100BCD095 /* menuViewController.xib */,
-				02A67C98174BE29500BCD095 /* foodDetailViewController.h */,
-				02A67C99174BE29500BCD095 /* foodDetailViewController.m */,
-				02A67C9A174BE29600BCD095 /* foodDetailViewController.xib */,
-				023842BC17588CC700831605 /* UploadRecipe.h */,
-				023842BD17588CC700831605 /* UploadRecipe.m */,
-				023842BE17588CC700831605 /* UploadRecipe.xib */,
-				491AE83E175FAF3C00E4121C /* entryViewController.h */,
-				491AE83F175FAF3C00E4121C /* entryViewController.m */,
-				491AE840175FAF3D00E4121C /* entryViewController.xib */,
+				4984C51B17DF177400EDE6B1 /* Views */,
 			);
 			path = miniGame;
 			sourceTree = "<group>";
@@ -558,6 +497,219 @@
 				02A9172B170207BC00F2E55F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4984C50A17DF140400EDE6B1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				02A68B6B170380B300B34828 /* blackhole.png */,
+				02A67CA7174BE3DE00BCD095 /* Property List.plist */,
+				02A67C9F174BE3C900BCD095 /* Cell 2.jpg */,
+				02A67CA0174BE3C900BCD095 /* Cell 3.jpg */,
+				02A67CA1174BE3CA00BCD095 /* Cell 4.jpg */,
+				02A99DB5174F5D2E00F576E2 /* 001.png */,
+				491AE83A175FAD4800E4121C /* homepage1.png */,
+				491AE83B175FAD4800E4121C /* homepage2-1.png */,
+				02A99DBB174F612800F576E2 /* 564.png */,
+				02A99DB9174F602900F576E2 /* 123.png */,
+				02A99DB7174F5FC500F576E2 /* backgrond.png */,
+				02A99DB1174F5B5900F576E2 /* background-big.png */,
+				02A99DAF174F496C00F576E2 /* gamebaby.png */,
+				02A99DAD174F492700F576E2 /* gamepan.png */,
+				02A99DA8174F450600F576E2 /* game.png */,
+				02AE7871174F211500DDCBDA /* 蒜香烤土司.jpg */,
+				02AE7872174F211500DDCBDA /* 銀杏百合蝦球.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		4984C50B17DF14BD00EDE6B1 /* JsonView */ = {
+			isa = PBXGroup;
+			children = (
+				02A68AF817034A8300B34828 /* JsonViewController.h */,
+				02A68AF917034A8300B34828 /* JsonViewController.m */,
+				02A68AFA17034A8300B34828 /* JsonViewController.xib */,
+			);
+			name = JsonView;
+			sourceTree = "<group>";
+		};
+		4984C50C17DF14DE00EDE6B1 /* RecipeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				02A68AFD17034C5600B34828 /* RecipeInfo.h */,
+				02A68AFE17034C5600B34828 /* RecipeInfo.m */,
+			);
+			name = RecipeInfo;
+			sourceTree = "<group>";
+		};
+		4984C50D17DF153B00EDE6B1 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				02A68B2E17035EDF00B34828 /* Person.h */,
+				02A68B2F17035EDF00B34828 /* Person.m */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
+		4984C50E17DF156800EDE6B1 /* WebJsonDataGetter */ = {
+			isa = PBXGroup;
+			children = (
+				02A68B3217035F9F00B34828 /* WebJsonDataGetter.h */,
+				02A68B3317035F9F00B34828 /* WebJsonDataGetter.m */,
+			);
+			name = WebJsonDataGetter;
+			sourceTree = "<group>";
+		};
+		4984C50F17DF15C000EDE6B1 /* testView */ = {
+			isa = PBXGroup;
+			children = (
+				0202E7891704CA7200B0CD51 /* testViewController.xib */,
+				0202E7871704CA7200B0CD51 /* testViewController.h */,
+				0202E7881704CA7200B0CD51 /* testViewController.m */,
+			);
+			name = testView;
+			sourceTree = "<group>";
+		};
+		4984C51017DF160800EDE6B1 /* materialView */ = {
+			isa = PBXGroup;
+			children = (
+				491AE846175FB7F900E4121C /* materialViewController.h */,
+				491AE847175FB7F900E4121C /* materialViewController.m */,
+				491AE848175FB7FA00E4121C /* materialViewController.xib */,
+			);
+			name = materialView;
+			sourceTree = "<group>";
+		};
+		4984C51117DF164900EDE6B1 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				023F8A1617089BDD00283A71 /* MBProgressHUD.h */,
+				023F8A1717089BDD00283A71 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		4984C51217DF166F00EDE6B1 /* CVCell */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C6F174BDA1800BCD095 /* CVCell.h */,
+				02A67C70174BDA1800BCD095 /* CVCell.m */,
+				02A67C71174BDA1800BCD095 /* CVCell.xib */,
+			);
+			name = CVCell;
+			sourceTree = "<group>";
+		};
+		4984C51317DF16A300EDE6B1 /* mainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C79174BDC6200BCD095 /* mainTabViewController.h */,
+				02A67C7A174BDC6200BCD095 /* mainTabViewController.m */,
+				02A67C7B174BDC6200BCD095 /* mainTabViewController.xib */,
+			);
+			name = mainTabView;
+			sourceTree = "<group>";
+		};
+		4984C51417DF16B600EDE6B1 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C83174BDECA00BCD095 /* Recipes.h */,
+				02A67C84174BDECA00BCD095 /* Recipes.m */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		4984C51517DF16D500EDE6B1 /* PlsitRead */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C86174BDF0500BCD095 /* PlsitRead.h */,
+				02A67C87174BDF0500BCD095 /* PlsitRead.m */,
+			);
+			name = PlsitRead;
+			sourceTree = "<group>";
+		};
+		4984C51617DF16E800EDE6B1 /* refView */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C89174BE05F00BCD095 /* refViewController.h */,
+				02A67C8A174BE05F00BCD095 /* refViewController.m */,
+				02A67C8B174BE05F00BCD095 /* refViewController.xib */,
+			);
+			name = refView;
+			sourceTree = "<group>";
+		};
+		4984C51717DF16FF00EDE6B1 /* menuView */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C93174BE21100BCD095 /* menuViewController.h */,
+				02A67C94174BE21100BCD095 /* menuViewController.m */,
+				02A67C95174BE21100BCD095 /* menuViewController.xib */,
+			);
+			name = menuView;
+			sourceTree = "<group>";
+		};
+		4984C51817DF173000EDE6B1 /* foodDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				02A67C98174BE29500BCD095 /* foodDetailViewController.h */,
+				02A67C99174BE29500BCD095 /* foodDetailViewController.m */,
+				02A67C9A174BE29600BCD095 /* foodDetailViewController.xib */,
+			);
+			name = foodDetailView;
+			sourceTree = "<group>";
+		};
+		4984C51917DF174300EDE6B1 /* UploadRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				023842BC17588CC700831605 /* UploadRecipe.h */,
+				023842BD17588CC700831605 /* UploadRecipe.m */,
+				023842BE17588CC700831605 /* UploadRecipe.xib */,
+			);
+			name = UploadRecipe;
+			sourceTree = "<group>";
+		};
+		4984C51A17DF175400EDE6B1 /* entryView */ = {
+			isa = PBXGroup;
+			children = (
+				491AE83E175FAF3C00E4121C /* entryViewController.h */,
+				491AE83F175FAF3C00E4121C /* entryViewController.m */,
+				491AE840175FAF3D00E4121C /* entryViewController.xib */,
+			);
+			name = entryView;
+			sourceTree = "<group>";
+		};
+		4984C51B17DF177400EDE6B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4984C51A17DF175400EDE6B1 /* entryView */,
+				4984C51817DF173000EDE6B1 /* foodDetailView */,
+				4984C51717DF16FF00EDE6B1 /* menuView */,
+				4984C51617DF16E800EDE6B1 /* refView */,
+				4984C51317DF16A300EDE6B1 /* mainTabView */,
+				4984C51017DF160800EDE6B1 /* materialView */,
+				4984C50F17DF15C000EDE6B1 /* testView */,
+				4984C50B17DF14BD00EDE6B1 /* JsonView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4984C51C17DF17D300EDE6B1 /* logical */ = {
+			isa = PBXGroup;
+			children = (
+				02A68B3117035F5F00B34828 /* WebList.h */,
+				4984C51917DF174300EDE6B1 /* UploadRecipe */,
+				4984C51517DF16D500EDE6B1 /* PlsitRead */,
+				4984C51417DF16B600EDE6B1 /* Recipes */,
+				4984C51217DF166F00EDE6B1 /* CVCell */,
+				4984C51117DF164900EDE6B1 /* MBProgressHUD */,
+				4984C50E17DF156800EDE6B1 /* WebJsonDataGetter */,
+				4984C50D17DF153B00EDE6B1 /* Person */,
+				4984C50C17DF14DE00EDE6B1 /* RecipeInfo */,
+				4984C50A17DF140400EDE6B1 /* images */,
+				02A68B6317037A3900B34828 /* Reachability */,
+				02A68B01170357F700B34828 /* JSON */,
+				02A68B00170357DA00B34828 /* ASIHTTPRequest */,
+			);
+			name = logical;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
