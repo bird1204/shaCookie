@@ -103,8 +103,9 @@
     NSString *str=[NSString stringWithFormat:GetRecipesImage,[[self.array_Items objectAtIndex:index]objectForKey:@"image_url"]];
     imageView.imageURL = [NSURL URLWithString:str];
     
-
+    
     NSString *rank=[[self.array_Items objectAtIndex:index]objectForKey:@"rank_avg"];
+    [cell.recipeId setText:[[self.array_Items objectAtIndex:index]objectForKey:@"id"]];
     [cell.titleLabel setText:[[self.array_Items objectAtIndex:index]objectForKey:@"name"]];
     [cell.likeLabel setTextWithAutoFrame:[NSString stringWithFormat:@"%@",[[self.array_Items objectAtIndex:index]objectForKey:@"like_sum"]]];
     [cell.shareLabel setTextWithAutoFrame:[NSString stringWithFormat:@"%@",[[self.array_Items objectAtIndex:index]objectForKey:@"share_sum"]]];
@@ -113,7 +114,7 @@
     cell.rankImage.image=[UIImage imageNamed:@"rank"];
     cell.shareImage.image=[UIImage imageNamed:@"share"];
     cell.likeImage.image=[UIImage imageNamed:@"like"];
-
+    
     view=(UIView *)cell;
     
     UIButton *button_like = (UIButton*)[cell viewWithTag:10];
@@ -122,6 +123,7 @@
           forControlEvents:UIControlEventTouchDown];
     [cell addSubview:button_like];
     
+    
 
     return view;
 }
@@ -129,10 +131,12 @@
 
 
 -(IBAction)button_like:(id)sender{
-    NSLog(@"wedijeowiw");
     [cell.likeLabel setText:[NSString stringWithFormat:@"%d",[cell.likeLabel.text integerValue]+1]];
+    [self.carousel reloadData];
 }
-
+- (IBAction)btn_Share:(id)sender {
+    [self.carousel reloadData];
+}
 -(NSUInteger)numberOfPlaceholdersInCarousel:(iCarousel *)carousel{
     return 2;
 }
