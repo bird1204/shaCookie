@@ -19,6 +19,7 @@
 }
 -(void)materialSearch:(NSString*)recipeType;
 
+- (IBAction)userMaterial_Botton:(id)sender;
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_Material;
 @property(strong,nonatomic)NSArray * array_Collection;
 @property(strong,nonatomic)NSArray * array_MaterialName;

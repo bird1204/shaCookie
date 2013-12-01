@@ -38,6 +38,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    webGetter = [[WebJsonDataGetter alloc]init];
+    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
+    [webGetter setDelegate:self];
+    
+
     // Do any additional setup after loading the view from its nib.
     
     self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
@@ -64,13 +69,6 @@
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     self.array_Collection=[[NSArray alloc]initWithArray:webGetter.webData];
     [self.collection_Material reloadData];
-}
-
--(void)materialSearch:(NSString*)materialTypeCase{
-    webGetter = [[WebJsonDataGetter alloc]init];
-    NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,materialTypeCase];
-    [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
-    [webGetter setDelegate:self];
 }
 
 

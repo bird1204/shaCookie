@@ -19,6 +19,7 @@
 #import "UILabel+AutoFrame.h"
 #import "combineResultsViewController.h"
 #import "AsyncImageView.h"
+#import "userMaterialViewController.h"
 
 @interface materialWithCollectionViewController ()
 
@@ -71,6 +72,16 @@
     NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,materialTypeCase];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
+    
+    NSLog(@"%@",str);
+}
+
+- (IBAction)userMaterial_Botton:(id)sender {
+    userMaterialViewController *userMaterialView=[[userMaterialViewController alloc]initWithNibName:@"userMaterialViewController" bundle:nil ];
+    
+    [self.navigationController pushViewController:userMaterialView animated:TRUE];
+
+    
 }
 
 
