@@ -165,8 +165,6 @@
 {
     
     UICollectionViewCell *cell=[collectionView cellForItemAtIndexPath:indexPath];
-    MaterialCell *cell2=(MaterialCell*)cell;
-    cell2.image_Check.backgroundColor=[UI]
     
     [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"eng_name"]];
 
