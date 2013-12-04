@@ -105,6 +105,32 @@
     [self openActiveSessionWithPublishPermissionsOfFaceBook:publishPermissions];
 }
 
+- (IBAction)birdInfo:(id)sender {
+    [self showInfo:@"你也可以叫他Bird Chiu,一個能夠善用最新工具開發並管理進度的高手,目前持續鑽研RoR以及iOS的開發中.隨時學習並能不斷接受新的挑戰."];
+}
+
+- (IBAction)charmingInfo:(id)sender {
+    [self showInfo:@"她是阿咪\n她是陳姿瑾"];
+}
+
+- (IBAction)camelInfo:(id)sender {
+    [self showInfo:@"她是卡毛\n他是吳承韋"];
+}
+
+- (IBAction)heidiInfo:(id)sender {
+    [self showInfo:@"她是嬰兒\n她是張詩羽"];
+}
+
+- (IBAction)keekilerInfo:(id)sender {
+    [self showInfo:@"她是江子翠蛇王\n他是高華夏"];
+}
+
+- (IBAction)dismissInfo:(id)sender {
+    [self.imageView setHidden:NO];
+    self.imageView.alpha=1.0f;
+    [self.textView_Us setHidden:YES];
+}
+
 -(void)openActiveSessionWithPublishPermissionsOfFaceBook:(NSArray *)publishPermissions{
     //  Check if this session have publish permission.
     if ([FBSession.activeSession.permissions indexOfObject:@"publish_actions"] == NSNotFound || !FBSession.activeSession.accessTokenData) {
@@ -151,4 +177,34 @@
                               }
                           }];
 }
+
+#pragma mark -
+#pragma mark - info method
+-(void)showInfo:(NSString*)info{
+    self.imageView.alpha=0.5f;
+//    [self.imageView setHidden:YES];
+    
+    self.textView_Us =[[UITextView alloc]init];
+    self.textView_Us.frame=CGRectMake(self.imageView.frame.origin.x+75,self.imageView.frame.origin.y+75,self.imageView.frame.size.width-150,self.tabBarController.tabBar.frame.origin.y-150);
+    [self.textView_Us setFont:[UIFont fontWithName:@"system" size:12]];
+    self.textView_Us.editable=NO;
+    self.textView_Us.textAlignment=NSTextAlignmentCenter;
+    self.textView_Us.backgroundColor=[UIColor lightTextColor];
+    [self.textView_Us setText:[NSString stringWithFormat:@"\n%@\n",info]];
+    
+    UIButton *leaveDesc = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leaveDesc addTarget:self
+                      action:@selector(dismissInfo:)
+            forControlEvents:UIControlEventTouchDown];
+    [leaveDesc setTitle:@"" forState:UIControlStateNormal];
+    leaveDesc.frame = self.textView_Us.frame;
+    
+    [self.textView_Us addSubview:leaveDesc];
+    [self.view addSubview:self.textView_Us];
+    
+
+    
+}
+
+
 @end

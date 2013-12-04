@@ -108,7 +108,7 @@
 {
     SampleTimelineViewCell *cell = (SampleTimelineViewCell*)[timelineView dequeueReusableCellWithReuseIdentifier:@"SampleTimelineViewCell" forIndex:index];
     
-    cell.alpha=0.5;
+    cell.alpha=1.0;
     cell.backgroundColor=[UIColor whiteColor];
     cell.friendName.textColor=[UIColor blackColor];
     cell.recipeName.textColor=[UIColor blackColor];

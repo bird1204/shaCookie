@@ -95,8 +95,6 @@
 		497CAACE18029D7E00894C15 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 497CAACB18029D7E00894C15 /* like.png */; };
 		497CAACF18029D7E00894C15 /* rank.png in Resources */ = {isa = PBXBuildFile; fileRef = 497CAACC18029D7E00894C15 /* rank.png */; };
 		497CAAD018029D7E00894C15 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 497CAACD18029D7E00894C15 /* share.png */; };
-		499C632917E43EFB00513989 /* loginWithFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C632717E43EFB00513989 /* loginWithFBViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		499C632A17E43EFB00513989 /* loginWithFBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499C632817E43EFB00513989 /* loginWithFBViewController.xib */; };
 		499C634417E449EC00513989 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 499C633D17E449EB00513989 /* 37x-Checkmark.png */; };
 		499C634517E449EC00513989 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499C633E17E449EB00513989 /* icon.png */; };
 		499C634617E449EC00513989 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499C633F17E449EC00513989 /* icon@2x.png */; };
@@ -110,8 +108,6 @@
 		49E388B917F5A25C0012C8A9 /* TimelineView+Tiling.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388AE17F5A25C0012C8A9 /* TimelineView+Tiling.m */; };
 		49E388BA17F5A25C0012C8A9 /* TimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388B017F5A25C0012C8A9 /* TimelineView.m */; };
 		49E388BB17F5A25C0012C8A9 /* TimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388B317F5A25C0012C8A9 /* TimelineViewCell.m */; };
-		49E388C017F5A2CD0012C8A9 /* newsTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388BE17F5A2CD0012C8A9 /* newsTimeLineViewController.m */; };
-		49E388C117F5A2CD0012C8A9 /* newsTimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E388BF17F5A2CD0012C8A9 /* newsTimeLineViewController.xib */; };
 		49E388D017F5A4570012C8A9 /* SampleTimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388CD17F5A4570012C8A9 /* SampleTimelineViewCell.m */; };
 		49E388D117F5A4570012C8A9 /* SampleTimelineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E388CE17F5A4570012C8A9 /* SampleTimelineViewCell.xib */; };
 		49E388D617F5B4A80012C8A9 /* asyncImageCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388D417F5B4A80012C8A9 /* asyncImageCellViewController.m */; };
@@ -120,11 +116,15 @@
 		49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E714311811A48D000FD778 /* addInventoryViewController.xib */; };
 		49E714371811B567000FD778 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E714361811B567000FD778 /* MMPickerView.m */; };
 		49E86D4D17F47530002CF0CF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E86D4C17F47530002CF0CF /* MediaPlayer.framework */; };
+		49F816BC184F7EB600EDB8D4 /* aboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F816BA184F7EB600EDB8D4 /* aboutUsViewController.m */; };
+		49F816BD184F7EB600EDB8D4 /* aboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F816BB184F7EB600EDB8D4 /* aboutUsViewController.xib */; };
+		49F816C1184F807200EDB8D4 /* newsTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F816BE184F807200EDB8D4 /* newsTimeLineViewController.m */; };
+		49F816C2184F807200EDB8D4 /* newsTimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F816BF184F807200EDB8D4 /* newsTimeLineViewController.xib */; };
+		49F816C6184F818C00EDB8D4 /* loginWithFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F816C4184F818C00EDB8D4 /* loginWithFBViewController.m */; };
+		49F816C7184F818C00EDB8D4 /* loginWithFBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F816C5184F818C00EDB8D4 /* loginWithFBViewController.xib */; };
 		49FD44AC17EC3A6E00F472B5 /* recipesSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44AA17EC3A6E00F472B5 /* recipesSideViewController.m */; };
 		49FD44AD17EC3A6E00F472B5 /* recipesSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */; };
 		49FD44B017EC3E1600F472B5 /* profileSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44AE17EC3E1600F472B5 /* profileSideMenuViewController.m */; };
-		49FD44B617EC57F900F472B5 /* aboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44B417EC57F900F472B5 /* aboutUsViewController.m */; };
-		49FD44B717EC57F900F472B5 /* aboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FD44B517EC57F900F472B5 /* aboutUsViewController.xib */; };
 		49FD44B917EC5E4800F472B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD44B817EC5E4800F472B5 /* MessageUI.framework */; };
 		BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC34872180EC72200FE0E1C /* ShareViewController.m */; };
 		BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC34873180EC72200FE0E1C /* ShareViewController.xib */; };
@@ -261,9 +261,6 @@
 		497CAACB18029D7E00894C15 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		497CAACC18029D7E00894C15 /* rank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank.png; sourceTree = "<group>"; };
 		497CAACD18029D7E00894C15 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
-		499C632617E43EFB00513989 /* loginWithFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginWithFBViewController.h; sourceTree = "<group>"; };
-		499C632717E43EFB00513989 /* loginWithFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginWithFBViewController.m; sourceTree = "<group>"; };
-		499C632817E43EFB00513989 /* loginWithFBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginWithFBViewController.xib; sourceTree = "<group>"; };
 		499C633D17E449EB00513989 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		499C633E17E449EB00513989 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		499C633F17E449EC00513989 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
@@ -290,9 +287,6 @@
 		49E388B317F5A25C0012C8A9 /* TimelineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewCell.m; sourceTree = "<group>"; };
 		49E388B417F5A25C0012C8A9 /* TimelineViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewDataSource.h; sourceTree = "<group>"; };
 		49E388B517F5A25C0012C8A9 /* TimelineViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewDelegate.h; sourceTree = "<group>"; };
-		49E388BD17F5A2CD0012C8A9 /* newsTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsTimeLineViewController.h; sourceTree = "<group>"; };
-		49E388BE17F5A2CD0012C8A9 /* newsTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsTimeLineViewController.m; sourceTree = "<group>"; };
-		49E388BF17F5A2CD0012C8A9 /* newsTimeLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsTimeLineViewController.xib; sourceTree = "<group>"; };
 		49E388CD17F5A4570012C8A9 /* SampleTimelineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTimelineViewCell.m; sourceTree = "<group>"; };
 		49E388CE17F5A4570012C8A9 /* SampleTimelineViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTimelineViewCell.xib; sourceTree = "<group>"; };
 		49E388CF17F5A4570012C8A9 /* SampleTimelineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTimelineViewCell.h; sourceTree = "<group>"; };
@@ -305,14 +299,20 @@
 		49E714351811B567000FD778 /* MMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPickerView.h; sourceTree = "<group>"; };
 		49E714361811B567000FD778 /* MMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPickerView.m; sourceTree = "<group>"; };
 		49E86D4C17F47530002CF0CF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		49F816B9184F7EB600EDB8D4 /* aboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutUsViewController.h; sourceTree = "<group>"; };
+		49F816BA184F7EB600EDB8D4 /* aboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutUsViewController.m; sourceTree = "<group>"; };
+		49F816BB184F7EB600EDB8D4 /* aboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutUsViewController.xib; sourceTree = "<group>"; };
+		49F816BE184F807200EDB8D4 /* newsTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsTimeLineViewController.m; sourceTree = "<group>"; };
+		49F816BF184F807200EDB8D4 /* newsTimeLineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsTimeLineViewController.xib; sourceTree = "<group>"; };
+		49F816C0184F807200EDB8D4 /* newsTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsTimeLineViewController.h; sourceTree = "<group>"; };
+		49F816C3184F818C00EDB8D4 /* loginWithFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginWithFBViewController.h; sourceTree = "<group>"; };
+		49F816C4184F818C00EDB8D4 /* loginWithFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginWithFBViewController.m; sourceTree = "<group>"; };
+		49F816C5184F818C00EDB8D4 /* loginWithFBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginWithFBViewController.xib; sourceTree = "<group>"; };
 		49FD44A917EC3A6E00F472B5 /* recipesSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recipesSideViewController.h; sourceTree = "<group>"; };
 		49FD44AA17EC3A6E00F472B5 /* recipesSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recipesSideViewController.m; sourceTree = "<group>"; };
 		49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recipesSideViewController.xib; sourceTree = "<group>"; };
 		49FD44AE17EC3E1600F472B5 /* profileSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileSideMenuViewController.m; sourceTree = "<group>"; };
 		49FD44AF17EC3E1600F472B5 /* profileSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileSideMenuViewController.h; sourceTree = "<group>"; };
-		49FD44B317EC57F900F472B5 /* aboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutUsViewController.h; sourceTree = "<group>"; };
-		49FD44B417EC57F900F472B5 /* aboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutUsViewController.m; sourceTree = "<group>"; };
-		49FD44B517EC57F900F472B5 /* aboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutUsViewController.xib; sourceTree = "<group>"; };
 		49FD44B817EC5E4800F472B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BBC34871180EC72200FE0E1C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		BBC34872180EC72200FE0E1C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -529,9 +529,9 @@
 		490322B817E476050008F1F4 /* loginwithFBView */ = {
 			isa = PBXGroup;
 			children = (
-				499C632617E43EFB00513989 /* loginWithFBViewController.h */,
-				499C632717E43EFB00513989 /* loginWithFBViewController.m */,
-				499C632817E43EFB00513989 /* loginWithFBViewController.xib */,
+				49F816C3184F818C00EDB8D4 /* loginWithFBViewController.h */,
+				49F816C4184F818C00EDB8D4 /* loginWithFBViewController.m */,
+				49F816C5184F818C00EDB8D4 /* loginWithFBViewController.xib */,
 			);
 			name = loginwithFBView;
 			sourceTree = "<group>";
@@ -869,9 +869,9 @@
 		49E388BC17F5A2A30012C8A9 /* newsTimeLineView */ = {
 			isa = PBXGroup;
 			children = (
-				49E388BD17F5A2CD0012C8A9 /* newsTimeLineViewController.h */,
-				49E388BE17F5A2CD0012C8A9 /* newsTimeLineViewController.m */,
-				49E388BF17F5A2CD0012C8A9 /* newsTimeLineViewController.xib */,
+				49F816BE184F807200EDB8D4 /* newsTimeLineViewController.m */,
+				49F816BF184F807200EDB8D4 /* newsTimeLineViewController.xib */,
+				49F816C0184F807200EDB8D4 /* newsTimeLineViewController.h */,
 			);
 			name = newsTimeLineView;
 			sourceTree = "<group>";
@@ -928,9 +928,9 @@
 		49FD44B117EC57D100F472B5 /* aboutUsView */ = {
 			isa = PBXGroup;
 			children = (
-				49FD44B317EC57F900F472B5 /* aboutUsViewController.h */,
-				49FD44B417EC57F900F472B5 /* aboutUsViewController.m */,
-				49FD44B517EC57F900F472B5 /* aboutUsViewController.xib */,
+				49F816B9184F7EB600EDB8D4 /* aboutUsViewController.h */,
+				49F816BA184F7EB600EDB8D4 /* aboutUsViewController.m */,
+				49F816BB184F7EB600EDB8D4 /* aboutUsViewController.xib */,
 			);
 			name = aboutUsView;
 			sourceTree = "<group>";
@@ -1009,7 +1009,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E388C117F5A2CD0012C8A9 /* newsTimeLineViewController.xib in Resources */,
 				02A91720170207BC00F2E55F /* InfoPlist.strings in Resources */,
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
@@ -1043,16 +1042,18 @@
 				497CAACE18029D7E00894C15 /* like.png in Resources */,
 				02B69EE71801ECBD00A43E20 /* navbackgound.png in Resources */,
 				02B69EE81801ECBD00A43E20 /* back.png in Resources */,
+				49F816BD184F7EB600EDB8D4 /* aboutUsViewController.xib in Resources */,
 				49A090DF17E22F7900B19E8C /* menu-icon@2x.png in Resources */,
 				02A8DD5717F1DE5E00E6B5D9 /* materialWithCollectionViewController.xib in Resources */,
 				4927D89B17E33FEE000DDEBF /* matchMaterialViewController.xib in Resources */,
 				4927D8A117E34AC0000DDEBF /* moveFinishViewController.xib in Resources */,
+				49F816C2184F807200EDB8D4 /* newsTimeLineViewController.xib in Resources */,
 				02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */,
 				497CAAC81802951A00894C15 /* recipe.png in Resources */,
 				4975630417F1D4C10053248F /* procedureStepViewController.xib in Resources */,
-				499C632A17E43EFB00513989 /* loginWithFBViewController.xib in Resources */,
 				497CAAD018029D7E00894C15 /* share.png in Resources */,
 				499C634417E449EC00513989 /* 37x-Checkmark.png in Resources */,
+				49F816C7184F818C00EDB8D4 /* loginWithFBViewController.xib in Resources */,
 				499C634517E449EC00513989 /* icon.png in Resources */,
 				499C634617E449EC00513989 /* icon@2x.png in Resources */,
 				490322C917E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib in Resources */,
@@ -1061,7 +1062,6 @@
 				02B69EE61801ECBD00A43E20 /* left.png in Resources */,
 				49FD44AD17EC3A6E00F472B5 /* recipesSideViewController.xib in Resources */,
 				49E388D717F5B4A80012C8A9 /* asyncImageCellViewController.xib in Resources */,
-				49FD44B717EC57F900F472B5 /* aboutUsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,7 +1104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				497562FC17F1D1F50053248F /* MPFlipTransition.m in Sources */,
-				49E388C017F5A2CD0012C8A9 /* newsTimeLineViewController.m in Sources */,
 				BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */,
 				02A91722170207BC00F2E55F /* main.m in Sources */,
 				02A91726170207BC00F2E55F /* AppDelegate.m in Sources */,
@@ -1115,6 +1114,7 @@
 				02A68AFB17034A8300B34828 /* JsonViewController.m in Sources */,
 				497562FD17F1D1F60053248F /* MPFlipViewController.m in Sources */,
 				020C700017FC7FD900623DF6 /* combineResultsViewController.m in Sources */,
+				49F816C6184F818C00EDB8D4 /* loginWithFBViewController.m in Sources */,
 				02A68B3017035EDF00B34828 /* Person.m in Sources */,
 				02A68B3417035F9F00B34828 /* WebJsonDataGetter.m in Sources */,
 				02A67C72174BDA1800BCD095 /* CVCell.m in Sources */,
@@ -1136,11 +1136,12 @@
 				4927D89A17E33FEE000DDEBF /* matchMaterialViewController.m in Sources */,
 				49E388B617F5A25C0012C8A9 /* TimelineView+Discovery.m in Sources */,
 				4927D8A017E34AC0000DDEBF /* moveFinishViewController.m in Sources */,
-				499C632917E43EFB00513989 /* loginWithFBViewController.m in Sources */,
 				02608D0017FDEAB900F0082E /* UILabel+AutoFrame.m in Sources */,
 				49E388D017F5A4570012C8A9 /* SampleTimelineViewCell.m in Sources */,
 				02A8DD6217F2027D00E6B5D9 /* MaterialCell.m in Sources */,
+				49F816C1184F807200EDB8D4 /* newsTimeLineViewController.m in Sources */,
 				490322C817E5BBBB0008F1F4 /* recipesWithICarouselViewController.m in Sources */,
+				49F816BC184F7EB600EDB8D4 /* aboutUsViewController.m in Sources */,
 				02A9B11517F5FDE200535CC7 /* LBYouTubeExtractor.m in Sources */,
 				02C8795217EA1BDD00E1F738 /* materialSideViewController.m in Sources */,
 				49E714371811B567000FD778 /* MMPickerView.m in Sources */,
@@ -1149,7 +1150,6 @@
 				49FD44B017EC3E1600F472B5 /* profileSideMenuViewController.m in Sources */,
 				497562EE17F1D0570053248F /* procedureWithMPFlipViewController.m in Sources */,
 				49E388B817F5A25C0012C8A9 /* TimelineView+Mutation.m in Sources */,
-				49FD44B617EC57F900F472B5 /* aboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
