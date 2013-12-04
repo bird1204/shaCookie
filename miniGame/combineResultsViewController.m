@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     
-
+    motionManager=[[CMMotionManager alloc] init];
     self.arrayMaterial=[[NSArray alloc]init];
     self.randomRecipes=[[NSString alloc]init];
     NSString *stringName=[self.getMaterial componentsJoinedByString:@","];
@@ -63,21 +63,29 @@
     }
     
     
-    CMMotionManager *motionManager = [[CMMotionManager alloc] init];
-
-
+    
+    
     switch (buttonIndex) {
         case 0:
+            NSLog(@"cancel");
+            
             if (motionManager.gyroAvailable) {
-                NSLog(@"eeee");
                 motionManager.gyroUpdateInterval = 1.0f/3.0f;
                 [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData* gyroData, NSError *error){
-                    if ((gyroData.rotationRate.z>=13 || gyroData.rotationRate.z<=-13)){
+                    
+                    
+                    
+                    if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) && (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3) &&(gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) )
+                    {
                         NSString *recipeId=self.randomRecipes;
+                        NSLog(@"show:%@",recipeId);
                         procedureWithMPFlipViewController *pro=[[procedureWithMPFlipViewController alloc]initWithNibName:@"procedureWithMPFlipViewController" bundle:nil recipeId:recipeId];
+                        
                         [self.navigationController pushViewController:pro animated:TRUE];
                     }
+                    
                 }];
+                
             } else {
                 NSLog(@"陀螺儀未感測");
             }
@@ -85,7 +93,6 @@
         default:
             break;
     }
-    motionManager=nil;
 }
 
 - (void)didReceiveMemoryWarning

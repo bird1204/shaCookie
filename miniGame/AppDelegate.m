@@ -145,7 +145,7 @@
     [main materialSearch:@"1"];
     
     UINavigationController *mainView=[[UINavigationController alloc]initWithRootViewController:main];
-    //[mainView setNavigationBarHidden:TRUE animated:TRUE];
+    [mainView setNavigationBarHidden:TRUE animated:TRUE];
     materialSideViewController *leftSideView= [[materialSideViewController alloc ]init];
     MFSideMenuContainerViewController *container=[MFSideMenuContainerViewController containerWithCenterViewController:mainView leftMenuViewController:leftSideView rightMenuViewController:nil];
     [main setTitle:@"refrigerator"];

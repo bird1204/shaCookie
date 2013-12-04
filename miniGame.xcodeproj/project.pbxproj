@@ -59,7 +59,13 @@
 		02B69EE61801ECBD00A43E20 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE31801ECBD00A43E20 /* left.png */; };
 		02B69EE71801ECBD00A43E20 /* navbackgound.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE41801ECBD00A43E20 /* navbackgound.png */; };
 		02B69EE81801ECBD00A43E20 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE51801ECBD00A43E20 /* back.png */; };
+		02B927841816C5BD00B954D5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B927831816C5BD00B954D5 /* FacebookSDK.framework */; };
+		02BEF60B184F6BC1009A9160 /* check2_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEF60A184F6BC1009A9160 /* check2_btn.png */; };
 		02C8795217EA1BDD00E1F738 /* materialSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C8795117EA1BDD00E1F738 /* materialSideViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		02CD7E9F1824218A00B29FDC /* lable1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7E9D1824218A00B29FDC /* lable1.png */; };
+		02CD7EA01824218A00B29FDC /* lable2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7E9E1824218A00B29FDC /* lable2.png */; };
+		02CD7EA51824294600B29FDC /* userMaterialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CD7EA31824294600B29FDC /* userMaterialViewController.m */; };
+		02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7EA41824294600B29FDC /* userMaterialViewController.xib */; };
 		02E983541803C7BB005FF04C /* pp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E983531803C7BB005FF04C /* pp.png */; };
 		2BEDE413FCB64F2EB044019A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A691AA26FB84D70BFC64D3E /* libPods.a */; };
 		490322C817E5BBBB0008F1F4 /* recipesWithICarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490322C617E5BBBB0008F1F4 /* recipesWithICarouselViewController.m */; };
@@ -117,7 +123,6 @@
 		49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E714311811A48D000FD778 /* addInventoryViewController.xib */; };
 		49E714371811B567000FD778 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E714361811B567000FD778 /* MMPickerView.m */; };
 		49E86D4D17F47530002CF0CF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E86D4C17F47530002CF0CF /* MediaPlayer.framework */; };
-		49F1F4C417FEBCF900E7A0AA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F1F4C317FEBCF900E7A0AA /* FacebookSDK.framework */; };
 		49FD44AC17EC3A6E00F472B5 /* recipesSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44AA17EC3A6E00F472B5 /* recipesSideViewController.m */; };
 		49FD44AD17EC3A6E00F472B5 /* recipesSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */; };
 		49FD44B017EC3E1600F472B5 /* profileSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44AE17EC3E1600F472B5 /* profileSideMenuViewController.m */; };
@@ -207,8 +212,15 @@
 		02B69EE31801ECBD00A43E20 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		02B69EE41801ECBD00A43E20 /* navbackgound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbackgound.png; sourceTree = "<group>"; };
 		02B69EE51801ECBD00A43E20 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		02B927831816C5BD00B954D5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		02BEF60A184F6BC1009A9160 /* check2_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check2_btn.png; path = ../../Pictures/shacookie/check2_btn.png; sourceTree = "<group>"; };
 		02C8795017EA1BDD00E1F738 /* materialSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = materialSideViewController.h; sourceTree = "<group>"; };
 		02C8795117EA1BDD00E1F738 /* materialSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = materialSideViewController.m; sourceTree = "<group>"; };
+		02CD7E9D1824218A00B29FDC /* lable1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lable1.png; path = ../../Pictures/shacookie/lable1.png; sourceTree = "<group>"; };
+		02CD7E9E1824218A00B29FDC /* lable2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lable2.png; path = ../../Pictures/shacookie/lable2.png; sourceTree = "<group>"; };
+		02CD7EA21824294600B29FDC /* userMaterialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userMaterialViewController.h; sourceTree = "<group>"; };
+		02CD7EA31824294600B29FDC /* userMaterialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userMaterialViewController.m; sourceTree = "<group>"; };
+		02CD7EA41824294600B29FDC /* userMaterialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userMaterialViewController.xib; sourceTree = "<group>"; };
 		02E983531803C7BB005FF04C /* pp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pp.png; sourceTree = "<group>"; };
 		15404D105D6D4CF9B5351AEF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		2A691AA26FB84D70BFC64D3E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,7 +311,6 @@
 		49E714351811B567000FD778 /* MMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPickerView.h; sourceTree = "<group>"; };
 		49E714361811B567000FD778 /* MMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPickerView.m; sourceTree = "<group>"; };
 		49E86D4C17F47530002CF0CF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		49F1F4C317FEBCF900E7A0AA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/ios_framework/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		49FD44A917EC3A6E00F472B5 /* recipesSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recipesSideViewController.h; sourceTree = "<group>"; };
 		49FD44AA17EC3A6E00F472B5 /* recipesSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recipesSideViewController.m; sourceTree = "<group>"; };
 		49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recipesSideViewController.xib; sourceTree = "<group>"; };
@@ -319,7 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F1F4C417FEBCF900E7A0AA /* FacebookSDK.framework in Frameworks */,
+				02B927841816C5BD00B954D5 /* FacebookSDK.framework in Frameworks */,
 				49E86D4D17F47530002CF0CF /* MediaPlayer.framework in Frameworks */,
 				49FD44B917EC5E4800F472B5 /* MessageUI.framework in Frameworks */,
 				4927D8AB17E3959C000DDEBF /* Security.framework in Frameworks */,
@@ -428,7 +439,7 @@
 		02A91714170207BC00F2E55F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49F1F4C317FEBCF900E7A0AA /* FacebookSDK.framework */,
+				02B927831816C5BD00B954D5 /* FacebookSDK.framework */,
 				49E86D4C17F47530002CF0CF /* MediaPlayer.framework */,
 				49FD44B817EC5E4800F472B5 /* MessageUI.framework */,
 				4927D8AA17E3959C000DDEBF /* Security.framework */,
@@ -509,6 +520,16 @@
 				49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */,
 			);
 			name = recipesSideView;
+			sourceTree = "<group>";
+		};
+		02CD7EA1182427DF00B29FDC /* userMaterial */ = {
+			isa = PBXGroup;
+			children = (
+				02CD7EA21824294600B29FDC /* userMaterialViewController.h */,
+				02CD7EA31824294600B29FDC /* userMaterialViewController.m */,
+				02CD7EA41824294600B29FDC /* userMaterialViewController.xib */,
+			);
+			name = userMaterial;
 			sourceTree = "<group>";
 		};
 		490322B817E476050008F1F4 /* loginwithFBView */ = {
@@ -625,6 +646,9 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				02BEF60A184F6BC1009A9160 /* check2_btn.png */,
+				02CD7E9D1824218A00B29FDC /* lable1.png */,
+				02CD7E9E1824218A00B29FDC /* lable2.png */,
 				02E983531803C7BB005FF04C /* pp.png */,
 				499C633D17E449EB00513989 /* 37x-Checkmark.png */,
 				49A090D817E22F7900B19E8C /* back-arrow.png */,
@@ -770,6 +794,7 @@
 		4984C51B17DF177400EDE6B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02CD7EA1182427DF00B29FDC /* userMaterial */,
 				49E7142E1811A454000FD778 /* addInventory */,
 				BBC34876180EC72900FE0E1C /* ShareView */,
 				020C6FFC17FC7CEF00623DF6 /* combineResults */,
@@ -998,12 +1023,14 @@
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
 				02A91732170207BC00F2E55F /* ViewController.xib in Resources */,
+				02CD7E9F1824218A00B29FDC /* lable1.png in Resources */,
 				02A68AFC17034A8300B34828 /* JsonViewController.xib in Resources */,
 				497CAAA61802801200894C15 /* under.png in Resources */,
 				BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */,
 				02A67C73174BDA1800BCD095 /* CVCell.xib in Resources */,
 				02A67C8D174BE06000BCD095 /* refViewController.xib in Resources */,
 				02A67C97174BE21100BCD095 /* menuViewController.xib in Resources */,
+				02BEF60B184F6BC1009A9160 /* check2_btn.png in Resources */,
 				02A67C9C174BE29600BCD095 /* foodDetailViewController.xib in Resources */,
 				02A67CA8174BE3DE00BCD095 /* Property List.plist in Resources */,
 				02A8DD6317F2027D00E6B5D9 /* MaterialCell.xib in Resources */,
@@ -1031,6 +1058,7 @@
 				02A8DD5717F1DE5E00E6B5D9 /* materialWithCollectionViewController.xib in Resources */,
 				4927D89B17E33FEE000DDEBF /* matchMaterialViewController.xib in Resources */,
 				4927D8A117E34AC0000DDEBF /* moveFinishViewController.xib in Resources */,
+				02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */,
 				497CAAC81802951A00894C15 /* recipe.png in Resources */,
 				4975630417F1D4C10053248F /* procedureStepViewController.xib in Resources */,
 				499C632A17E43EFB00513989 /* loginWithFBViewController.xib in Resources */,
@@ -1043,6 +1071,7 @@
 				497562EF17F1D0570053248F /* procedureWithMPFlipViewController.xib in Resources */,
 				02B69EE61801ECBD00A43E20 /* left.png in Resources */,
 				49FD44AD17EC3A6E00F472B5 /* recipesSideViewController.xib in Resources */,
+				02CD7EA01824218A00B29FDC /* lable2.png in Resources */,
 				49E388D717F5B4A80012C8A9 /* asyncImageCellViewController.xib in Resources */,
 				49FD44B717EC57F900F472B5 /* aboutUsViewController.xib in Resources */,
 			);
@@ -1114,6 +1143,7 @@
 				497562FE17F1D1F60053248F /* MPTransition.m in Sources */,
 				49E388BB17F5A25C0012C8A9 /* TimelineViewCell.m in Sources */,
 				491AE849175FB7FB00E4121C /* materialViewController.m in Sources */,
+				02CD7EA51824294600B29FDC /* userMaterialViewController.m in Sources */,
 				497562FB17F1D1F50053248F /* MPAnimation.m in Sources */,
 				4927D89A17E33FEE000DDEBF /* matchMaterialViewController.m in Sources */,
 				49E388B617F5A25C0012C8A9 /* TimelineView+Discovery.m in Sources */,
@@ -1219,11 +1249,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/../../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\"",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\"",
+					"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"$(SRCROOT)/../../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
+					"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"$(SRCROOT)/../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
 					/Users/chenweiwu/Documents/ios_framework/FacebookSDK,
 					/Documents/FacebookSDK,
 					/Users/birdchiu/Documents/ios_framework/FacebookSDK,
+					/Users/Keeliker/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miniGame/miniGame-Prefix.pch";
@@ -1242,11 +1273,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/../../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\"",
-					"\\\\\\\\\\\\\\\"$(SRCROOT)/../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\"",
+					"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"$(SRCROOT)/../../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
+					"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"$(SRCROOT)/../Documents/ios_framework/FacebookSDK\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"",
 					/Users/chenweiwu/Documents/ios_framework/FacebookSDK,
 					/Documents/FacebookSDK,
 					/Users/birdchiu/Documents/ios_framework/FacebookSDK,
+					/Users/Keeliker/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "miniGame/miniGame-Prefix.pch";
