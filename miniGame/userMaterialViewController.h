@@ -1,8 +1,8 @@
 //
-//  materialSideWithCollectionViewController.h
+//  userMaterialViewController.h
 //  miniGame
 //
-//  Created by 趴特萬 on 13/9/24.
+//  Created by 趴特萬 on 13/11/2.
 //
 //
 
@@ -10,7 +10,7 @@
 #import "WebJsonDataGetter.h"
 #import "ASIHTTPRequest.h"
 
-@interface materialWithCollectionViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,WebJsonDataGetFinishDelegater,UICollectionViewDelegateFlowLayout>{
+@interface userMaterialViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,WebJsonDataGetFinishDelegater,UICollectionViewDelegateFlowLayout>{
     NSMutableDictionary *dictionary_MaterialName;
     NSMutableArray *array_Material;
     WebJsonDataGetter * webGetter;
@@ -18,12 +18,9 @@
     
 }
 -(void)materialSearch:(NSString*)recipeType;
-- (IBAction)backpage_Material:(id)sender;
 
-- (IBAction)userMaterial_Botton:(id)sender;
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_Material;
 @property(strong,nonatomic)NSArray * array_Collection;
-@property (strong, nonatomic) IBOutlet UIImageView *image_Background;
 @property(strong,nonatomic)NSArray * array_MaterialName;
 
 @end

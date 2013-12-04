@@ -8,7 +8,7 @@
 //
 //
 
-#import "materialWithCollectionViewController.h"
+#import "userMaterialViewController.h"
 #import "matchMaterialViewController.h"
 #import "moveFinishViewController.h"
 #import "GetJsonURLString.h"
@@ -19,13 +19,12 @@
 #import "UILabel+AutoFrame.h"
 #import "combineResultsViewController.h"
 #import "AsyncImageView.h"
-#import "userMaterialViewController.h"
 
-@interface materialWithCollectionViewController ()
+@interface userMaterialViewController ()
 
 @end
 
-@implementation materialWithCollectionViewController
+@implementation userMaterialViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,13 +38,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    webGetter = [[WebJsonDataGetter alloc]init];
+    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
+    [webGetter setDelegate:self];
+    
+
     // Do any additional setup after loading the view from its nib.
     
-    //self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
-    self.image_Background.contentMode=UIViewContentModeScaleAspectFill;
-
-    self.collection_Material.backgroundColor=[UIColor clearColor];
+    self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
+    
     array_Material=[[NSMutableArray alloc]init];
     self.array_MaterialName=[[NSArray alloc] init];
     self.array_Collection=[[NSArray alloc]init];
@@ -68,37 +70,6 @@
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     self.array_Collection=[[NSArray alloc]initWithArray:webGetter.webData];
     [self.collection_Material reloadData];
-}
-
--(void)materialSearch:(NSString*)materialTypeCase{
-    webGetter = [[WebJsonDataGetter alloc]init];
-    NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,materialTypeCase];
-    [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
-    [webGetter setDelegate:self];
-    
-    NSLog(@"%@",str);
-}
-
-- (IBAction)backpage_Material:(id)sender {
-    
-    webGetter = [[WebJsonDataGetter alloc]init];
-    NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,@"1"];
-    [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
-    [webGetter setDelegate:self];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
-}
-
-- (IBAction)userMaterial_Botton:(id)sender {
-//    userMaterialViewController *userMaterialView=[[userMaterialViewController alloc]initWithNibName:@"userMaterialViewController" bundle:nil ];
-//    
-//    [self.navigationController pushViewController:userMaterialView animated:TRUE];
-
-    webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
-    [webGetter setDelegate:self];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable1.png"]];
-    
-    
 }
 
 
@@ -151,7 +122,8 @@
     
     //load the image
     NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[[self.array_Collection objectAtIndex:indexPath.row]objectForKey:@"image_url"]];
-        imageView.imageURL = [NSURL URLWithString:str];
+    imageView.imageURL = [NSURL URLWithString:str];
+    
     [cell.label_Title setTextWithAutoFrame:[[webGetter.webData objectAtIndex:indexPath.row]objectForKey:@"name"]];
     [cell.label_Title setBackgroundColor:[UIColor clearColor]];
     [cell setBackgroundColor:[UIColor clearColor]];
@@ -166,12 +138,14 @@
     
     UICollectionViewCell *cell=[collectionView cellForItemAtIndexPath:indexPath];
     MaterialCell *cell2=(MaterialCell*)cell;
-    cell2.image_Check.backgroundColor=[UI]
+    cell2.image_Material.alpha=0.5f;
+    cell2.label_Title.alpha=0.5f;
+    cell2.image_Check.alpha=1.0f;
     
     [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"eng_name"]];
-
+    
     if (array_Material.count==3) {
-
+        
         combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
         recipeView.getMaterial=array_Material;
         
@@ -181,7 +155,7 @@
         
         
     }
-
+    
     
 }
 
@@ -192,8 +166,6 @@
     
     cell2.image_Material.alpha=1.0f;
     cell2.label_Title.alpha=1.0f;
-    
-
     
     NSString *name =[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"name"];
     [array_Material removeObjectAtIndex:[array_Material indexOfObject:name]];
