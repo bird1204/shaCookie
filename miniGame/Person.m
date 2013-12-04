@@ -16,6 +16,7 @@
         [dataGetter setDelegate:self];
     }
     return self;
+    
 }
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     NSArray *array=(NSArray*)dataGetter.webData;
