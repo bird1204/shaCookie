@@ -60,6 +60,7 @@
 		02B69EE71801ECBD00A43E20 /* navbackgound.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE41801ECBD00A43E20 /* navbackgound.png */; };
 		02B69EE81801ECBD00A43E20 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE51801ECBD00A43E20 /* back.png */; };
 		02B927841816C5BD00B954D5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B927831816C5BD00B954D5 /* FacebookSDK.framework */; };
+		02BEF60B184F6BC1009A9160 /* check2_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BEF60A184F6BC1009A9160 /* check2_btn.png */; };
 		02C8795217EA1BDD00E1F738 /* materialSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C8795117EA1BDD00E1F738 /* materialSideViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		02CD7E9F1824218A00B29FDC /* lable1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7E9D1824218A00B29FDC /* lable1.png */; };
 		02CD7EA01824218A00B29FDC /* lable2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7E9E1824218A00B29FDC /* lable2.png */; };
@@ -212,6 +213,7 @@
 		02B69EE41801ECBD00A43E20 /* navbackgound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbackgound.png; sourceTree = "<group>"; };
 		02B69EE51801ECBD00A43E20 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		02B927831816C5BD00B954D5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		02BEF60A184F6BC1009A9160 /* check2_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check2_btn.png; path = ../../Pictures/shacookie/check2_btn.png; sourceTree = "<group>"; };
 		02C8795017EA1BDD00E1F738 /* materialSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = materialSideViewController.h; sourceTree = "<group>"; };
 		02C8795117EA1BDD00E1F738 /* materialSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = materialSideViewController.m; sourceTree = "<group>"; };
 		02CD7E9D1824218A00B29FDC /* lable1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lable1.png; path = ../../Pictures/shacookie/lable1.png; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				02BEF60A184F6BC1009A9160 /* check2_btn.png */,
 				02CD7E9D1824218A00B29FDC /* lable1.png */,
 				02CD7E9E1824218A00B29FDC /* lable2.png */,
 				02E983531803C7BB005FF04C /* pp.png */,
@@ -1027,6 +1030,7 @@
 				02A67C73174BDA1800BCD095 /* CVCell.xib in Resources */,
 				02A67C8D174BE06000BCD095 /* refViewController.xib in Resources */,
 				02A67C97174BE21100BCD095 /* menuViewController.xib in Resources */,
+				02BEF60B184F6BC1009A9160 /* check2_btn.png in Resources */,
 				02A67C9C174BE29600BCD095 /* foodDetailViewController.xib in Resources */,
 				02A67CA8174BE3DE00BCD095 /* Property List.plist in Resources */,
 				02A8DD6317F2027D00E6B5D9 /* MaterialCell.xib in Resources */,

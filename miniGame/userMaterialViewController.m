@@ -38,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
     [webGetter setDelegate:self];
@@ -139,6 +140,7 @@
     MaterialCell *cell2=(MaterialCell*)cell;
     cell2.image_Material.alpha=0.5f;
     cell2.label_Title.alpha=0.5f;
+    cell2.image_Check.alpha=1.0f;
     
     [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"eng_name"]];
     
