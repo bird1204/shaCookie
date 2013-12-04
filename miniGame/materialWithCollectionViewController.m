@@ -42,8 +42,10 @@
     // Do any additional setup after loading the view from its nib.
     
     //self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
+    //self.image_Background =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"lable2.png"]];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
     self.image_Background.contentMode=UIViewContentModeScaleAspectFill;
+    self.image_Background.clipsToBounds =YES;
 
     self.collection_Material.backgroundColor=[UIColor clearColor];
     array_Material=[[NSMutableArray alloc]init];
@@ -87,6 +89,7 @@
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
 }
+
 
 - (IBAction)userMaterial_Botton:(id)sender {
 //    userMaterialViewController *userMaterialView=[[userMaterialViewController alloc]initWithNibName:@"userMaterialViewController" bundle:nil ];
@@ -164,26 +167,38 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UICollectionViewCell *cell=[collectionView cellForItemAtIndexPath:indexPath];
-    MaterialCell *cell2=(MaterialCell*)cell;
-    cell2.image_Check.backgroundColor=[UI]
+   // UICollectionViewCell *cell=[collectionView cellForItemAtIndexPath:indexPath];
+    //MaterialCell *cell2=(MaterialCell*)cell;
     
-    [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"eng_name"]];
-
-    if (array_Material.count==3) {
-
-        combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
-        recipeView.getMaterial=array_Material;
-        
-        [self.navigationController pushViewController:recipeView animated:TRUE];
-        self.collection_Material.allowsMultipleSelection = NO;
-        
-        
-        
-    }
+    
+    [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"name"]];
+    NSLog(@"%@",array_Material);
+//    if (array_Material.count==3) {
+//
+//        combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
+//        recipeView.getMaterial=array_Material;
+//        
+//        [self.navigationController pushViewController:recipeView animated:TRUE];
+//        self.collection_Material.allowsMultipleSelection = NO;
+//        
+//        
+//        
+//    }
 
     
 }
+
+- (IBAction)random:(id)sender {
+    
+    combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
+    recipeView.getMaterial=array_Material;
+    
+    [self.navigationController pushViewController:recipeView animated:TRUE];
+    self.collection_Material.allowsMultipleSelection = NO;
+    
+    
+}
+
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -193,13 +208,11 @@
     cell2.image_Material.alpha=1.0f;
     cell2.label_Title.alpha=1.0f;
     
-
-    
     NSString *name =[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"name"];
-    [array_Material removeObjectAtIndex:[array_Material indexOfObject:name]];
-    
+    if(array_Material.count!=0){
+        [array_Material removeObjectAtIndex:[array_Material indexOfObject:name]];
+    }
 }
-
 -(void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
     cell.contentView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];

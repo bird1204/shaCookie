@@ -64,8 +64,18 @@
                         <action selector="backpage_Material:" destination="-1" eventType="touchUpInside" id="2oE-3H-ppO"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5M-EV-v2K">
+                    <rect key="frame" x="232" y="0.0" width="88" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="random:" destination="-1" eventType="touchUpInside" id="Rcy-GC-uOu"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.96862751245498657" green="0.92941182851791382" blue="0.71764707565307617" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.85837085696784154" green="0.87952953620894003" blue="0.9598117470741272" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
