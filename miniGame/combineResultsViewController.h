@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "WebJsonDataGetter.h"
 #import "iCarousel.h"
+#import <CoreMotion/CoreMotion.h>
 
 
 @interface combineResultsViewController : UIViewController<WebJsonDataGetFinishDelegater>{
+    CMMotionManager *motionManager;
+
     WebJsonDataGetter * webGetter;
 }
 @property(nonatomic,strong)NSArray *getMaterial;
