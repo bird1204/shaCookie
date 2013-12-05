@@ -113,14 +113,14 @@
         
     }
 
-    NSString *main_text=[NSString stringWithFormat:@"%@ --> %@",[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"display_name"],[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"latest_online"]];
+    NSString *main_text=[NSString stringWithFormat:@"%@",[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"display_name"]];
     cell.textLabel.text=main_text;
     
     CLLocation *loc=[Array_locaions lastObject];
     CLLocation *default_Location=[[CLLocation alloc]initWithLatitude:[[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"latitude"] doubleValue] longitude:[[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"longtitude"] doubleValue]];
     CLLocationDistance meters =[loc distanceFromLocation:default_Location];
     
-    NSString *detail_text=[NSString stringWithFormat:@"%@ --> type:%@",[NSString stringWithFormat:@"DISTANCE:%fKM",(CGFloat)meters/1000],[[self.array_nearUsers objectAtIndex:indexPath.row]objectForKey:@"type"]];
+    NSString *detail_text=[NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"DISTANCE:%fKM",(CGFloat)meters/1000]];
     cell.detailTextLabel.text=detail_text;
     cell.backgroundColor=[UIColor clearColor];
 

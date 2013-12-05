@@ -32,13 +32,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.frame=CGRectMake(20, 30, 300, 300);
+    self.view.frame=CGRectMake(0, 60, 320, 315);
+    
     [self.parentViewController.navigationController pushViewController:self animated:YES];
     [self.recipeName setTextWithAutoFrame:_pushName];
     NSString *rank=[NSString stringWithFormat:@"%d",(int)_rank.value];
     //NSString *rankString=[[NSString alloc] initWithString:@"%d",rank];
     //self.rankNumber.text=rankString;
     self.rankNumber.text=rank;
+    self.nothingShow.alpha=0.3;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -53,6 +55,7 @@
     NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@",self.rank.value,share,_recipeId];
     NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
     NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",result);
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的訊息"
     message:@"已分享食譜"
     delegate:self
