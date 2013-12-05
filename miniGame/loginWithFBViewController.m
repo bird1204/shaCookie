@@ -32,7 +32,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
+     //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login.png"]]
+    
+    // redraw the image to fit |yourView|'s size
+    UIGraphicsBeginImageContextWithOptions(self.view.frame.size, NO, 0.f);
+    [[UIImage imageNamed:@"login.png"]drawInRect:self.view.bounds];
+    UIImage * resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.label_UserName.alpha=0.0f;
+    self.label_UserMail.alpha=0.0f;
+    self.label_UserGender.alpha=0.0f;
+
+    
+    self.view.backgroundColor=[UIColor colorWithPatternImage:resultImage];
+    
     [self initLocationManager];
     [self updateView];
     [self openActiveSessionWithReadPermissionsOfFaceBook];
@@ -53,7 +67,6 @@
     self.label_UserMail = nil;
     self.label_UserName = nil;
     self.imageView_UserImage = nil;
-    [self.label_WelcomeMessage setText:@"Login with FaceBook now!!!"];
 }
 - (void)viewDidUnload
 {
@@ -140,7 +153,6 @@
             [self.label_UserName setText:[result objectForKey:@"name"]];
             [self.label_UserMail setText:[result objectForKey:@"email"]];
             [self.label_UserGender setText:[result objectForKey:@"gender"]];
-            [self.label_WelcomeMessage setText:@"you are sign in with FaceBook"];
             NSString *profileImageURL = [[[result objectForKey:@"picture"]objectForKey:@"data"]objectForKey:@"url"];
             NSData *profileImageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:profileImageURL]];
             [self.imageView_UserImage setImage:[UIImage imageWithData:profileImageData]];
@@ -155,6 +167,19 @@
 // FBSample logic
 // handler for button click, logs sessions in or out
 - (IBAction)button_SignUp:(id)sender {
+    
+    UIGraphicsBeginImageContextWithOptions(self.view.frame.size, NO, 0.f);
+    [[UIImage imageNamed:@"logout.png"]drawInRect:self.view.bounds];
+    UIImage * resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor=[UIColor colorWithPatternImage:resultImage];
+    
+    self.label_UserName.alpha=1.0f;
+    self.label_UserMail.alpha=1.0f;
+    self.label_UserGender.alpha=1.0f;
+
+    
     // get the app delegate so that we can access the session property
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     

@@ -26,7 +26,7 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil timeLine:(NSArray*)timeLine{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.array_Items = timeLine;
+        _array_Items = timeLine;
     }
     return self;
 }
@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
     
-    NSInteger num = [self.array_Items count];
+    NSInteger num = [_array_Items count];
     NSInteger lastPos = 0;
     
     data = [[NSMutableArray alloc] initWithCapacity:num];
@@ -65,7 +65,7 @@
 {
     [super didReceiveMemoryWarning];
     self.timelineView=nil;
-    self.array_Items=nil;
+    _array_Items=nil;
     self.Content=nil;
     // Dispose of any resources that can be recreated.
 }
@@ -108,17 +108,17 @@
 {
     SampleTimelineViewCell *cell = (SampleTimelineViewCell*)[timelineView dequeueReusableCellWithReuseIdentifier:@"SampleTimelineViewCell" forIndex:index];
     
-    cell.alpha=0.5;
+    cell.alpha=1.0;
     cell.backgroundColor=[UIColor whiteColor];
     cell.friendName.textColor=[UIColor blackColor];
     cell.recipeName.textColor=[UIColor blackColor];
     cell.latestTime.textColor=[UIColor blackColor];
     cell.shareContent.textColor=[UIColor blackColor];
     
-    [cell.friendName setTextWithAutoFrame:[[self.array_Items objectAtIndex:index] objectForKey:@"display_name"]];
-    [cell.recipeName setTextWithAutoFrame:[[self.array_Items objectAtIndex:index]objectForKey:@"name"]];
-    [cell.latestTime setTextWithAutoFrame:[[self.array_Items objectAtIndex:index] objectForKey:@"latest_online"]];
-    [cell.shareContent setTextWithAutoFrame:[[self.array_Items objectAtIndex:index] objectForKey:@"content"]];
+    [cell.friendName setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"display_name"]];
+    [cell.recipeName setTextWithAutoFrame:[[_array_Items objectAtIndex:index]objectForKey:@"name"]];
+    [cell.latestTime setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"latest_online"]];
+    [cell.shareContent setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"content"]];
 
     
     //add AsyncImageView to cell
@@ -135,7 +135,7 @@
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
     
     //load the image
-    NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/%@",[[self.array_Items objectAtIndex:index]objectForKey:@"image_url"]];
+    NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/%@",[[_array_Items objectAtIndex:index]objectForKey:@"image_url"]];
     imageView.imageURL = [NSURL URLWithString:str];
     
     return cell;
@@ -156,7 +156,6 @@
 
 #pragma mark Buttons
 #pragma mark -
-
 
 /*
 - (IBAction)deleteButtonPush:(id)sender
