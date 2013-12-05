@@ -126,6 +126,8 @@
 		49FD44AD17EC3A6E00F472B5 /* recipesSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FD44AB17EC3A6E00F472B5 /* recipesSideViewController.xib */; };
 		49FD44B017EC3E1600F472B5 /* profileSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD44AE17EC3E1600F472B5 /* profileSideMenuViewController.m */; };
 		49FD44B917EC5E4800F472B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD44B817EC5E4800F472B5 /* MessageUI.framework */; };
+		BB4D086B184F7A7600787502 /* SHAREOUT.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086A184F7A7600787502 /* SHAREOUT.png */; };
+		BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */; };
 		BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC34872180EC72200FE0E1C /* ShareViewController.m */; };
 		BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC34873180EC72200FE0E1C /* ShareViewController.xib */; };
 /* End PBXBuildFile section */
@@ -314,6 +316,8 @@
 		49FD44AE17EC3E1600F472B5 /* profileSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileSideMenuViewController.m; sourceTree = "<group>"; };
 		49FD44AF17EC3E1600F472B5 /* profileSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileSideMenuViewController.h; sourceTree = "<group>"; };
 		49FD44B817EC5E4800F472B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BB4D086A184F7A7600787502 /* SHAREOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUT.png; sourceTree = "<group>"; };
+		BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUTupdate.png; sourceTree = "<group>"; };
 		BBC34871180EC72200FE0E1C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		BBC34872180EC72200FE0E1C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		BBC34873180EC72200FE0E1C /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
@@ -647,7 +651,9 @@
 				02B69EE51801ECBD00A43E20 /* back.png */,
 				02A99DA8174F450600F576E2 /* game.png */,
 				02A99DAF174F496C00F576E2 /* gamebaby.png */,
+				BB4D086A184F7A7600787502 /* SHAREOUT.png */,
 				02A99DAD174F492700F576E2 /* gamepan.png */,
+				BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */,
 				497CAAC918029A1200894C15 /* good.png */,
 				491AE83A175FAD4800E4121C /* homepage1.png */,
 				491AE83B175FAD4800E4121C /* homepage2-1.png */,
@@ -1027,6 +1033,7 @@
 				49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */,
 				02A99DAB174F450600F576E2 /* game.png in Resources */,
 				02A99DAE174F492700F576E2 /* gamepan.png in Resources */,
+				BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */,
 				02A99DB0174F496C00F576E2 /* gamebaby.png in Resources */,
 				023842C017588CC800831605 /* UploadRecipe.xib in Resources */,
 				491AE83C175FAD4800E4121C /* homepage1.png in Resources */,
@@ -1056,6 +1063,7 @@
 				49F816C7184F818C00EDB8D4 /* loginWithFBViewController.xib in Resources */,
 				499C634517E449EC00513989 /* icon.png in Resources */,
 				499C634617E449EC00513989 /* icon@2x.png in Resources */,
+				BB4D086B184F7A7600787502 /* SHAREOUT.png in Resources */,
 				490322C917E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib in Resources */,
 				497CAAAC1802816C00894C15 /* knife.png in Resources */,
 				497562EF17F1D0570053248F /* procedureWithMPFlipViewController.xib in Resources */,

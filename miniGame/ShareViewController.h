@@ -22,5 +22,6 @@
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil pushName:(NSString*)pushName recipeId:(NSString*)recipeId;
 @property(strong,nonatomic) NSString *pushName;
 @property(strong,nonatomic) NSString *recipeId;
+@property (strong, nonatomic) IBOutlet UIImageView *nothingShow;
 
 @end
