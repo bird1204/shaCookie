@@ -15,7 +15,6 @@
 }
 
 
-@property (strong, nonatomic) IBOutlet UILabel *label_WelcomeMessage;
 @property (strong, nonatomic) IBOutlet UIButton *buttonLoginLogout;
 @property (strong, nonatomic) IBOutlet UILabel *label_UserName;
 @property (strong, nonatomic) IBOutlet UILabel *label_UserMail;

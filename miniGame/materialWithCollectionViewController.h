@@ -15,10 +15,12 @@
     NSMutableArray *array_Material;
     WebJsonDataGetter * webGetter;
     ASIHTTPRequest *asiRequest;
+    UIImageView *image_Check;
     
 }
 -(void)materialSearch:(NSString*)recipeType;
 - (IBAction)backpage_Material:(id)sender;
+- (IBAction)random:(id)sender;
 
 - (IBAction)userMaterial_Botton:(id)sender;
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_Material;
