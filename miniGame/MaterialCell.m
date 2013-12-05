@@ -38,4 +38,11 @@
     return self;
     
 }
+
+
+- (IBAction)image_Hidden:(id)sender {
+    if(self.image_Check.hidden==NO){
+        [self.image_Check setHidden:YES];}else{[self.image_Check setHidden:NO];}
+    
+}
 @end
