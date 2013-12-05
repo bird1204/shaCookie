@@ -77,8 +77,6 @@
     NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,materialTypeCase];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
-    
-    NSLog(@"%@",str);
 }
 
 - (IBAction)backpage_Material:(id)sender {
@@ -88,6 +86,7 @@
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
+
 }
 
 
@@ -100,6 +99,8 @@
     [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable1.png"]];
+   
+
     
     
 }
@@ -190,12 +191,15 @@
 
 - (IBAction)random:(id)sender {
     
+    if(self.image_Background.backgroundColor==[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]]){
     combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
     recipeView.getMaterial=array_Material;
     
     [self.navigationController pushViewController:recipeView animated:TRUE];
     self.collection_Material.allowsMultipleSelection = NO;
-    
+    }else if(self.image_Background.backgroundColor==[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable1.png"]]){
+        
+    }
     
 }
 

@@ -16,6 +16,7 @@
     WebJsonDataGetter * webGetter;
     ASIHTTPRequest *asiRequest;
     UIImageView *image_Check;
+    Boolean *whereareyou;
     
 }
 -(void)materialSearch:(NSString*)recipeType;
