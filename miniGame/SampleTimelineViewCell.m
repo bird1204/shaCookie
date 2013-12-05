@@ -57,7 +57,7 @@
     [super setSelected:selected];
     
     if(selected) {
-        NSLog(@"select cell");
+        NSLog(@"select cell : %@",self.recipeName);
     }
     else {
         NSLog(@"deselect cell");
