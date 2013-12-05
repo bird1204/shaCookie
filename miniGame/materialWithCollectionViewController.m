@@ -43,9 +43,11 @@
     
     //self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
     //self.image_Background =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"lable2.png"]];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
-    self.image_Background.contentMode=UIViewContentModeScaleAspectFill;
-    self.image_Background.clipsToBounds =YES;
+    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable4.png"]];
+    
+
+//    self.image_Background.contentMode=UIViewContentModeScaleAspectFill;
+//    self.image_Background.clipsToBounds =YES;
 
     self.collection_Material.backgroundColor=[UIColor clearColor];
     array_Material=[[NSMutableArray alloc]init];
@@ -85,7 +87,7 @@
     NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,@"1"];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]];
+    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable4.png"]];
 
 }
 
@@ -98,7 +100,7 @@
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
     [webGetter setDelegate:self];
-    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable1.png"]];
+    self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable3.png"]];
    
 
     
@@ -191,16 +193,12 @@
 
 - (IBAction)random:(id)sender {
     
-    if(self.image_Background.backgroundColor==[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable2.png"]]){
-    combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
+        combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
     recipeView.getMaterial=array_Material;
     
     [self.navigationController pushViewController:recipeView animated:TRUE];
     self.collection_Material.allowsMultipleSelection = NO;
-    }else if(self.image_Background.backgroundColor==[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable1.png"]]){
         
-    }
-    
 }
 
 
