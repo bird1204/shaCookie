@@ -41,7 +41,10 @@
     NSLog(@"%@",self.window.subviews);
 
     self.likeLabel.text=[NSString stringWithFormat:@"%d",[self.likeLabel.text intValue]+1];
-    
+    NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputLike.php?recipeId=%@",_recipeId];
+    NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
+    NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",result);
     
 }
 
