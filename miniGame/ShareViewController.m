@@ -55,7 +55,8 @@
 - (IBAction)shareContent:(id)sender {
     NSString *share=_content.text;
    
-    if (share==NULL) {
+    if (share==NULL || [share isEqual:@" "]) {
+        
         UIAlertView *errorAlert=[[UIAlertView alloc]initWithTitle:@"你的訊息" message:@"內容值不可以空白" delegate:self cancelButtonTitle:@"完成" otherButtonTitles:nil];
         [errorAlert show];
     }else{

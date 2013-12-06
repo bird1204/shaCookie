@@ -128,6 +128,7 @@
 		49FD44B917EC5E4800F472B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD44B817EC5E4800F472B5 /* MessageUI.framework */; };
 		BB4D086B184F7A7600787502 /* SHAREOUT.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086A184F7A7600787502 /* SHAREOUT.png */; };
 		BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */; };
+		BB9AC23818517FD100373607 /* promote.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9AC23718517FD100373607 /* promote.png */; };
 		BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC34872180EC72200FE0E1C /* ShareViewController.m */; };
 		BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC34873180EC72200FE0E1C /* ShareViewController.xib */; };
 /* End PBXBuildFile section */
@@ -318,6 +319,7 @@
 		49FD44B817EC5E4800F472B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BB4D086A184F7A7600787502 /* SHAREOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUT.png; sourceTree = "<group>"; };
 		BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUTupdate.png; sourceTree = "<group>"; };
+		BB9AC23718517FD100373607 /* promote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = promote.png; sourceTree = "<group>"; };
 		BBC34871180EC72200FE0E1C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		BBC34872180EC72200FE0E1C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		BBC34873180EC72200FE0E1C /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 				497CAACB18029D7E00894C15 /* like.png */,
 				49A090DA17E22F7900B19E8C /* menu-icon.png */,
 				49A090DB17E22F7900B19E8C /* menu-icon@2x.png */,
+				BB9AC23718517FD100373607 /* promote.png */,
 				02B69EE41801ECBD00A43E20 /* navbackgound.png */,
 				02A67CA7174BE3DE00BCD095 /* Property List.plist */,
 				497CAACC18029D7E00894C15 /* rank.png */,
@@ -1043,6 +1046,7 @@
 				497CAACF18029D7E00894C15 /* rank.png in Resources */,
 				49A090DD17E22F7900B19E8C /* back-arrow@2x.png in Resources */,
 				02E983541803C7BB005FF04C /* pp.png in Resources */,
+				BB9AC23818517FD100373607 /* promote.png in Resources */,
 				497CAACA18029A1200894C15 /* good.png in Resources */,
 				49A090DE17E22F7900B19E8C /* menu-icon.png in Resources */,
 				49E388D117F5A4570012C8A9 /* SampleTimelineViewCell.xib in Resources */,
