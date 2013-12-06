@@ -9,6 +9,7 @@
 #import "CVCell.h"
 #import "ShareViewController.h"
 #import "ViewController.h"
+#import "AppDelegate.h"
 @implementation CVCell
 
 @synthesize titleLabel = _titleLabel;
@@ -45,6 +46,7 @@
     self.sv =[[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil pushName:[_titleLabel text]recipeId:[_recipeId text]];
     [self.sv.recipeName setText:[_titleLabel text]];
     [self.window addSubview:self.sv.view];
+    //    NSLog(@"%@",self.view.superview);
    // [carousel reloadData];
     
     //

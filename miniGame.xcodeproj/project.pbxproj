@@ -56,6 +56,9 @@
 		02A99DB0174F496C00F576E2 /* gamebaby.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A99DAF174F496C00F576E2 /* gamebaby.png */; };
 		02A9B11517F5FDE200535CC7 /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9B11217F5FDE200535CC7 /* LBYouTubeExtractor.m */; };
 		02A9B11617F5FDE200535CC7 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9B11417F5FDE200535CC7 /* LBYouTubePlayerViewController.m */; };
+		02B137C3185113E600AEE4B5 /* lable3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B137C2185113E600AEE4B5 /* lable3.png */; };
+		02B137C5185113F400AEE4B5 /* lable4.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B137C4185113F400AEE4B5 /* lable4.png */; };
+		02B137C71851151C00AEE4B5 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B137C61851151C00AEE4B5 /* start.png */; };
 		02B69EE61801ECBD00A43E20 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE31801ECBD00A43E20 /* left.png */; };
 		02B69EE71801ECBD00A43E20 /* navbackgound.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE41801ECBD00A43E20 /* navbackgound.png */; };
 		02B69EE81801ECBD00A43E20 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B69EE51801ECBD00A43E20 /* back.png */; };
@@ -208,6 +211,9 @@
 		02A9B11217F5FDE200535CC7 /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
 		02A9B11317F5FDE200535CC7 /* LBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerViewController.h; sourceTree = "<group>"; };
 		02A9B11417F5FDE200535CC7 /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
+		02B137C2185113E600AEE4B5 /* lable3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable3.png; sourceTree = "<group>"; };
+		02B137C4185113F400AEE4B5 /* lable4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable4.png; sourceTree = "<group>"; };
+		02B137C61851151C00AEE4B5 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		02B69EE31801ECBD00A43E20 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		02B69EE41801ECBD00A43E20 /* navbackgound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbackgound.png; sourceTree = "<group>"; };
 		02B69EE51801ECBD00A43E20 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -644,6 +650,9 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				02B137C61851151C00AEE4B5 /* start.png */,
+				02B137C4185113F400AEE4B5 /* lable4.png */,
+				02B137C2185113E600AEE4B5 /* lable3.png */,
 				02E983531803C7BB005FF04C /* pp.png */,
 				499C633D17E449EB00513989 /* 37x-Checkmark.png */,
 				49A090D817E22F7900B19E8C /* back-arrow.png */,
@@ -1015,7 +1024,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B137C3185113E600AEE4B5 /* lable3.png in Resources */,
 				02A91720170207BC00F2E55F /* InfoPlist.strings in Resources */,
+				02B137C71851151C00AEE4B5 /* start.png in Resources */,
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
 				02A91732170207BC00F2E55F /* ViewController.xib in Resources */,
@@ -1033,6 +1044,7 @@
 				49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */,
 				02A99DAB174F450600F576E2 /* game.png in Resources */,
 				02A99DAE174F492700F576E2 /* gamepan.png in Resources */,
+				02B137C5185113F400AEE4B5 /* lable4.png in Resources */,
 				BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */,
 				02A99DB0174F496C00F576E2 /* gamebaby.png in Resources */,
 				023842C017588CC800831605 /* UploadRecipe.xib in Resources */,
