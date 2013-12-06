@@ -32,15 +32,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.frame=CGRectMake(0, 60, 320, 315);
-    
+    self.view.frame=CGRectMake(0, 60, 320, 480);
+    self.view.backgroundColor=[UIColor clearColor];
+    //self.view.layer.opaque=NO;
     [self.parentViewController.navigationController pushViewController:self animated:YES];
     [self.recipeName setTextWithAutoFrame:_pushName];
     NSString *rank=[NSString stringWithFormat:@"%d",(int)_rank.value];
     //NSString *rankString=[[NSString alloc] initWithString:@"%d",rank];
     //self.rankNumber.text=rankString;
     self.rankNumber.text=rank;
-    self.nothingShow.alpha=0.3;
+    self.nothingShow.alpha=0.0;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -52,18 +54,23 @@
 
 - (IBAction)shareContent:(id)sender {
     NSString *share=_content.text;
-    NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@",self.rank.value,share,_recipeId];
-    NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
-    NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",result);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的訊息"
-    message:@"已分享食譜"
-    delegate:self
-    cancelButtonTitle:@"完成"
-    otherButtonTitles: nil];
-    [alert show];
-    [self.view removeFromSuperview];
-    
+   
+    if (share==NULL) {
+        UIAlertView *errorAlert=[[UIAlertView alloc]initWithTitle:@"你的訊息" message:@"內容值不可以空白" delegate:self cancelButtonTitle:@"完成" otherButtonTitles:nil];
+        [errorAlert show];
+    }else{
+        NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@",self.rank.value,share,_recipeId];
+        NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
+        NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",result);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的訊息"
+                                                        message:@"已分享食譜"
+                                                       delegate:self
+                                              cancelButtonTitle:@"完成"
+                                              otherButtonTitles: nil];
+        [alert show];
+        [self.view removeFromSuperview];
+    }
     
     
 }
@@ -84,6 +91,9 @@
     [super touchesBegan:touches withEvent:event];
     
 }
-
+-(IBAction)updateLabel:(id)sender{
+    NSInteger sliderValue =(int)_rank.value;
+    self.rankNumber.text=[NSString stringWithFormat:@"%d" , sliderValue];
+}
 
 @end
