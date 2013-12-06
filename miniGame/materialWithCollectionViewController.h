@@ -16,13 +16,16 @@
     WebJsonDataGetter * webGetter;
     ASIHTTPRequest *asiRequest;
     UIImageView *image_Check;
+    int isInUserMaterial;
     
 }
 -(void)materialSearch:(NSString*)recipeType;
 - (IBAction)backpage_Material:(id)sender;
 - (IBAction)random:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *random_outlet;
 
 - (IBAction)userMaterial_Botton:(id)sender;
+@property (nonatomic) int isInUserMaterial;
 @property (strong, nonatomic) IBOutlet UICollectionView *collection_Material;
 @property(strong,nonatomic)NSArray * array_Collection;
 @property (strong, nonatomic) IBOutlet UIImageView *image_Background;
