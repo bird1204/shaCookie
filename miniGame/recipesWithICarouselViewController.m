@@ -65,6 +65,7 @@
     self.carousel.type = iCarouselTypeCoverFlow;
     self.carousel.vertical = true;
     
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -132,7 +133,7 @@
 
 -(IBAction)button_like:(id)sender{
     [cell.likeLabel setText:[NSString stringWithFormat:@"%d",[cell.likeLabel.text integerValue]+1]];
-    [self.carousel reloadData];
+    
 }
 - (IBAction)btn_Share:(id)sender {
     [self.carousel reloadData];
