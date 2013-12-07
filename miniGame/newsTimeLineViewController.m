@@ -115,9 +115,12 @@
     cell.latestTime.textColor=[UIColor blackColor];
     cell.shareContent.textColor=[UIColor blackColor];
     
-    [cell.friendName setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"display_name"]];
-    [cell.recipeName setTextWithAutoFrame:[[_array_Items objectAtIndex:index]objectForKey:@"name"]];
+    NSString *display_name= [NSString stringWithFormat:@"%@說：",[[_array_Items objectAtIndex:index] objectForKey:@"display_name"]];
+    [cell.friendName setTextWithAutoFrame:display_name];
+    [cell.recipeName setText:[[_array_Items objectAtIndex:index]objectForKey:@"name"]];
+    //[cell.recipeName setTextWithAutoFrame:[[_array_Items objectAtIndex:index]objectForKey:@"name"]];
     [cell.latestTime setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"latest_online"]];
+
     [cell.shareContent setTextWithAutoFrame:[[_array_Items objectAtIndex:index] objectForKey:@"content"]];
 
     
