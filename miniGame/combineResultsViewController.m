@@ -10,6 +10,7 @@
 #import "procedureWithMPFlipViewController.h"
 #import "GetJsonURLString.h"
 #import <CoreMotion/CoreMotion.h>
+#import "recipesWithICarouselViewController.h"
 
 
 @interface combineResultsViewController ()
@@ -39,7 +40,7 @@
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
-    
+    NSLog(@"%@",str);
     
     UIAlertView* mes=[[UIAlertView alloc] initWithTitle:@"搖一搖！！！"
                                                 message:@"請搖一搖幫您隨機配菜" delegate:self cancelButtonTitle:@"開始搖！" otherButtonTitles: nil];
@@ -53,6 +54,7 @@
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     self.getRecipes=[[NSArray alloc]initWithArray:webGetter.webData];
     
+    NSLog(@"%@",self.getRecipes);
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -77,11 +79,15 @@
                     
                     if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) && (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3) &&(gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) )
                     {
-                        NSString *recipeId=self.randomRecipes;
-                        NSLog(@"show:%@",recipeId);
-                        procedureWithMPFlipViewController *pro=[[procedureWithMPFlipViewController alloc]initWithNibName:@"procedureWithMPFlipViewController" bundle:nil recipeId:recipeId];
+//                        NSString *recipeId=self.randomRecipes;
+//                        NSLog(@"show:%@",recipeId);
+//                        procedureWithMPFlipViewController *pro=[[procedureWithMPFlipViewController alloc]initWithNibName:@"procedureWithMPFlipViewController" bundle:nil recipeId:recipeId];
+//                        
+//                        [self.navigationController pushViewController:pro animated:TRUE];
                         
-                        [self.navigationController pushViewController:pro animated:TRUE];
+//                        recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
+//                        rwicc.array_Items=self.getRecipes;
+//                        [self.navigationController pushViewController:rwicc animated:TRUE];
                     }
                     
                 }];
