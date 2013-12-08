@@ -20,12 +20,14 @@
 #import "combineResultsViewController.h"
 #import "AsyncImageView.h"
 #import "userMaterialViewController.h"
+#import "addInventoryViewController.h"
 
 @interface materialWithCollectionViewController ()
 
 @end
 
 @implementation materialWithCollectionViewController
+@synthesize isInUserMaterial=_isInUserMaterial;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +41,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _isInUserMaterial=1;
+    
     // Do any additional setup after loading the view from its nib.
     
     //self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
@@ -82,7 +86,9 @@
 }
 
 - (IBAction)backpage_Material:(id)sender {
-    
+    _isInUserMaterial=1;
+    [self.random_outlet setTitle:@"新增" forState:UIControlStateNormal];
+
     webGetter = [[WebJsonDataGetter alloc]init];
     NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,@"1"];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
@@ -96,6 +102,8 @@
 //    userMaterialViewController *userMaterialView=[[userMaterialViewController alloc]initWithNibName:@"userMaterialViewController" bundle:nil ];
 //    
 //    [self.navigationController pushViewController:userMaterialView animated:TRUE];
+    _isInUserMaterial=0;
+    [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
@@ -192,12 +200,18 @@
 }
 
 - (IBAction)random:(id)sender {
-    
+    if (_isInUserMaterial==1) {
+        addInventoryViewController *controller=[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:TRUE];
+    }else{
         combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
-    recipeView.getMaterial=array_Material;
+        recipeView.getMaterial=array_Material;
+        
+        [self.navigationController pushViewController:recipeView animated:TRUE];
+        self.collection_Material.allowsMultipleSelection = NO;
+    }
     
-    [self.navigationController pushViewController:recipeView animated:TRUE];
-    self.collection_Material.allowsMultipleSelection = NO;
+
         
 }
 

@@ -88,7 +88,7 @@
     cell = [[CVCell alloc]initWithFrame:CGRectMake(0, 0, 300.0f, 317.0f)];
     
     //add AsyncImageView to cell
-    AsyncImageView *imageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(15.0f, 11.0f, 271.0f, 234.0f)];
+    AsyncImageView *imageView = [[AsyncImageView alloc] initWithFrame:CGRectMake(15.0f, 35.0f, 271.0f, 234.0f)];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.clipsToBounds = YES;
     imageView.tag = IMAGE_VIEW_TAG;
