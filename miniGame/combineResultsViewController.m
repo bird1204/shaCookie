@@ -85,9 +85,9 @@
 //                        
 //                        [self.navigationController pushViewController:pro animated:TRUE];
                         
-//                        recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
-//                        rwicc.array_Items=self.getRecipes;
-//                        [self.navigationController pushViewController:rwicc animated:TRUE];
+                        recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
+                        rwicc.array_Items=self.getRecipes;
+                        [self.navigationController pushViewController:rwicc animated:TRUE];
                     }
                     
                 }];
