@@ -54,18 +54,14 @@
 
 - (IBAction)shareContent:(id)sender {
     NSString *share=_content.text;
-    NSString *shareinside = [share stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSInteger Userid=3;
     if (share==NULL || [share isEqual:@" "]) {
         
         UIAlertView *errorAlert=[[UIAlertView alloc]initWithTitle:@"你的訊息" message:@"內容值不可以空白" delegate:self cancelButtonTitle:@"完成" otherButtonTitles:nil];
         [errorAlert show];
     }else{
-        
-        NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@&Userid=%d",self.rank.value,shareinside,_recipeId,Userid];
-        NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
-        NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",result);
+        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Share,self.rank.value,share,_recipeId,Userid]];
+        //[webGetter setDelegate:self];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的訊息"
                                                         message:@"已分享食譜"
                                                        delegate:self
