@@ -169,7 +169,7 @@
         case iCarouselOptionWrap:
         {
             //normally you would hard-code this to YES or NO
-            return NO;
+            return YES;
         }
         case iCarouselOptionSpacing:
         {

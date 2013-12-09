@@ -10,6 +10,11 @@
 
 @interface MaterialCell : UICollectionViewCell
 
+
+
+@property (nonatomic, getter=isSelected) BOOL selected;
+
+
 @property (strong, nonatomic) IBOutlet UIImageView *image_Material;
 @property (strong, nonatomic) IBOutlet UIImageView *image_Check;
 - (IBAction)image_Hidden:(id)sender;
