@@ -97,7 +97,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     CLLocation *loc=(CLLocation*)[locations lastObject];
-    NSInteger userId=1;
+    NSInteger userId=3;
     
     NSInteger type=1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
