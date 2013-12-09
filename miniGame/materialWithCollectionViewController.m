@@ -106,7 +106,7 @@
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
+    [webGetter requestWithURLString:    [NSString stringWithFormat:GetJsonURLString_MaterialforUserid,@"3"]];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable3.png"]];
    
@@ -163,9 +163,10 @@
     //cancel loading previous image for cell
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
     
+    
     //load the image
-    NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[[self.array_Collection objectAtIndex:indexPath.row]objectForKey:@"image_url"]];
-        imageView.imageURL = [NSURL URLWithString:str];
+    NSString *str=[NSString stringWithFormat:GetImageUrl_material,[[self.array_Collection objectAtIndex:indexPath.row]objectForKey:@"image_url"]];
+    imageView.imageURL = [NSURL URLWithString:str];
     [cell.label_Title setTextWithAutoFrame:[[webGetter.webData objectAtIndex:indexPath.row]objectForKey:@"name"]];
     [cell.label_Title setBackgroundColor:[UIColor clearColor]];
     [cell setBackgroundColor:[UIColor clearColor]];
