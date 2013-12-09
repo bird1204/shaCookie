@@ -71,10 +71,10 @@
     
     //cell.textLabel.text = [[self.array_MaterialMenu objectAtIndex:indexPath.row]objectForKey:@"category"];
     switch (indexPath.row) {
-        case 1:
+        case 2:
             cell.textLabel.text=@"青菜類";
             break;
-        case 2:
+        case 1:
             cell.textLabel.text=@"肉類";
             break;
         case 3:

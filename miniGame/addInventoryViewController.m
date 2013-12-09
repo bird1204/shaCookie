@@ -65,6 +65,7 @@
         [alert show];
     }else{
         webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
+        [webGetter setDelegate:self];
         [self.navigationController popViewControllerAnimated:TRUE];
     }
     
