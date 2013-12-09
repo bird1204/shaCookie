@@ -37,6 +37,7 @@
     self.randomRecipes=[[NSString alloc]init];
     NSString *stringName=[self.getMaterial componentsJoinedByString:@","];
     NSString *str=[NSString stringWithFormat:GetJsonURLString_RecipeByNames,stringName];
+    NSLog(@"%@",str);
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
