@@ -15,7 +15,7 @@
 }
 
 @property (strong,nonatomic)NSDictionary *dictionary_RecipesMenu;
-@property(strong,nonatomic)NSArray *array_RecipesMenu;
+@property(strong,nonatomic)NSMutableArray *array_RecipesMenu;
 
 
 @end

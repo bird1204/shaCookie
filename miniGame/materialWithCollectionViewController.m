@@ -106,7 +106,7 @@
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:    [NSString stringWithFormat:GetJsonURLString_MaterialforUserid,@"3"]];
+    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialforUserid,User_id]];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable3.png"]];
    

@@ -17,7 +17,7 @@
 }
 
 @property (strong,nonatomic)NSDictionary *dictionary_MaterialMenu;
-@property(strong,nonatomic)NSArray *array_MaterialMenu;
+@property(strong,nonatomic)NSMutableArray *array_MaterialMenu;
 
 
 @end

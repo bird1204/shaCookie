@@ -43,8 +43,7 @@
 - (IBAction)btn_Like:(id)sender{
 
     self.likeLabel.text=[NSString stringWithFormat:@"%d",[self.likeLabel.text intValue]+1];
-    NSString *userId=@"3";
-    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,[_recipeId text],userId]];
+    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,[_recipeId text],User_id]];
     [webGetter setDelegate:self];
 }
 

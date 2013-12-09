@@ -16,8 +16,8 @@
 @implementation profileSideMenuViewController
 
 -(void)viewDidLoad{
-    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"個人檔案",@"動態牆",@"附近好友",@"關於我們", nil];
-    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,@"3"]];
+    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"",@"個人檔案",@"動態牆",@"附近好友",@"關於我們", nil];
+    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,User_id]];
     [webGetter setDelegate:self];
     
      self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"left.png"]];
@@ -46,6 +46,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        if (indexPath.row==0) {cell.userInteractionEnabled=NO;}
+
     }
     
     cell.textLabel.text = [self.array_PofileCategory objectAtIndex:indexPath.row];
@@ -75,16 +77,16 @@
 -(UIViewController *)buildViewController:(NSIndexPath *)indexPath{
     UIViewController *controller=nil;
     switch (indexPath.row) {
-        case 0:
+        case 1:
             controller=(UIViewController *)[[loginWithFBViewController alloc]initWithNibName:@"loginWithFBViewController" bundle:nil];
             break;
-        case 1:
+        case 2:
             controller=(UIViewController *)[[newsTimeLineViewController alloc]initWithNibName:@"newsTimeLineViewController" bundle:nil timeLine:self.array_Items];
             break;
-        case 2:
+        case 3:
             controller=(UIViewController *)[[JsonViewController alloc]initWithNibName:@"JsonViewController" bundle:nil];
             break;
-        case 3:
+        case 4:
             controller=(UIViewController *)[[aboutUsViewController alloc]initWithNibName:@"aboutUsViewController" bundle:nil];
             break;
         default:
