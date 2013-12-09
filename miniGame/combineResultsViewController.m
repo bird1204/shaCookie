@@ -77,7 +77,7 @@
                     
                     
                     
-                    if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) && (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3) &&(gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) )
+                    if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) || (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3)  || (gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) )
                     {
 //                        NSString *recipeId=self.randomRecipes;
 //                        NSLog(@"show:%@",recipeId);
@@ -94,6 +94,9 @@
                 
             } else {
                 NSLog(@"陀螺儀未感測");
+                recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
+                rwicc.array_Items=self.getRecipes;
+                [self.navigationController pushViewController:rwicc animated:TRUE];
             }
             break;
         default:
