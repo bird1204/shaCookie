@@ -87,6 +87,7 @@
 
 - (IBAction)backpage_Material:(id)sender {
     _isInUserMaterial=1;
+    [self.random_outlet setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"新增" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
@@ -103,10 +104,11 @@
 //    
 //    [self.navigationController pushViewController:userMaterialView animated:TRUE];
     _isInUserMaterial=0;
+    [self.random_outlet setImage:nil forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:    [NSString stringWithFormat:GetJsonURLString_MaterialforUserid,@"3"]];
+    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialforUserid,User_id]];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable3.png"]];
    
@@ -188,7 +190,6 @@
     }else{
         combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
         recipeView.getMaterial=array_Material;
-        NSLog(@" 選到的食材 ： %@",array_Material);
         [self.navigationController pushViewController:recipeView animated:TRUE];
         self.collection_Material.allowsMultipleSelection = NO;
     }

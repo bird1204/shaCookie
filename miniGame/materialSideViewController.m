@@ -63,7 +63,6 @@
         
         cell.backgroundColor=[UIColor clearColor];
         if (indexPath.row==0) {
-            NSLog(@"d");
             cell.userInteractionEnabled=NO;
         }
 

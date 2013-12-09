@@ -97,7 +97,6 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     CLLocation *loc=(CLLocation*)[locations lastObject];
-    NSInteger userId=1;
     
     NSInteger type=1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -108,7 +107,7 @@
     CGFloat latitude=loc.coordinate.latitude;
     CGFloat longtitude=loc.coordinate.longitude;
     //userId,type,deviceId,latitude,longtitude
-    NSString *urlString = [NSString stringWithFormat:SetJsonURLString_Device,userId,type,deviceId,latitude,longtitude];
+    NSString *urlString = [NSString stringWithFormat:SetJsonURLString_Device,User_id,type,deviceId,latitude,longtitude];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     NSURLConnection *conn=[[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
@@ -150,6 +149,7 @@
         // valid account UI is shown whenever the session is open
         [self.buttonLoginLogout setTitle:@"Log out" forState:UIControlStateNormal];
         [FBRequestConnection startWithGraphPath:@"me" parameters:@{@"fields":@"email,name,gender,picture"} HTTPMethod:@"GET" completionHandler:^(FBRequestConnection *connection,id result,NSError *error) {
+            NSLog(@"%@",result);
             [self.label_UserName setText:[result objectForKey:@"name"]];
             [self.label_UserMail setText:[result objectForKey:@"email"]];
             [self.label_UserGender setText:[result objectForKey:@"gender"]];

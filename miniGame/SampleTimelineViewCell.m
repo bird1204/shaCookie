@@ -27,7 +27,7 @@
     _color = color;
     
     if(! self.selected) {
-        NSLog(@"setColor");
+        //NSLog(@"setColor");
         //self.backgroundColor = color;
     }
 }
@@ -57,10 +57,10 @@
     [super setSelected:selected];
     
     if(selected) {
-        NSLog(@"select cell : %@",self.recipeName);
+        //NSLog(@"select cell : %@",self.recipeName);
     }
     else {
-        NSLog(@"deselect cell");
+        //NSLog(@"deselect cell");
     }
 }
 
