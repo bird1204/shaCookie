@@ -29,7 +29,8 @@
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-    self.array_RecipesMenu=[[NSArray alloc]initWithArray: webGetter.webData];
+    self.array_RecipesMenu=[[NSMutableArray alloc]initWithObjects:@"", nil];
+    [self.array_RecipesMenu addObjectsFromArray:webGetter.webData];
     [self.tableView reloadData];
 }
 
@@ -64,7 +65,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.backgroundColor=[UIColor clearColor];
-    NSString *recipesType=[[self.array_RecipesMenu objectAtIndex:indexPath.row]objectForKey:@"type"];
+    NSString *recipesType=@"0";
+    if (indexPath.row==0){
+        cell.userInteractionEnabled=NO;
+    }else{
+        recipesType=[[self.array_RecipesMenu objectAtIndex:indexPath.row]objectForKey:@"type"];
+    }
     cell.textLabel.text=[self getRecipeTitle:recipesType];
     return cell;
 }

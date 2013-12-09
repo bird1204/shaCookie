@@ -61,6 +61,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [UIApplication sharedApplication].statusBarHidden=true;
+
     self.carousel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
     self.carousel.type = iCarouselTypeCoverFlow;
     self.carousel.vertical = true;

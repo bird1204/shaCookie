@@ -23,7 +23,9 @@
 
  -(void)viewDidLoad{
     [super viewDidLoad];
-    webGetter=[[WebJsonDataGetter alloc]initWithURLString:GetJsonURLString_MaterialType];
+     self.array_MaterialMenu=[[NSMutableArray alloc]initWithObjects:@"", nil];
+
+     webGetter=[[WebJsonDataGetter alloc]initWithURLString:GetJsonURLString_MaterialType];
     [webGetter setDelegate:self];
      
      UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"left.png"]];
@@ -39,8 +41,7 @@
 
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-    self.array_MaterialMenu=[[NSArray alloc]initWithArray:webGetter.webData];
-   
+    [self.array_MaterialMenu addObjectsFromArray:webGetter.webData];
     [self.tableView reloadData];
 }
 
@@ -61,21 +62,26 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
         cell.backgroundColor=[UIColor clearColor];
+        if (indexPath.row==0) {
+            NSLog(@"d");
+            cell.userInteractionEnabled=NO;
+        }
+
 
     }
     
     //cell.textLabel.text = [[self.array_MaterialMenu objectAtIndex:indexPath.row]objectForKey:@"category"];
     switch (indexPath.row) {
-        case 0:
+        case 1:
             cell.textLabel.text=@"青菜類";
             break;
-        case 1:
+        case 2:
             cell.textLabel.text=@"肉類";
             break;
-        case 2:
+        case 3:
             cell.textLabel.text=@"海鮮類";
             break;
-        case 3:
+        case 4:
             cell.textLabel.text=@"調味料";
             
         default:
@@ -128,6 +134,4 @@
     }
     return materialType;
 }
-
-
 @end
