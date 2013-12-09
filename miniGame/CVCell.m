@@ -44,7 +44,8 @@
 
     self.likeLabel.text=[NSString stringWithFormat:@"%d",[self.likeLabel.text intValue]+1];
     NSString *userId=@"3";
-    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,_recipeId,userId]];
+    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,[_recipeId text],userId]];
+    NSLog(@"%@",[NSString stringWithFormat:SetJsonURLString_Like,[_recipeId text],userId]);
     [webGetter setDelegate:self];
 }
 
