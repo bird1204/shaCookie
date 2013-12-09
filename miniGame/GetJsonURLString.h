@@ -20,7 +20,7 @@
 #define GetJsonURLString_RecipeByNames @"http://54.244.225.229/shacookie/useThis/getMaterialforRecipes.php?eng_name=%@"
 
 #define GetJsonURLString_MaterialforUserid @"http://54.244.225.229/shacookie/useThis/getUserMaterial.php"
-#define GetJsonURLString_Content @"http://54.244.225.229/shacookie/useThis/getRecipeContent.php?Id=3"
+#define GetJsonURLString_Content @"http://54.244.225.229/shacookie/useThis/getRecipeContent.php?Id=%@"
 
 #define GetJsonURLString_Material @"http://54.244.225.229/shacookie/useThis/getMaterial.php?category=%@"
 #define GetJsonURLString_MaterialType @"http://54.244.225.229/shacookie/useThis/getMaterialTypeForSide.php"
