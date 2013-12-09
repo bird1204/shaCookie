@@ -39,10 +39,16 @@
     
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    if(selected) {
+        [self.image_Check setHidden:NO];
 
-- (IBAction)image_Hidden:(id)sender {
-    if(self.image_Check.hidden==NO){
-        [self.image_Check setHidden:YES];}else{[self.image_Check setHidden:NO];}
-    
+    }
+    else {
+        [self.image_Check setHidden:YES];
+
+    }
 }
 @end
