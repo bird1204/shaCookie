@@ -10,6 +10,8 @@
 #import "ShareViewController.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "WebJsonDataGetter.h"
+#import "GetJsonURLString.h"
 @implementation CVCell
 
 @synthesize titleLabel = _titleLabel;
@@ -38,14 +40,11 @@
     
 }
 - (IBAction)btn_Like:(id)sender{
-    NSLog(@"%@",self.window.subviews);
 
     self.likeLabel.text=[NSString stringWithFormat:@"%d",[self.likeLabel.text intValue]+1];
-    NSString *input=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/useThis/inputLike.php?recipeId=%@",_recipeId];
-    NSData *dateUrl=[NSData dataWithContentsOfURL:[NSURL URLWithString:input]];
-    NSString *result=[[NSString alloc] initWithData:dateUrl encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",result);
-    
+    NSString *userId=@"3";
+    WebJsonDataGetter *webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,_recipeId,userId]];
+    webGetter=nil;
 }
 
 - (IBAction)btn_Share:(id)sender {
