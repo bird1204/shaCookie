@@ -87,6 +87,7 @@
 
 - (IBAction)backpage_Material:(id)sender {
     _isInUserMaterial=1;
+    [self.random_outlet setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"新增" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
@@ -103,6 +104,7 @@
 //    
 //    [self.navigationController pushViewController:userMaterialView animated:TRUE];
     _isInUserMaterial=0;
+    [self.random_outlet setImage:nil forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];

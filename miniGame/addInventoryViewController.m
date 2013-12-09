@@ -113,4 +113,8 @@
     [self.view endEditing:TRUE];
     return YES;
 }
+
+-(void)doThingAfterWebJsonIsOKFromDelegate{
+    webGetter=nil;
+}
 @end

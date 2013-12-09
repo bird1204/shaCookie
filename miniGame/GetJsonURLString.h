@@ -14,7 +14,7 @@
 
 #define GetRecipesImage @"http://54.244.225.229/shacookie/image/%@"
 
-#define GetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/getDeviceLocation.php?deviceId=%@"
+#define GetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/getDeviceLocation.php?userId=%@"
 
 #define GetJsonURLString_Recipe @"http://54.244.225.229/shacookie/useThis/getRecipeInfo.php?type=%@"
 #define GetJsonURLString_RecipeType @"http://54.244.225.229/shacookie/useThis/getRecipeTypeForSide.php"
