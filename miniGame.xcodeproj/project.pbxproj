@@ -69,6 +69,9 @@
 		02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7EA41824294600B29FDC /* userMaterialViewController.xib */; };
 		02E983541803C7BB005FF04C /* pp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E983531803C7BB005FF04C /* pp.png */; };
 		2BEDE413FCB64F2EB044019A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A691AA26FB84D70BFC64D3E /* libPods.a */; };
+		49006EBB1855A2A40093FC3F /* lable1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49006EB91855A2A40093FC3F /* lable1.png */; };
+		49006EBC1855A2A40093FC3F /* lable2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49006EBA1855A2A40093FC3F /* lable2.png */; };
+		49006EBE1855A37E0093FC3F /* check2_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 49006EBD1855A37E0093FC3F /* check2_btn.png */; };
 		490322C817E5BBBB0008F1F4 /* recipesWithICarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490322C617E5BBBB0008F1F4 /* recipesWithICarouselViewController.m */; };
 		490322C917E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490322C717E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib */; };
 		491AE83C175FAD4800E4121C /* homepage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 491AE83A175FAD4800E4121C /* homepage1.png */; };
@@ -132,6 +135,11 @@
 		49FD44B917EC5E4800F472B5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FD44B817EC5E4800F472B5 /* MessageUI.framework */; };
 		BB4D086B184F7A7600787502 /* SHAREOUT.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086A184F7A7600787502 /* SHAREOUT.png */; };
 		BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */; };
+		BB98D5A61855C09A0091708A /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = BB98D5A51855C09A0091708A /* login.png */; };
+		BB98D5AA1855F1DB0091708A /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = BB98D5A71855F1DB0091708A /* add.png */; };
+		BB98D5AB1855F1DB0091708A /* all.png in Resources */ = {isa = PBXBuildFile; fileRef = BB98D5A81855F1DB0091708A /* all.png */; };
+		BB98D5AC1855F1DB0091708A /* my.png in Resources */ = {isa = PBXBuildFile; fileRef = BB98D5A91855F1DB0091708A /* my.png */; };
+		BB98D5AE1855F1F50091708A /* manager.png in Resources */ = {isa = PBXBuildFile; fileRef = BB98D5AD1855F1F50091708A /* manager.png */; };
 		BB9AC23818517FD100373607 /* promote.png in Resources */ = {isa = PBXBuildFile; fileRef = BB9AC23718517FD100373607 /* promote.png */; };
 		BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC34872180EC72200FE0E1C /* ShareViewController.m */; };
 		BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC34873180EC72200FE0E1C /* ShareViewController.xib */; };
@@ -229,6 +237,9 @@
 		02E983531803C7BB005FF04C /* pp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pp.png; sourceTree = "<group>"; };
 		15404D105D6D4CF9B5351AEF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		2A691AA26FB84D70BFC64D3E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49006EB91855A2A40093FC3F /* lable1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable1.png; sourceTree = "<group>"; };
+		49006EBA1855A2A40093FC3F /* lable2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable2.png; sourceTree = "<group>"; };
+		49006EBD1855A37E0093FC3F /* check2_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check2_btn.png; sourceTree = "<group>"; };
 		490322C517E5BBBA0008F1F4 /* recipesWithICarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recipesWithICarouselViewController.h; sourceTree = "<group>"; };
 		490322C617E5BBBB0008F1F4 /* recipesWithICarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recipesWithICarouselViewController.m; sourceTree = "<group>"; };
 		490322C717E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recipesWithICarouselViewController.xib; sourceTree = "<group>"; };
@@ -327,6 +338,11 @@
 		49FD44B817EC5E4800F472B5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BB4D086A184F7A7600787502 /* SHAREOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUT.png; sourceTree = "<group>"; };
 		BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SHAREOUTupdate.png; sourceTree = "<group>"; };
+		BB98D5A51855C09A0091708A /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		BB98D5A71855F1DB0091708A /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		BB98D5A81855F1DB0091708A /* all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all.png; sourceTree = "<group>"; };
+		BB98D5A91855F1DB0091708A /* my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my.png; sourceTree = "<group>"; };
+		BB98D5AD1855F1F50091708A /* manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manager.png; sourceTree = "<group>"; };
 		BB9AC23718517FD100373607 /* promote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = promote.png; sourceTree = "<group>"; };
 		BBC34871180EC72200FE0E1C /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		BBC34872180EC72200FE0E1C /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -654,36 +670,44 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				02B0CA5F1851BE160093CD24 /* about.png */,
-				02B137C61851151C00AEE4B5 /* start.png */,
-				02B137C4185113F400AEE4B5 /* lable4.png */,
-				02B137C2185113E600AEE4B5 /* lable3.png */,
-				02E983531803C7BB005FF04C /* pp.png */,
+				49006EBD1855A37E0093FC3F /* check2_btn.png */,
 				499C633D17E449EB00513989 /* 37x-Checkmark.png */,
+				02B0CA5F1851BE160093CD24 /* about.png */,
 				49A090D817E22F7900B19E8C /* back-arrow.png */,
 				49A090D917E22F7900B19E8C /* back-arrow@2x.png */,
 				02B69EE51801ECBD00A43E20 /* back.png */,
 				02A99DA8174F450600F576E2 /* game.png */,
 				02A99DAF174F496C00F576E2 /* gamebaby.png */,
-				BB4D086A184F7A7600787502 /* SHAREOUT.png */,
 				02A99DAD174F492700F576E2 /* gamepan.png */,
-				BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */,
 				497CAAC918029A1200894C15 /* good.png */,
 				491AE83A175FAD4800E4121C /* homepage1.png */,
+				BB98D5A71855F1DB0091708A /* add.png */,
+				BB98D5A81855F1DB0091708A /* all.png */,
+				BB98D5A91855F1DB0091708A /* my.png */,
+				BB98D5AD1855F1F50091708A /* manager.png */,
 				491AE83B175FAD4800E4121C /* homepage2-1.png */,
 				499C633E17E449EB00513989 /* icon.png */,
 				499C633F17E449EC00513989 /* icon@2x.png */,
 				497CAAA91802816C00894C15 /* knife.png */,
+				BB98D5A51855C09A0091708A /* login.png */,
+				49006EB91855A2A40093FC3F /* lable1.png */,
+				49006EBA1855A2A40093FC3F /* lable2.png */,
+				02B137C2185113E600AEE4B5 /* lable3.png */,
+				02B137C4185113F400AEE4B5 /* lable4.png */,
 				02B69EE31801ECBD00A43E20 /* left.png */,
 				497CAACB18029D7E00894C15 /* like.png */,
 				49A090DA17E22F7900B19E8C /* menu-icon.png */,
 				49A090DB17E22F7900B19E8C /* menu-icon@2x.png */,
-				BB9AC23718517FD100373607 /* promote.png */,
 				02B69EE41801ECBD00A43E20 /* navbackgound.png */,
+				02E983531803C7BB005FF04C /* pp.png */,
+				BB9AC23718517FD100373607 /* promote.png */,
 				02A67CA7174BE3DE00BCD095 /* Property List.plist */,
 				497CAACC18029D7E00894C15 /* rank.png */,
 				497CAAC61802951A00894C15 /* recipe.png */,
 				497CAACD18029D7E00894C15 /* share.png */,
+				BB4D086A184F7A7600787502 /* SHAREOUT.png */,
+				BB4D086C184FA8AD00787502 /* SHAREOUTupdate.png */,
+				02B137C61851151C00AEE4B5 /* start.png */,
 				497CAAA51802801200894C15 /* under.png */,
 			);
 			name = images;
@@ -1035,21 +1059,25 @@
 				02B137C71851151C00AEE4B5 /* start.png in Resources */,
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
+				BB98D5AC1855F1DB0091708A /* my.png in Resources */,
 				02A91732170207BC00F2E55F /* ViewController.xib in Resources */,
 				02A68AFC17034A8300B34828 /* JsonViewController.xib in Resources */,
 				497CAAA61802801200894C15 /* under.png in Resources */,
 				BBC34875180EC72200FE0E1C /* ShareViewController.xib in Resources */,
+				BB98D5AB1855F1DB0091708A /* all.png in Resources */,
 				02A67C73174BDA1800BCD095 /* CVCell.xib in Resources */,
 				02A67C8D174BE06000BCD095 /* refViewController.xib in Resources */,
 				02A67C97174BE21100BCD095 /* menuViewController.xib in Resources */,
 				02A67C9C174BE29600BCD095 /* foodDetailViewController.xib in Resources */,
 				02A67CA8174BE3DE00BCD095 /* Property List.plist in Resources */,
+				49006EBB1855A2A40093FC3F /* lable1.png in Resources */,
 				02A8DD6317F2027D00E6B5D9 /* MaterialCell.xib in Resources */,
 				02A4E79E174C023A00EA8FEB /* foodData.plist in Resources */,
 				020C700117FC7FD900623DF6 /* combineResultsViewController.xib in Resources */,
 				49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */,
 				02A99DAB174F450600F576E2 /* game.png in Resources */,
 				02A99DAE174F492700F576E2 /* gamepan.png in Resources */,
+				BB98D5A61855C09A0091708A /* login.png in Resources */,
 				02B137C5185113F400AEE4B5 /* lable4.png in Resources */,
 				BB4D086D184FA8AD00787502 /* SHAREOUTupdate.png in Resources */,
 				02A99DB0174F496C00F576E2 /* gamebaby.png in Resources */,
@@ -1066,14 +1094,17 @@
 				49A090DE17E22F7900B19E8C /* menu-icon.png in Resources */,
 				49E388D117F5A4570012C8A9 /* SampleTimelineViewCell.xib in Resources */,
 				02B0CA601851BE160093CD24 /* about.png in Resources */,
+				BB98D5AA1855F1DB0091708A /* add.png in Resources */,
 				497CAACE18029D7E00894C15 /* like.png in Resources */,
 				02B69EE71801ECBD00A43E20 /* navbackgound.png in Resources */,
 				02B69EE81801ECBD00A43E20 /* back.png in Resources */,
 				49F816BD184F7EB600EDB8D4 /* aboutUsViewController.xib in Resources */,
+				BB98D5AE1855F1F50091708A /* manager.png in Resources */,
 				49A090DF17E22F7900B19E8C /* menu-icon@2x.png in Resources */,
 				02A8DD5717F1DE5E00E6B5D9 /* materialWithCollectionViewController.xib in Resources */,
 				4927D89B17E33FEE000DDEBF /* matchMaterialViewController.xib in Resources */,
 				4927D8A117E34AC0000DDEBF /* moveFinishViewController.xib in Resources */,
+				49006EBC1855A2A40093FC3F /* lable2.png in Resources */,
 				49F816C2184F807200EDB8D4 /* newsTimeLineViewController.xib in Resources */,
 				02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */,
 				497CAAC81802951A00894C15 /* recipe.png in Resources */,
@@ -1082,6 +1113,7 @@
 				499C634417E449EC00513989 /* 37x-Checkmark.png in Resources */,
 				49F816C7184F818C00EDB8D4 /* loginWithFBViewController.xib in Resources */,
 				499C634517E449EC00513989 /* icon.png in Resources */,
+				49006EBE1855A37E0093FC3F /* check2_btn.png in Resources */,
 				499C634617E449EC00513989 /* icon@2x.png in Resources */,
 				BB4D086B184F7A7600787502 /* SHAREOUT.png in Resources */,
 				490322C917E5BBBB0008F1F4 /* recipesWithICarouselViewController.xib in Resources */,

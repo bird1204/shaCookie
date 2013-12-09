@@ -87,6 +87,7 @@
 
 - (IBAction)backpage_Material:(id)sender {
     _isInUserMaterial=1;
+    [self.random_outlet setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"新增" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
@@ -103,10 +104,11 @@
 //    
 //    [self.navigationController pushViewController:userMaterialView animated:TRUE];
     _isInUserMaterial=0;
+    [self.random_outlet setImage:nil forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
 
     webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
+    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialforUserid,User_id]];
     [webGetter setDelegate:self];
     self.image_Background.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"lable3.png"]];
    
@@ -163,9 +165,10 @@
     //cancel loading previous image for cell
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
     
+    
     //load the image
-    NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[[self.array_Collection objectAtIndex:indexPath.row]objectForKey:@"image_url"]];
-        imageView.imageURL = [NSURL URLWithString:str];
+    NSString *str=[NSString stringWithFormat:GetImageUrl_material,[[self.array_Collection objectAtIndex:indexPath.row]objectForKey:@"image_url"]];
+    imageView.imageURL = [NSURL URLWithString:str];
     [cell.label_Title setTextWithAutoFrame:[[webGetter.webData objectAtIndex:indexPath.row]objectForKey:@"name"]];
     [cell.label_Title setBackgroundColor:[UIColor clearColor]];
     [cell setBackgroundColor:[UIColor clearColor]];
@@ -177,27 +180,7 @@
 #pragma mark - select collectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-   // UICollectionViewCell *cell=[collectionView cellForItemAtIndexPath:indexPath];
-    //MaterialCell *cell2=(MaterialCell*)cell;
-    
-    
     [array_Material addObject:[[self.array_Collection objectAtIndex:indexPath.row] objectForKey:@"name"]];
-    
-    
-//    if (array_Material.count==3) {
-//
-//        combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
-//        recipeView.getMaterial=array_Material;
-//        
-//        [self.navigationController pushViewController:recipeView animated:TRUE];
-//        self.collection_Material.allowsMultipleSelection = NO;
-//        
-//        
-//        
-//    }
-
-    
 }
 
 - (IBAction)random:(id)sender {
@@ -211,9 +194,6 @@
         [self.navigationController pushViewController:recipeView animated:TRUE];
         self.collection_Material.allowsMultipleSelection = NO;
     }
-    
-
-        
 }
 
 

@@ -333,6 +333,9 @@
     NSString *name=[[[[self.array_Items objectAtIndex:1]objectForKey:@"material"]objectAtIndex:indexPath.row]objectForKey:@"name"];
     NSString *quantity=[[[[self.array_Items objectAtIndex:1]objectForKey:@"material"]objectAtIndex:indexPath.row]objectForKey:@"quantity"];
     NSString *type=[[[[self.array_Items objectAtIndex:1]objectForKey:@"material"]objectAtIndex:indexPath.row]objectForKey:@"type"];
+    if ([quantity isEqual:@"0"]) {
+        quantity=@"";
+    }
     
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyCellIdentifier];

@@ -56,8 +56,19 @@
 }
 
 - (IBAction)insert:(id)sender {
-    NSInteger userId=1;
-    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,userId,[_type text],[_category text],[_name text],[_quantity text]]];
+    if ([[_name text] isEqualToString:@""] || [_name text] == (NSString*)[NSNull null]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"錯誤"
+                                                        message:@"請輸入食材名稱"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }else{
+        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
+        [self.navigationController popViewControllerAnimated:TRUE];
+    }
+    
+    
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -101,5 +112,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self.view endEditing:TRUE];
     return YES;
+}
+
+-(void)doThingAfterWebJsonIsOKFromDelegate{
+    webGetter=nil;
 }
 @end
