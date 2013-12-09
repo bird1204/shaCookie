@@ -46,7 +46,6 @@
     NSString *userId=@"3";
     webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,_recipeId,userId]];
     [webGetter setDelegate:self];
-
 }
 
 - (IBAction)btn_Share:(id)sender {
@@ -57,9 +56,7 @@
 
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-    NSLog(@"liked");
     webGetter=nil;
-
 }
 
 
