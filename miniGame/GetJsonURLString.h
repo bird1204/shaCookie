@@ -19,11 +19,13 @@
 #define GetJsonURLString_RecipeStep @"http://54.244.225.229/shacookie/useThis/getRecipeProcedure.php?recipeId=%@"
 #define GetJsonURLString_RecipeByNames @"http://54.244.225.229/shacookie/useThis/getMaterialforRecipes.php?name=%@"
 
-#define GetJsonURLString_MaterialforUserid @"http://54.244.225.229/shacookie/useThis/getUserMaterial.php"
-#define GetJsonURLString_Content @"http://54.244.225.229/shacookie/useThis/getRecipeContent.php?Id=3"
+#define GetJsonURLString_MaterialforUserid @"http://54.244.225.229/shacookie/useThis/getUserMaterial.php?userId=%@"
+#define GetJsonURLString_Content @"http://54.244.225.229/shacookie/useThis/getRecipeContent.php?Id=%@"
 
 #define GetJsonURLString_Material @"http://54.244.225.229/shacookie/useThis/getMaterial.php?category=%@"
 #define GetJsonURLString_MaterialType @"http://54.244.225.229/shacookie/useThis/getMaterialTypeForSide.php"
+
+#define GetImageUrl_material @"http://54.244.225.229/shacookie/image/material/%@"
 
 
 #define SetJsonURLString_Like @"http://54.244.225.229/shacookie/useThis/inputLike.php?recipeId=%@userId=%@"

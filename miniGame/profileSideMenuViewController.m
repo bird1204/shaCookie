@@ -16,8 +16,8 @@
 @implementation profileSideMenuViewController
 
 -(void)viewDidLoad{
-    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"個人檔案",@"動態牆",@"附近好友",@"食材管理",@"關於我們", nil];
-    webGetter =[[WebJsonDataGetter alloc]initWithURLString:GetJsonURLString_Content];
+    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"個人檔案",@"動態牆",@"附近好友",@"關於我們", nil];
+    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,@"3"]];
     [webGetter setDelegate:self];
     
      self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"left.png"]];
@@ -85,9 +85,6 @@
             controller=(UIViewController *)[[JsonViewController alloc]initWithNibName:@"JsonViewController" bundle:nil];
             break;
         case 3:
-            controller=(UIViewController *)[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil];
-            break;
-        case 4:
             controller=(UIViewController *)[[aboutUsViewController alloc]initWithNibName:@"aboutUsViewController" bundle:nil];
             break;
         default:

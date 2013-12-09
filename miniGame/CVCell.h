@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareViewController.h"
+#import "WebJsonDataGetter.h"
 //#import "recipesWithICarouselViewController.h"
-@interface CVCell : UICollectionViewCell{
+@interface CVCell : UICollectionViewCell<WebJsonDataGetFinishDelegater>{
     IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *recipeId;
+    WebJsonDataGetter * webGetter;
+
     //IBOutlet iCarousel *carousel;
 }
 

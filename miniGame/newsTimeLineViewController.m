@@ -11,6 +11,7 @@
 #import "SampleTimelineViewCell.h"
 #import "GetJsonURLString.h"
 #import "AsyncImageView.h"
+#import "procedureWithMPFlipViewController.h"
 
 @interface newsTimeLineViewController ()
 
@@ -156,6 +157,14 @@
 //    [data removeObjectAtIndex:sourceIndex];
 //    [data insertObject:@{@"rect": NSStringFromCGRect(frame), @"color": info[@"color"], @"num": info[@"num"]} atIndex:destinationIndex];
 }
+
+- (void)timelineView:(TimelineView *)timelineView didSelectItemAtIndex:(NSInteger)index{
+    NSString *recipeId=[[_array_Items objectAtIndex:index] objectForKey:@"recipe_id"];
+    procedureWithMPFlipViewController *pro=[[procedureWithMPFlipViewController alloc]initWithNibName:@"procedureWithMPFlipViewController" bundle:nil recipeId:recipeId];
+    
+    [self.navigationController pushViewController:pro animated:TRUE];
+}
+
 
 #pragma mark Buttons
 #pragma mark -
