@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     webGetter = [[WebJsonDataGetter alloc]init];
-    [webGetter requestWithURLString:GetJsonURLString_MaterialforUserid];
+    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialforUserid,User_id]];
     [webGetter setDelegate:self];
     
 

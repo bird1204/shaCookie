@@ -17,7 +17,7 @@
 
 -(void)viewDidLoad{
     self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"",@"個人檔案",@"動態牆",@"附近好友",@"關於我們", nil];
-    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,@"3"]];
+    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,User_id]];
     [webGetter setDelegate:self];
     
      self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"left.png"]];

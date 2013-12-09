@@ -9,6 +9,8 @@
 #ifndef miniGame_GetJsonURLString_h
 #define miniGame_GetJsonURLString_h
 
+#define User_id @"3"
+
 
 #define GetRecipesImage @"http://54.244.225.229/shacookie/image/%@"
 
@@ -27,8 +29,8 @@
 
 #define GetImageUrl_material @"http://54.244.225.229/shacookie/image/material/%@"
 
-#define SetJsonURLString_Share @"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@&Userid=%d"
+#define SetJsonURLString_Share @"http://54.244.225.229/shacookie/useThis/inputShare.php?rank=%.f&content=%@&recipeId=%@&Userid=%@"
 #define SetJsonURLString_Like @"http://54.244.225.229/shacookie/useThis/inputLike.php?recipeId=%@&userId=%@"
-#define SetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/setCurrentLocation.php?userId=%d&type=%d&deviceId=%@&latitude=%f&longtitude=%f"
-#define SetJsonURLString_UserInventory @"http://54.244.225.229/shacookie/useThis/setUserInventory.php?userId=%d&type=%@&category=%@&name=%@&quantity=%@"
+#define SetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/setCurrentLocation.php?userId=%@&type=%d&deviceId=%@&latitude=%f&longtitude=%f"
+#define SetJsonURLString_UserInventory @"http://54.244.225.229/shacookie/useThis/setUserInventory.php?userId=%@&type=%@&category=%@&name=%@&quantity=%@"
 #endif

@@ -54,13 +54,12 @@
 
 - (IBAction)shareContent:(id)sender {
     NSString *share=_content.text;
-    NSInteger Userid=3;
     if (share==NULL || [share isEqual:@" "]) {
         
         UIAlertView *errorAlert=[[UIAlertView alloc]initWithTitle:@"你的訊息" message:@"內容值不可以空白" delegate:self cancelButtonTitle:@"完成" otherButtonTitles:nil];
         [errorAlert show];
     }else{
-        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Share,self.rank.value,share,_recipeId,Userid]];
+        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Share,self.rank.value,share,_recipeId,User_id]];
         //[webGetter setDelegate:self];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"你的訊息"
                                                         message:@"已分享食譜"

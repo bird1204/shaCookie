@@ -64,8 +64,7 @@
                                               otherButtonTitles: nil];
         [alert show];
     }else{
-        NSInteger userId=3;
-        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,userId,[_type text],[_category text],[_name text],[_quantity text]]];
+        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
         [self.navigationController popViewControllerAnimated:TRUE];
     }
     
