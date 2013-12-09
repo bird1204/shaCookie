@@ -15,6 +15,7 @@
 @implementation CVCell
 
 @synthesize titleLabel = _titleLabel;
+@synthesize recipeId=_recipeId;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -43,8 +44,9 @@
 
     self.likeLabel.text=[NSString stringWithFormat:@"%d",[self.likeLabel.text intValue]+1];
     NSString *userId=@"3";
-    WebJsonDataGetter *webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,_recipeId,userId]];
-    webGetter=nil;
+    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_Like,_recipeId,userId]];
+    [webGetter setDelegate:self];
+
 }
 
 - (IBAction)btn_Share:(id)sender {
@@ -53,6 +55,12 @@
     [self.window addSubview:self.sv.view];
 }
 
+
+-(void)doThingAfterWebJsonIsOKFromDelegate{
+    NSLog(@"liked");
+    webGetter=nil;
+
+}
 
 
 @end
