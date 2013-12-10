@@ -8,6 +8,7 @@
 
 #import "addInventoryViewController.h"
 #import "MMPickerView.h"
+#import "addRecipeViewController.h"
 #import "GetJsonURLString.h"
 
 
@@ -23,11 +24,14 @@
 @synthesize quantities=_quantities;
 @synthesize categories=_categories;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        isBelongsToUser=isUser;
+        recipeMaterial=material;
+        recipeName=Rname;
     }
     return self;
 }
@@ -64,9 +68,23 @@
                                               otherButtonTitles: nil];
         [alert show];
     }else{
-        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
-        [webGetter setDelegate:self];
-        [self.navigationController popViewControllerAnimated:TRUE];
+        if (isBelongsToUser) {
+            webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
+            [webGetter setDelegate:self];
+        }else{
+            addRecipeViewController *recipe=[[addRecipeViewController alloc]initWithNibName:@"addRecipeViewController" bundle:nil];
+            //recipe.materials=[[NSMutableArray alloc]initWithObjects:[_name text], nil];
+            if ([recipeMaterial count]<1) {
+                recipeMaterial=[[NSMutableArray alloc]init];
+            }
+            [recipeMaterial addObject:[_name text]];
+
+            recipe.materials=[[NSMutableArray alloc]initWithArray:recipeMaterial];
+            recipe.recipeName=recipeName;
+            NSLog(@"zzzz : %@",recipe.recipeName);
+            [self.navigationController pushViewController:recipe animated:TRUE];
+        }
+        
     }
     
     
@@ -117,5 +135,6 @@
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     webGetter=nil;
+    [self.navigationController popViewControllerAnimated:TRUE];
 }
 @end
