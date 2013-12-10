@@ -111,7 +111,6 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     NSURLConnection *conn=[[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
-    NSLog(@"%@",urlString);
     [locationManager stopUpdatingLocation];
 }
 

@@ -36,6 +36,9 @@
 {
     [super viewDidLoad];
     
+    webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,User_id]];
+    [webGetter setDelegate:self];
+    
     NSInteger num = [_array_Items count];
     NSInteger lastPos = 0;
     
@@ -139,7 +142,8 @@
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
     
     //load the image
-    NSString *str=[NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/%@",[[_array_Items objectAtIndex:index]objectForKey:@"image_url"]];
+    
+    NSString *str=[NSString stringWithFormat:GetRecipesImage,[[_array_Items objectAtIndex:index]objectForKey:@"image_url"]];
     imageView.imageURL = [NSURL URLWithString:str];
     
     return cell;
@@ -214,6 +218,9 @@
 
 */
 
+-(void)doThingAfterWebJsonIsOKFromDelegate{
+    self.array_Items=[[NSArray alloc]initWithArray:webGetter.webData ];
+}
 
 
 @end

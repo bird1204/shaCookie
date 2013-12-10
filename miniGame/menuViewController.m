@@ -52,7 +52,6 @@
     UIDevice *device=[UIDevice currentDevice];
     [device beginGeneratingDeviceOrientationNotifications];
     UIDeviceOrientation orientation=device.orientation;
-    NSLog(@"%d",orientation);
     [device endGeneratingDeviceOrientationNotifications];
 }
 

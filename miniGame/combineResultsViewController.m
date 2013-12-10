@@ -41,7 +41,6 @@
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:[NSString stringWithUTF8String:[str UTF8String]]];
     [webGetter setDelegate:self];
-    NSLog(@"%@",str);
     
     UIAlertView* mes=[[UIAlertView alloc] initWithTitle:@"搖一搖！！！"
                                                 message:@"請搖一搖幫您隨機配菜" delegate:self cancelButtonTitle:@"開始搖！" otherButtonTitles: nil];
@@ -54,8 +53,6 @@
 }
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     self.getRecipes=[[NSArray alloc]initWithArray:webGetter.webData];
-    
-    NSLog(@"%@",self.getRecipes);
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -70,8 +67,6 @@
     
     switch (buttonIndex) {
         case 0:
-            NSLog(@"cancel");
-            
             if (motionManager.gyroAvailable) {
                 motionManager.gyroUpdateInterval = 1.0f/3.0f;
                 [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData* gyroData, NSError *error){
@@ -95,9 +90,6 @@
                 
             } else {
                 NSLog(@"陀螺儀未感測");
-                recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
-                rwicc.array_Items=self.getRecipes;
-                [self.navigationController pushViewController:rwicc animated:TRUE];
             }
             break;
         default:
