@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "WebJsonDataGetter.h"
 
-@interface addInventoryViewController : UIViewController<WebJsonDataGetFinishDelegater,NSURLConnectionDataDelegate>{
+@interface addInventoryViewController : UIViewController<WebJsonDataGetFinishDelegater>{
    IBOutlet UITextField *name;
    IBOutlet UITextField *quantity;
    IBOutlet UITextField *category;
    IBOutlet UITextField *type;
-    WebJsonDataGetter *webGetter;
-    NSURLConnection  *conn;
-    
+   WebJsonDataGetter *webGetter;
+   BOOL isBelongsToUser;
+   NSMutableArray *recipeMaterial;
+    NSString *recipeName;
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
@@ -27,6 +28,6 @@
 @property (strong,nonatomic) NSArray *quantities;
 
 - (IBAction)insert:(id)sender;
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname;
 
 @end

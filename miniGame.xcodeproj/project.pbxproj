@@ -11,6 +11,8 @@
 		020C700117FC7FD900623DF6 /* combineResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020C6FFF17FC7FD900623DF6 /* combineResultsViewController.xib */; };
 		023842BF17588CC800831605 /* UploadRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 023842BD17588CC700831605 /* UploadRecipe.m */; };
 		023842C017588CC800831605 /* UploadRecipe.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023842BE17588CC700831605 /* UploadRecipe.xib */; };
+		025AB00E18571CCD006349CB /* addRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025AB00C18571CCD006349CB /* addRecipeViewController.m */; };
+		025AB00F18571CCD006349CB /* addRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025AB00D18571CCD006349CB /* addRecipeViewController.xib */; };
 		02608D0017FDEAB900F0082E /* UILabel+AutoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 02608CFE17FDEAB900F0082E /* UILabel+AutoFrame.m */; };
 		02612DE8173CB23600C04A37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02612DE7173CB23600C04A37 /* QuartzCore.framework */; };
 		02A4E79E174C023A00EA8FEB /* foodData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02A4E79D174C023A00EA8FEB /* foodData.plist */; };
@@ -152,6 +154,9 @@
 		023842BC17588CC700831605 /* UploadRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadRecipe.h; sourceTree = "<group>"; };
 		023842BD17588CC700831605 /* UploadRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadRecipe.m; sourceTree = "<group>"; };
 		023842BE17588CC700831605 /* UploadRecipe.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadRecipe.xib; sourceTree = "<group>"; };
+		025AB00B18571CCD006349CB /* addRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addRecipeViewController.h; sourceTree = "<group>"; };
+		025AB00C18571CCD006349CB /* addRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addRecipeViewController.m; sourceTree = "<group>"; };
+		025AB00D18571CCD006349CB /* addRecipeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addRecipeViewController.xib; sourceTree = "<group>"; };
 		02608CFE17FDEAB900F0082E /* UILabel+AutoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AutoFrame.m"; sourceTree = "<group>"; };
 		02608CFF17FDEAB900F0082E /* UILabel+AutoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AutoFrame.h"; sourceTree = "<group>"; };
 		02612DE7173CB23600C04A37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -419,6 +424,16 @@
 				02A4E79F174C03CA00EA8FEB /* icon.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		025AB00A18571CB0006349CB /* addRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				025AB00B18571CCD006349CB /* addRecipeViewController.h */,
+				025AB00C18571CCD006349CB /* addRecipeViewController.m */,
+				025AB00D18571CCD006349CB /* addRecipeViewController.xib */,
+			);
+			name = addRecipe;
 			sourceTree = "<group>";
 		};
 		02A8DD5817F1DE8300E6B5D9 /* materialWithCollectionViewController */ = {
@@ -830,6 +845,7 @@
 		4984C51B17DF177400EDE6B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				025AB00A18571CB0006349CB /* addRecipe */,
 				02CD7EA1182427DF00B29FDC /* userMaterial */,
 				49E7142E1811A454000FD778 /* addInventory */,
 				BBC34876180EC72900FE0E1C /* ShareView */,
@@ -1071,6 +1087,7 @@
 				02A67C9C174BE29600BCD095 /* foodDetailViewController.xib in Resources */,
 				02A67CA8174BE3DE00BCD095 /* Property List.plist in Resources */,
 				49006EBB1855A2A40093FC3F /* lable1.png in Resources */,
+				025AB00F18571CCD006349CB /* addRecipeViewController.xib in Resources */,
 				02A8DD6317F2027D00E6B5D9 /* MaterialCell.xib in Resources */,
 				02A4E79E174C023A00EA8FEB /* foodData.plist in Resources */,
 				020C700117FC7FD900623DF6 /* combineResultsViewController.xib in Resources */,
@@ -1167,6 +1184,7 @@
 				BBC34874180EC72200FE0E1C /* ShareViewController.m in Sources */,
 				02A91722170207BC00F2E55F /* main.m in Sources */,
 				02A91726170207BC00F2E55F /* AppDelegate.m in Sources */,
+				025AB00E18571CCD006349CB /* addRecipeViewController.m in Sources */,
 				02A9B11617F5FDE200535CC7 /* LBYouTubePlayerViewController.m in Sources */,
 				49E388B917F5A25C0012C8A9 /* TimelineView+Tiling.m in Sources */,
 				4975630317F1D4C10053248F /* procedureStepViewController.m in Sources */,
