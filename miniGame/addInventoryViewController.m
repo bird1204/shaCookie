@@ -185,7 +185,13 @@
     NSMutableArray *objs=[[ NSMutableArray alloc]init];
     for (NSDictionary *dic in [webData objectAtIndex:category]) {
         [objs addObject:[dic objectForKey:@"name"]];
+//        NSString *urlString = [NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[dic objectForKey:@"image_url"]];
+//        NSURL *imageUrl =[NSURL URLWithString:urlString];
+//        NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
+//        material_image.image = [UIImage imageWithData:imageData];
+//        NSLog(@"%@",urlString);
     };
+    NSLog(@"%@",objs);
     return objs;
 }
 
