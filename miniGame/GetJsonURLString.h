@@ -26,6 +26,7 @@
 
 #define GetJsonURLString_Material @"http://54.244.225.229/shacookie/useThis/getMaterial.php?category=%@"
 #define GetJsonURLString_MaterialType @"http://54.244.225.229/shacookie/useThis/getMaterialTypeForSide.php"
+#define GetJsonURLString_MaterialName @"http://54.244.225.229/shacookie/useThis/getMaterialName.php"
 
 #define GetImageUrl_material @"http://54.244.225.229/shacookie/image/material/%@"
 
