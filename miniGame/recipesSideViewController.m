@@ -10,6 +10,7 @@
 #import "GetJsonURLString.h"
 #import "MFSideMenu.h"
 #import "recipesWithICarouselViewController.h"
+#import "addRecipeViewController.h"
 
 
 @interface recipesSideViewController ()
@@ -17,6 +18,8 @@
 @end
 
 @implementation recipesSideViewController
+@synthesize dictionary_RecipesMenu=_dictionary_RecipesMenu;
+@synthesize array_RecipesMenu=_array_RecipesMenu;
 
 - (void)viewDidLoad
 {
@@ -29,16 +32,16 @@
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-    self.array_RecipesMenu=[[NSMutableArray alloc]initWithObjects:@"", nil];
-    [self.array_RecipesMenu addObjectsFromArray:webGetter.webData];
+    _array_RecipesMenu=[[NSMutableArray alloc]initWithObjects:@"", nil];
+    [_array_RecipesMenu addObjectsFromArray:webGetter.webData];
     [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    self.dictionary_RecipesMenu = nil;
-    self.array_RecipesMenu = nil;
+    _dictionary_RecipesMenu = nil;
+    _array_RecipesMenu = nil;
     // Dispose of any resources that can be recreated.
 }
 
@@ -53,7 +56,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.array_RecipesMenu count];
+    return [_array_RecipesMenu count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,7 +72,7 @@
     if (indexPath.row==0){
         cell.userInteractionEnabled=NO;
     }else{
-        recipesType=[[self.array_RecipesMenu objectAtIndex:indexPath.row]objectForKey:@"type"];
+        recipesType=[[_array_RecipesMenu objectAtIndex:indexPath.row]objectForKey:@"type"];
     }
     cell.textLabel.text=[self getRecipeTitle:recipesType];
     return cell;

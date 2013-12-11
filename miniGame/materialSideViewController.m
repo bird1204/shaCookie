@@ -23,7 +23,6 @@
 
  -(void)viewDidLoad{
     [super viewDidLoad];
-     self.array_MaterialMenu=[[NSMutableArray alloc]initWithObjects:@"", nil];
 
      webGetter=[[WebJsonDataGetter alloc]initWithURLString:GetJsonURLString_MaterialType];
     [webGetter setDelegate:self];
@@ -33,14 +32,14 @@
      
      self.tableView.backgroundView = tempImageView;
      [tempImageView release];
-     
-     //self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"left.png"]];
+
 }
  
 
 
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
+    self.array_MaterialMenu=[[NSMutableArray alloc]init];
     [self.array_MaterialMenu addObjectsFromArray:webGetter.webData];
     [self.tableView reloadData];
 }
@@ -56,7 +55,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -65,8 +63,6 @@
         if (indexPath.row==0) {
             cell.userInteractionEnabled=NO;
         }
-
-
     }
     
     //cell.textLabel.text = [[self.array_MaterialMenu objectAtIndex:indexPath.row]objectForKey:@"category"];
@@ -97,9 +93,7 @@
     
     NSString *materialType=[[self.array_MaterialMenu objectAtIndex:indexPath.row]objectForKey:@"category"];
      materialWithCollectionViewController *menuView=[[materialWithCollectionViewController alloc]initWithNibName:@"materialWithCollectionViewController" bundle:nil ];
-    
     [menuView materialSearch:materialType];
-    menuView.title=[self getMenuTitle:materialType];
     
     UINavigationController *navigationController = self.menuContainerViewController.centerViewController;
    // [navigationController setNavigationBarHidden:TRUE animated:TRUE];
@@ -107,30 +101,5 @@
     NSArray *controllers = [NSArray arrayWithObject:menuView];
     navigationController.viewControllers = controllers;
     [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
-}
-
--(NSString *)getMenuTitle:(NSString*)materialTypeCase{
-    NSString *materialType=nil;
-    switch ([materialType intValue]) {
-        case 1:
-            materialType=@"蔬菜類";
-            break;
-            
-        case 2:
-            materialType= @"肉類";
-            break;
-            
-        case 3:
-            materialType= @"海鮮類";
-            break;
-            
-        case 4:
-            materialType= @"調味料";
-            break;
-            
-        default:
-            break;
-    }
-    return materialType;
 }
 @end

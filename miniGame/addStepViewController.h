@@ -11,12 +11,10 @@
 
 
 @interface addStepViewController : UIViewController<WebJsonDataGetFinishDelegater>{
-    
     IBOutlet UITextField *textStep;
     WebJsonDataGetter *webGetter;
     NSMutableArray *recipeStep;
     NSMutableArray *recipeMaterial;
-
     NSString *recipeName;
     int isInAddMaterial;
     

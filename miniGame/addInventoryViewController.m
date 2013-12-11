@@ -24,6 +24,10 @@
 @synthesize quantities=_quantities;
 @synthesize categories=_categories;
 @synthesize materials=_materials;
+@synthesize steak_Array=_steak_Array;
+@synthesize fruit_Array=_fruit_Array;
+@synthesize fish_Array=_fish_Array;
+@synthesize sauce_Array=_sauce_Array;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd        recipeStep:(NSMutableArray *)step
@@ -63,6 +67,10 @@
     _name=nil;
     _type=nil;
     _quantity=nil;
+    _steak_Array=nil;
+    _sauce_Array=nil;
+    _fruit_Array=nil;
+    _fish_Array=nil;
     // Dispose of any resources that can be recreated.
 }
 
@@ -191,7 +199,6 @@
 //        material_image.image = [UIImage imageWithData:imageData];
 //        NSLog(@"%@",urlString);
     };
-    NSLog(@"%@",objs);
     return objs;
 }
 
