@@ -15,8 +15,6 @@
     WebJsonDataGetter *webGetter;
     NSMutableArray *materials;
     NSMutableArray *steps;
-
-    
     NSString *recipeName;
     int isInAddMaterial;
 }
