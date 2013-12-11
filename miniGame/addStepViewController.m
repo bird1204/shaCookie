@@ -18,13 +18,14 @@
 @implementation addStepViewController
 @synthesize textStep =_textStep;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString *)Rname
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString *)Rname isInAddMaterial:(int)isadd
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         recipeStep=step;
         recipeName=Rname;
+        isInAddMaterial=isadd;
             }
     return self;
 }

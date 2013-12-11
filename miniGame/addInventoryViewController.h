@@ -18,6 +18,7 @@
    BOOL isBelongsToUser;
    NSMutableArray *recipeMaterial;
     NSString *recipeName;
+    int isInAddMaterial;
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
@@ -28,6 +29,6 @@
 @property (strong,nonatomic) NSArray *quantities;
 
 - (IBAction)insert:(id)sender;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd;
 
 @end

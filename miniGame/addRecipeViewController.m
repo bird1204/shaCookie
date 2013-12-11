@@ -83,7 +83,7 @@
     [self.navigationController  pushViewController:inventory animated:YES];
     [_table_Material reloadData];
     }else{
-        addStepViewController *stepss=[[addStepViewController alloc]initWithNibName:@"addStepViewController" bundle:nil recipeStep:_steps  recipeName:[_label_recipeName text]];
+        addStepViewController *stepss=[[addStepViewController alloc]initWithNibName:@"addStepViewController" bundle:nil recipeStep:_steps  recipeName:[_label_recipeName text] isInAddMaterial:_isInAddMaterial];
         [self.navigationController  pushViewController:stepss animated:YES];
         [_table_Material reloadData];
 

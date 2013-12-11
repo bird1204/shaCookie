@@ -24,7 +24,7 @@
 @synthesize quantities=_quantities;
 @synthesize categories=_categories;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -32,6 +32,7 @@
         isBelongsToUser=isUser;
         recipeMaterial=material;
         recipeName=Rname;
+        isInAddMaterial=isadd;
     }
     return self;
 }
