@@ -58,6 +58,7 @@
 		02A99DB0174F496C00F576E2 /* gamebaby.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A99DAF174F496C00F576E2 /* gamebaby.png */; };
 		02A9B11517F5FDE200535CC7 /* LBYouTubeExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9B11217F5FDE200535CC7 /* LBYouTubeExtractor.m */; };
 		02A9B11617F5FDE200535CC7 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A9B11417F5FDE200535CC7 /* LBYouTubePlayerViewController.m */; };
+		02ACADFA1858D2D700BBAB38 /* addnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 02ACADF91858D2D700BBAB38 /* addnew.png */; };
 		02B0CA601851BE160093CD24 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B0CA5F1851BE160093CD24 /* about.png */; };
 		02B137C3185113E600AEE4B5 /* lable3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B137C2185113E600AEE4B5 /* lable3.png */; };
 		02B137C5185113F400AEE4B5 /* lable4.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B137C4185113F400AEE4B5 /* lable4.png */; };
@@ -230,6 +231,7 @@
 		02A9B11217F5FDE200535CC7 /* LBYouTubeExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeExtractor.m; sourceTree = "<group>"; };
 		02A9B11317F5FDE200535CC7 /* LBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubePlayerViewController.h; sourceTree = "<group>"; };
 		02A9B11417F5FDE200535CC7 /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
+		02ACADF91858D2D700BBAB38 /* addnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addnew.png; sourceTree = "<group>"; };
 		02B0CA5F1851BE160093CD24 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		02B137C2185113E600AEE4B5 /* lable3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable3.png; sourceTree = "<group>"; };
 		02B137C4185113F400AEE4B5 /* lable4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable4.png; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				02ACADF91858D2D700BBAB38 /* addnew.png */,
 				49E6F84318588C460058223F /* refrigerator2.png */,
 				49E6F84118588C360058223F /* lable_btn.png */,
 				49006EBD1855A37E0093FC3F /* check2_btn.png */,
@@ -1114,6 +1117,7 @@
 				49006EBB1855A2A40093FC3F /* lable1.png in Resources */,
 				025AB00F18571CCD006349CB /* addRecipeViewController.xib in Resources */,
 				02A8DD6317F2027D00E6B5D9 /* MaterialCell.xib in Resources */,
+				02ACADFA1858D2D700BBAB38 /* addnew.png in Resources */,
 				02A4E79E174C023A00EA8FEB /* foodData.plist in Resources */,
 				020C700117FC7FD900623DF6 /* combineResultsViewController.xib in Resources */,
 				49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */,
