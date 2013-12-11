@@ -47,14 +47,13 @@
 - (IBAction)sent:(id)sender {
     if ([[_textStep text] isEqualToString:@""] || [_textStep text] == (NSString*)[NSNull null]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"錯誤"
-                                                        message:@"請輸入食材名稱"
+                                                        message:@"輸入詳細說明"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles: nil];
         [alert show];
     }else{
         addRecipeViewController *recipe=[[addRecipeViewController alloc]initWithNibName:@"addRecipeViewController" bundle:nil];
-        //recipe.materials=[[NSMutableArray alloc]initWithObjects:[_name text], nil];
         if ([recipeStep count]<1) {
             recipeStep=[[NSMutableArray alloc]init];
         }

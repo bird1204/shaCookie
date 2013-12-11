@@ -87,26 +87,21 @@
             if (motionManager.gyroAvailable) {
                 motionManager.gyroUpdateInterval = 1.0f/3.0f;
                 [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData* gyroData, NSError *error){
-                    
-                    
-                    
-                    if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) || (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3)  || (gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) )
-                    {
-                        if ([self.getMaterial count]<1) {
+                    NSLog(@"%d",[self.getMaterial count]);
+                    if ((gyroData.rotationRate.x>=3 || gyroData.rotationRate.x<=-3) || (gyroData.rotationRate.z>=3 || gyroData.rotationRate.z<=-3)  || (gyroData.rotationRate.y>=3 || gyroData.rotationRate.y<=-3) ){
+                        
+                        if ([self.getRecipes count]<1) {
                             UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"沒有結果" message:@"沒有合適的菜色"delegate:self cancelButtonTitle:@"好" otherButtonTitles:@"我要提供", nil];
                             [alert show];
-                            
-                            
                         }else{
                             recipesWithICarouselViewController *rwicc=[[recipesWithICarouselViewController alloc]initWithNibName:@"recipesWithICarouselViewController" bundle:nil];
                             rwicc.array_Items=self.getRecipes;
                             [self.navigationController pushViewController:rwicc animated:TRUE];
                         }
-                        
+                        [motionManager stopGyroUpdates];
                     }
                     
                 }];
-                
             } else {
                 NSLog(@"陀螺儀未感測");
             }
