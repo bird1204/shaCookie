@@ -81,7 +81,6 @@
             [webGetter setDelegate:self];
         }else{
             addRecipeViewController *recipe=[[addRecipeViewController alloc]initWithNibName:@"addRecipeViewController" bundle:nil];
-            //recipe.materials=[[NSMutableArray alloc]initWithObjects:[_name text], nil];
             if ([recipeMaterial count]<1) {
                 recipeMaterial=[[NSMutableArray alloc]init];
             }
@@ -136,24 +135,30 @@
                                 }];
         return NO;
     }
-//    if (_name==textField) {
-//        [self.view endEditing:TRUE];
-//        
-//        [MMPickerView showPickerViewInView:self.view
-//                               withStrings:_name
-//                               withOptions:@{MMbackgroundColor: [UIColor lightTextColor],
-//                                             MMtextColor: [UIColor blackColor],
-//                                             MMtoolbarColor: [UIColor lightGrayColor],
-//                                             MMbuttonColor: [UIColor blackColor],
-//                                             MMfont: [UIFont systemFontOfSize:24],
-//                                             MMvalueY: @3,
-//                                             MMselectedObject:[_name text],
-//                                             MMtextAlignment:@1}
-//                                completion:^(NSString *selectedString) {
-//                                    [_category setText:selectedString];
-//                                }];
-//        return NO;
-//    }
+    if (_name==textField) {
+        switch ([_categories indexOfObject:[_category text]]) {
+            case 0:
+                [self showPicker:self.steak_Array];
+                break;
+            case 1:
+                [self showPicker:self.fruit_Array];
+                break;
+            case 2:
+                [self showPicker:self.fish_Array];
+                break;
+            case 3:
+                [self showPicker:self.sauce_Array];
+                break;
+            default:
+                NSLog(@"not found");
+                break;
+        }
+        
+        [self.view endEditing:TRUE];
+        
+        
+        return NO;
+    }
     return YES;
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -162,25 +167,44 @@
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-
     if (isInsert) {
         [self.navigationController popViewControllerAnimated:TRUE];
         webGetter=nil;
     }else{
-        self.array_Items = webGetter.webData;
-        if ([category.text isEqual:@"肉"]){
-            NSDictionary *dict=[[NSDictionary alloc]initWithDictionary:(NSDictionary*)webGetter.webData];
-            _materials=[[NSArray alloc]initWithArray:[dict objectForKey:@"1"]];
-            NSLog(@"%@",_materials);
-            [[_materials objectAtIndex:0]objectForKey:@"name"];
-            [_name setText:[NSString stringWithFormat:[[_materials objectAtIndex:0]objectForKey:@"name"]]];
-
-        }else if ([category.text isEqual:@"蔬菜"]){
-            _materials=[[NSArray alloc]initWithArray:webGetter.webData];
-
-            //_name=[[NSArray alloc]initWithObjects:[[[self.array_Items objectAtIndex:1] objectForKey:@"2"] objectForKey:@"name"], nil];
-        }
+        self.steak_Array=[self arrayRecreate:webGetter.webData category:0];
+        [_name setText:[self.steak_Array objectAtIndex:0]];
+        
+        self.fruit_Array=[self arrayRecreate:webGetter.webData category:1];
+        self.fish_Array=[self arrayRecreate:webGetter.webData category:2];
+        self.sauce_Array=[self arrayRecreate:webGetter.webData category:3];
     }
+}
+
+
+
+-(NSArray*)arrayRecreate:(NSArray*)webData category:(NSInteger)category{
+    NSMutableArray *objs=[[ NSMutableArray alloc]init];
+    for (NSDictionary *dic in [webData objectAtIndex:category]) {
+        [objs addObject:[dic objectForKey:@"name"]];
+    };
+    return objs;
+}
+
+-(void)showPicker:(NSArray*)strings{
+    [MMPickerView showPickerViewInView:self.view
+                           withStrings:strings
+                           withOptions:@{MMbackgroundColor: [UIColor lightTextColor],
+                                         MMtextColor: [UIColor blackColor],
+                                         MMtoolbarColor: [UIColor lightGrayColor],
+                                         MMbuttonColor: [UIColor blackColor],
+                                         MMfont: [UIFont systemFontOfSize:24],
+                                         MMvalueY: @3,
+                                         MMselectedObject:[_name text],
+                                         MMtextAlignment:@1}
+                            completion:^(NSString *selectedString) {
+                                [_name setText:selectedString];
+                            }];
+
 }
 
 @end

@@ -22,16 +22,21 @@
     NSMutableArray *recipeStep;
     NSString *recipeName;
     int isInAddMaterial;
-    NSArray *MaterialName; //camel
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
 @property (retain, nonatomic) IBOutlet UITextField *category;
 @property (retain, nonatomic) IBOutlet UITextField *type;
-@property (nonatomic, strong) NSArray *array_Items;
+
+@property (nonatomic, strong) NSArray *steak_Array;
+@property (nonatomic, strong) NSArray *fruit_Array;
+@property (nonatomic, strong) NSArray *fish_Array;
+@property (nonatomic, strong) NSArray *sauce_Array;
 @property (strong,nonatomic) NSArray *categories;
 @property (strong,nonatomic) NSArray *quantities;
+@property (nonatomic) NSUInteger *index;
 @property (strong,nonatomic) NSArray *materials;
+
 
 
 - (IBAction)insert:(id)sender;
