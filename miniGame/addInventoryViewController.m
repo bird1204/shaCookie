@@ -204,8 +204,8 @@
                              MMvalueY: @3,
                              MMtextAlignment:@1};
     [MMPickerView showPickerViewInView:self.view
-                           withStrings:strings
-                           withOptions:options
+                            withStrings:strings
+                            withOptions:options
                             completion:^(NSString *selectedString) {
                                 [_name setText:selectedString];
                             }];

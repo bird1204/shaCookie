@@ -27,7 +27,7 @@
         recipeName=Rname;
         isInAddMaterial=isadd;
         recipeMaterial=material;
-            }
+    }
     return self;
 }
 
@@ -66,12 +66,16 @@
         
         [self.navigationController pushViewController:recipe animated:TRUE];
     }
-
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
     webGetter=nil;
     [self.navigationController popViewControllerAnimated:TRUE];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:TRUE];
+    return YES;
 }
 
 @end
