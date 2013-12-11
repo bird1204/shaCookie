@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="collection_Material" destination="2pX-Go-26k" id="VPD-82-cm3"/>
                 <outlet property="image_Background" destination="aJJ-jF-ari" id="zC8-Pr-tN8"/>
+                <outlet property="image_refrigerator" destination="CDW-eo-h1o" id="o5V-ul-yfF"/>
                 <outlet property="random_outlet" destination="W5M-EV-v2K" id="qPy-6p-qPf"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -20,6 +21,10 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJJ-jF-ari">
                     <rect key="frame" x="0.0" y="20" width="320" height="557"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="refrigerator2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CDW-eo-h1o">
+                    <rect key="frame" x="0.0" y="53" width="320" height="395"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2pX-Go-26k">
@@ -85,5 +90,6 @@
         <image name="add.png" width="198" height="43"/>
         <image name="all.png" width="198" height="43"/>
         <image name="my.png" width="198" height="43"/>
+        <image name="refrigerator2.png" width="642" height="960"/>
     </resources>
 </document>

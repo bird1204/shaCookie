@@ -121,6 +121,8 @@
 		49E388D117F5A4570012C8A9 /* SampleTimelineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E388CE17F5A4570012C8A9 /* SampleTimelineViewCell.xib */; };
 		49E388D617F5B4A80012C8A9 /* asyncImageCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E388D417F5B4A80012C8A9 /* asyncImageCellViewController.m */; };
 		49E388D717F5B4A80012C8A9 /* asyncImageCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E388D517F5B4A80012C8A9 /* asyncImageCellViewController.xib */; };
+		49E6F84218588C360058223F /* lable_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6F84118588C360058223F /* lable_btn.png */; };
+		49E6F84418588C460058223F /* refrigerator2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E6F84318588C460058223F /* refrigerator2.png */; };
 		49E714321811A48D000FD778 /* addInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E714301811A48D000FD778 /* addInventoryViewController.m */; };
 		49E714331811A48D000FD778 /* addInventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49E714311811A48D000FD778 /* addInventoryViewController.xib */; };
 		49E714371811B567000FD778 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E714361811B567000FD778 /* MMPickerView.m */; };
@@ -320,6 +322,8 @@
 		49E388D317F5B4A80012C8A9 /* asyncImageCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asyncImageCellViewController.h; sourceTree = "<group>"; };
 		49E388D417F5B4A80012C8A9 /* asyncImageCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = asyncImageCellViewController.m; sourceTree = "<group>"; };
 		49E388D517F5B4A80012C8A9 /* asyncImageCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = asyncImageCellViewController.xib; sourceTree = "<group>"; };
+		49E6F84118588C360058223F /* lable_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable_btn.png; sourceTree = "<group>"; };
+		49E6F84318588C460058223F /* refrigerator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refrigerator2.png; sourceTree = "<group>"; };
 		49E7142F1811A48D000FD778 /* addInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addInventoryViewController.h; sourceTree = "<group>"; };
 		49E714301811A48D000FD778 /* addInventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addInventoryViewController.m; sourceTree = "<group>"; };
 		49E714311811A48D000FD778 /* addInventoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addInventoryViewController.xib; sourceTree = "<group>"; };
@@ -685,6 +689,8 @@
 		4984C50A17DF140400EDE6B1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				49E6F84318588C460058223F /* refrigerator2.png */,
+				49E6F84118588C360058223F /* lable_btn.png */,
 				49006EBD1855A37E0093FC3F /* check2_btn.png */,
 				499C633D17E449EB00513989 /* 37x-Checkmark.png */,
 				02B0CA5F1851BE160093CD24 /* about.png */,
@@ -1074,8 +1080,10 @@
 				02A91720170207BC00F2E55F /* InfoPlist.strings in Resources */,
 				02B137C71851151C00AEE4B5 /* start.png in Resources */,
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
+				49E6F84418588C460058223F /* refrigerator2.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
 				BB98D5AC1855F1DB0091708A /* my.png in Resources */,
+				49E6F84218588C360058223F /* lable_btn.png in Resources */,
 				02A91732170207BC00F2E55F /* ViewController.xib in Resources */,
 				02A68AFC17034A8300B34828 /* JsonViewController.xib in Resources */,
 				497CAAA61802801200894C15 /* under.png in Resources */,
