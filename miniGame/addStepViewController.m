@@ -27,7 +27,7 @@
         recipeName=Rname;
         isInAddMaterial=isadd;
         recipeMaterial=material;
-            }
+    }
     return self;
 }
 
@@ -66,7 +66,6 @@
         
         [self.navigationController pushViewController:recipe animated:TRUE];
     }
-
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
