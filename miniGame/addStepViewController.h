@@ -15,13 +15,16 @@
     IBOutlet UITextField *textStep;
     WebJsonDataGetter *webGetter;
     NSMutableArray *recipeStep;
+    NSMutableArray *recipeMaterial;
+
     NSString *recipeName;
+    int isInAddMaterial;
     
 }
 @property (strong, nonatomic) IBOutlet UITextField *textStep;
 
 - (IBAction)sent:(id)sender;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString*)Rname;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString*)Rname isInAddMaterial:(int)isadd recipeMaterial:(NSMutableArray*)material;
 
 
 @end

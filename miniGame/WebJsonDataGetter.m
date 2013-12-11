@@ -16,7 +16,6 @@
     return self;
 }
 -(void)requestWithURLString:(NSString *)url{
-    
     webRequest=[ASIHTTPRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     [webRequest setDelegate:self];
     [webRequest startAsynchronous];
@@ -34,7 +33,6 @@
     NSError* error;
     self.webData= [NSJSONSerialization JSONObjectWithData:request.responseData options:kNilOptions error:&error];
     [self.delegate  doThingAfterWebJsonIsOKFromDelegate];
-
 }
 
 -(void)requestFailed:(ASIHTTPRequest *)request{
