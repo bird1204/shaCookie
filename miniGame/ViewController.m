@@ -127,7 +127,7 @@
 #pragma mark -
 #pragma mark IBActions
 - (IBAction)button_Skip:(id)sender {
-    
+    /*
     // The hud will dispable all input on the view (use the higest view possible in the view hierarchy)
     HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
 	
@@ -140,7 +140,7 @@
 	
     // Show the HUD while the provided method executes in a new thread
     [HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
-   
+   */
 
 }
 
