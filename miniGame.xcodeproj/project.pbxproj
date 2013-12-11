@@ -70,6 +70,8 @@
 		02CD7EA51824294600B29FDC /* userMaterialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CD7EA31824294600B29FDC /* userMaterialViewController.m */; };
 		02CD7EA61824294600B29FDC /* userMaterialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02CD7EA41824294600B29FDC /* userMaterialViewController.xib */; };
 		02E983541803C7BB005FF04C /* pp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E983531803C7BB005FF04C /* pp.png */; };
+		02FC41271857867A0002ADAB /* addStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FC41251857867A0002ADAB /* addStepViewController.m */; };
+		02FC41281857867A0002ADAB /* addStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FC41261857867A0002ADAB /* addStepViewController.xib */; };
 		2BEDE413FCB64F2EB044019A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A691AA26FB84D70BFC64D3E /* libPods.a */; };
 		49006EBB1855A2A40093FC3F /* lable1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49006EB91855A2A40093FC3F /* lable1.png */; };
 		49006EBC1855A2A40093FC3F /* lable2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49006EBA1855A2A40093FC3F /* lable2.png */; };
@@ -240,6 +242,9 @@
 		02CD7EA31824294600B29FDC /* userMaterialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userMaterialViewController.m; sourceTree = "<group>"; };
 		02CD7EA41824294600B29FDC /* userMaterialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userMaterialViewController.xib; sourceTree = "<group>"; };
 		02E983531803C7BB005FF04C /* pp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pp.png; sourceTree = "<group>"; };
+		02FC41241857867A0002ADAB /* addStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addStepViewController.h; sourceTree = "<group>"; };
+		02FC41251857867A0002ADAB /* addStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addStepViewController.m; sourceTree = "<group>"; };
+		02FC41261857867A0002ADAB /* addStepViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addStepViewController.xib; sourceTree = "<group>"; };
 		15404D105D6D4CF9B5351AEF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		2A691AA26FB84D70BFC64D3E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49006EB91855A2A40093FC3F /* lable1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lable1.png; sourceTree = "<group>"; };
@@ -571,6 +576,16 @@
 			name = userMaterial;
 			sourceTree = "<group>";
 		};
+		02FC4123185785AB0002ADAB /* addStep */ = {
+			isa = PBXGroup;
+			children = (
+				02FC41241857867A0002ADAB /* addStepViewController.h */,
+				02FC41251857867A0002ADAB /* addStepViewController.m */,
+				02FC41261857867A0002ADAB /* addStepViewController.xib */,
+			);
+			name = addStep;
+			sourceTree = "<group>";
+		};
 		490322B817E476050008F1F4 /* loginwithFBView */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,6 +860,7 @@
 		4984C51B17DF177400EDE6B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02FC4123185785AB0002ADAB /* addStep */,
 				025AB00A18571CB0006349CB /* addRecipe */,
 				02CD7EA1182427DF00B29FDC /* userMaterial */,
 				49E7142E1811A454000FD778 /* addInventory */,
@@ -1076,6 +1092,7 @@
 				02A91728170207BC00F2E55F /* Default.png in Resources */,
 				02A9172C170207BC00F2E55F /* Default-568h@2x.png in Resources */,
 				BB98D5AC1855F1DB0091708A /* my.png in Resources */,
+				02FC41281857867A0002ADAB /* addStepViewController.xib in Resources */,
 				02A91732170207BC00F2E55F /* ViewController.xib in Resources */,
 				02A68AFC17034A8300B34828 /* JsonViewController.xib in Resources */,
 				497CAAA61802801200894C15 /* under.png in Resources */,
@@ -1193,6 +1210,7 @@
 				497562FD17F1D1F60053248F /* MPFlipViewController.m in Sources */,
 				020C700017FC7FD900623DF6 /* combineResultsViewController.m in Sources */,
 				49F816C6184F818C00EDB8D4 /* loginWithFBViewController.m in Sources */,
+				02FC41271857867A0002ADAB /* addStepViewController.m in Sources */,
 				02A68B3017035EDF00B34828 /* Person.m in Sources */,
 				02A68B3417035F9F00B34828 /* WebJsonDataGetter.m in Sources */,
 				02A67C72174BDA1800BCD095 /* CVCell.m in Sources */,
