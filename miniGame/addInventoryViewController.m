@@ -173,7 +173,6 @@
     }else{
         self.steak_Array=[self arrayRecreate:webGetter.webData category:0];
         [_name setText:[self.steak_Array objectAtIndex:0]];
-        
         self.fruit_Array=[self arrayRecreate:webGetter.webData category:1];
         self.fish_Array=[self arrayRecreate:webGetter.webData category:2];
         self.sauce_Array=[self arrayRecreate:webGetter.webData category:3];
@@ -186,20 +185,27 @@
     NSMutableArray *objs=[[ NSMutableArray alloc]init];
     for (NSDictionary *dic in [webData objectAtIndex:category]) {
         [objs addObject:[dic objectForKey:@"name"]];
+//        NSString *urlString = [NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[dic objectForKey:@"image_url"]];
+//        NSURL *imageUrl =[NSURL URLWithString:urlString];
+//        NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
+//        material_image.image = [UIImage imageWithData:imageData];
+//        NSLog(@"%@",urlString);
     };
+    NSLog(@"%@",objs);
     return objs;
 }
 
 -(void)showPicker:(NSArray*)strings{
+    NSDictionary *options =@{MMbackgroundColor: [UIColor lightTextColor],
+                             MMtextColor: [UIColor blackColor],
+                             MMtoolbarColor: [UIColor lightGrayColor],
+                             MMbuttonColor: [UIColor blackColor],
+                             MMfont: [UIFont systemFontOfSize:24],
+                             MMvalueY: @3,
+                             MMtextAlignment:@1};
     [MMPickerView showPickerViewInView:self.view
-                           withStrings:strings
-                           withOptions:@{MMbackgroundColor: [UIColor lightTextColor],
-                                         MMtextColor: [UIColor blackColor],
-                                         MMtoolbarColor: [UIColor lightGrayColor],
-                                         MMbuttonColor: [UIColor blackColor],
-                                         MMfont: [UIFont systemFontOfSize:24],
-                                         MMvalueY: @3,
-                                         MMtextAlignment:@1}
+                            withStrings:strings
+                            withOptions:options
                             completion:^(NSString *selectedString) {
                                 [_name setText:selectedString];
                             }];
