@@ -199,7 +199,6 @@
                                          MMbuttonColor: [UIColor blackColor],
                                          MMfont: [UIFont systemFontOfSize:24],
                                          MMvalueY: @3,
-                                         MMselectedObject:[_name text],
                                          MMtextAlignment:@1}
                             completion:^(NSString *selectedString) {
                                 [_name setText:selectedString];
