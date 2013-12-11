@@ -23,10 +23,10 @@
 @synthesize type=_type;
 @synthesize quantities=_quantities;
 @synthesize categories=_categories;
-@synthesize MaterialName=_MaterialName;
+@synthesize materials=_materials;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd        recipeStep:(NSMutableArray *)step
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -35,6 +35,7 @@
         recipeMaterial=material;
         recipeName=Rname;
         isInAddMaterial=isadd;
+        recipeStep=step;
     }
     return self;
 }
@@ -43,15 +44,10 @@
 {
     [super viewDidLoad];
     
-        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialName]];
-        [webGetter setDelegate:self];
-        NSLog(@"777%@",self.array_Items);
+    webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialName]];
+    isInsert=FALSE;
+    [webGetter setDelegate:self];
     _categories=[[NSArray alloc]initWithObjects:@"肉",@"蔬菜",@"海鮮",@"調味料", nil];
-    if ([category.text isEqual:@"肉"]){
-        _name=[[NSArray alloc]initWithObjects:[[[self.array_Items objectAtIndex:1] objectForKey:@"1"] objectForKey:@"name"], nil];
-    }else if ([category.text isEqual:@"蔬菜"]){
-        _name=[[NSArray alloc]initWithObjects:[[[self.array_Items objectAtIndex:1] objectForKey:@"2"] objectForKey:@"name"], nil];
-    }
     _quantities=[[NSArray alloc]initWithObjects:
                  @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",
                  @"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",
@@ -67,7 +63,6 @@
     _name=nil;
     _type=nil;
     _quantity=nil;
-    _MaterialName=nil;
     // Dispose of any resources that can be recreated.
 }
 
@@ -82,6 +77,7 @@
     }else{
         if (isBelongsToUser) {
             webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_UserInventory,User_id,[_type text],[_category text],[_name text],[_quantity text]]];
+            isInsert = true;
             [webGetter setDelegate:self];
         }else{
             addRecipeViewController *recipe=[[addRecipeViewController alloc]initWithNibName:@"addRecipeViewController" bundle:nil];
@@ -90,10 +86,12 @@
                 recipeMaterial=[[NSMutableArray alloc]init];
             }
             [recipeMaterial addObject:[_name text]];
-
+            recipe.isInAddMaterial=isInAddMaterial;
             recipe.materials=[[NSMutableArray alloc]initWithArray:recipeMaterial];
             recipe.recipeName=recipeName;
-            NSLog(@"zzzz : %@",recipe.recipeName);
+            recipe.steps=recipeStep;
+            
+            NSLog(@"zzzz : %@",recipe.materials);
             [self.navigationController pushViewController:recipe animated:TRUE];
         }
         
@@ -164,9 +162,25 @@
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
-    self.array_Items = webGetter.webData;
-    NSLog(@"333%@",self.array_Items);
-    [self.navigationController popViewControllerAnimated:TRUE];
+
+    if (isInsert) {
+        [self.navigationController popViewControllerAnimated:TRUE];
+        webGetter=nil;
+    }else{
+        self.array_Items = webGetter.webData;
+        if ([category.text isEqual:@"肉"]){
+            NSDictionary *dict=[[NSDictionary alloc]initWithDictionary:(NSDictionary*)webGetter.webData];
+            _materials=[[NSArray alloc]initWithArray:[dict objectForKey:@"1"]];
+            NSLog(@"%@",_materials);
+            [[_materials objectAtIndex:0]objectForKey:@"name"];
+            [_name setText:[NSString stringWithFormat:[[_materials objectAtIndex:0]objectForKey:@"name"]]];
+
+        }else if ([category.text isEqual:@"蔬菜"]){
+            _materials=[[NSArray alloc]initWithArray:webGetter.webData];
+
+            //_name=[[NSArray alloc]initWithObjects:[[[self.array_Items objectAtIndex:1] objectForKey:@"2"] objectForKey:@"name"], nil];
+        }
+    }
 }
 
 @end

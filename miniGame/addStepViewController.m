@@ -18,7 +18,7 @@
 @implementation addStepViewController
 @synthesize textStep =_textStep;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString *)Rname isInAddMaterial:(int)isadd
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil recipeStep:(NSMutableArray*)step recipeName:(NSString *)Rname isInAddMaterial:(int)isadd recipeMaterial:(NSMutableArray *)material
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -26,6 +26,7 @@
         recipeStep=step;
         recipeName=Rname;
         isInAddMaterial=isadd;
+        recipeMaterial=material;
             }
     return self;
 }
@@ -58,14 +59,11 @@
             recipeStep=[[NSMutableArray alloc]init];
         }
         [recipeStep addObject:[_textStep text]];
-//        for (i=0 ; i<[recipeStep count]; i++){
-//            [recipeprocedure addObject:[i]];
-//
-//        }
-        
+        recipe.isInAddMaterial=isInAddMaterial;
         recipe.steps=[[NSMutableArray alloc]initWithArray:recipeStep];
         recipe.recipeName=recipeName;
-        NSLog(@"SSSS : %@",recipe.recipeName);
+        recipe.materials=recipeMaterial;
+        
         [self.navigationController pushViewController:recipe animated:TRUE];
     }
 

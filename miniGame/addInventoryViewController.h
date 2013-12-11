@@ -10,28 +10,31 @@
 #import "WebJsonDataGetter.h"
 
 @interface addInventoryViewController : UIViewController<WebJsonDataGetFinishDelegater>{
-   IBOutlet UITextField *name;
-   IBOutlet UITextField *quantity;
-   IBOutlet UITextField *category;
-   IBOutlet UITextField *type;
-   IBOutlet UIImageView *material_image;
-   WebJsonDataGetter *webGetter;
-   BOOL isBelongsToUser;
-   NSMutableArray *recipeMaterial;
+    IBOutlet UITextField *name;
+    IBOutlet UITextField *quantity;
+    IBOutlet UITextField *category;
+    IBOutlet UITextField *type;
+    IBOutlet UIImageView *material_image;
+    WebJsonDataGetter *webGetter;
+    BOOL isBelongsToUser;
+    BOOL isInsert;
+    NSMutableArray *recipeMaterial;
+    NSMutableArray *recipeStep;
     NSString *recipeName;
     int isInAddMaterial;
-    NSArray *MaterialName;
+    NSArray *MaterialName; //camel
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
 @property (retain, nonatomic) IBOutlet UITextField *category;
 @property (retain, nonatomic) IBOutlet UITextField *type;
 @property (nonatomic, strong) NSArray *array_Items;
-@property (nonatomic, strong) NSArray *MaterialName;
 @property (strong,nonatomic) NSArray *categories;
 @property (strong,nonatomic) NSArray *quantities;
+@property (strong,nonatomic) NSArray *materials;
+
 
 - (IBAction)insert:(id)sender;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd recipeStep:(NSMutableArray*)step;
 
 @end

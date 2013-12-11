@@ -44,6 +44,7 @@
     //_categories=[[NSArray alloc]initWithObjects:@"肉",@"蔬菜",@"海鮮",@"調味料", nil];
     [_label_recipeName setText:_recipeName];
     [_label_recipeCategories setText:@"熱炒類"];
+    
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -70,23 +71,35 @@
         if ([[_label_recipeCategories text] isEqualToString:@"乾煎美食"]){category=@"2";}
         if ([[_label_recipeCategories text] isEqualToString:@"甜點類"]){category=@"3";}
         
-        webGetter = [[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:SetJsonURLString_recipe,User_id,category,[_label_recipeName text]]];
 
+        NSString *tempStringFromMaterials=[_materials componentsJoinedByString:@"shacookie"];
+        NSString *tempStringFromSteps=[_steps componentsJoinedByString:@"shacookie"];
+        
+        
+       // NSLog(@"%@",[NSString stringWithFormat:SetJsonURLString_recipe,[_label_recipeName text],tempStringFromMaterials,tempStringFromSteps,category,User_id]);
+        
+        NSString *urlString = [NSString stringWithFormat:SetJsonURLString_recipe,User_id,category,[_label_recipeName text],tempStringFromSteps,tempStringFromMaterials];
+        //NSString *urlString = [NSString stringWithFormat:SetJsonURLString_recipe,[_label_recipeName text],User_id];
+        
+        webGetter = [[WebJsonDataGetter alloc]initWithURLString:urlString];
+        
+//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+//        NSURLConnection *conn=[[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
+        
         [webGetter setDelegate:self];
     }
+    
 
+    
 }
 
 - (IBAction)addingMaterial:(id)sender {
     if(_isInAddMaterial==1){
-    addInventoryViewController *inventory=[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil isBelongsToUser:FALSE recipeMaterial:_materials recipeName:[_label_recipeName text]];
-    [self.navigationController  pushViewController:inventory animated:YES];
-    [_table_Material reloadData];
+        addInventoryViewController *inventory=[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil isBelongsToUser:FALSE recipeMaterial:_materials recipeName:[_label_recipeName text] isInAddMaterial:_isInAddMaterial recipeStep:_steps];
+        [self.navigationController  pushViewController:inventory animated:YES];
     }else{
-        addStepViewController *stepss=[[addStepViewController alloc]initWithNibName:@"addStepViewController" bundle:nil recipeStep:_steps  recipeName:[_label_recipeName text] isInAddMaterial:_isInAddMaterial];
+        addStepViewController *stepss=[[addStepViewController alloc]initWithNibName:@"addStepViewController" bundle:nil recipeStep:_steps  recipeName:[_label_recipeName text] isInAddMaterial:_isInAddMaterial recipeMaterial:_materials];
         [self.navigationController  pushViewController:stepss animated:YES];
-        [_table_Material reloadData];
-
     }
     /*
     NSArray *insertIndexPaths = [NSArray arrayWithObjects:
@@ -101,7 +114,6 @@
 - (IBAction)addingStep:(id)sender {
     _isInAddMaterial=0;
     [_table_Material reloadData];
-    
 }
 
 - (IBAction)addingFood:(id)sender {
@@ -113,7 +125,6 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (_label_recipeCategories==textField) {
         [self.view endEditing:TRUE];
-        NSLog(@"fee");
 //        [MMPickerView showPickerViewInView:self.view
 //                               withStrings:_categories
 //                               withOptions:@{MMbackgroundColor: [UIColor lightTextColor],
@@ -140,13 +151,9 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     if(_isInAddMaterial==1){
-    
-    return [_materials count];
-        
+            return [_materials count];
     }else{
-        
-    return [_steps count];
- 
+        return [_steps count];
     }
 }
 
@@ -157,40 +164,24 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"identifier"];
    
-    if(_isInAddMaterial==1){
-        [self.table_Material reloadData];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"identifier"];
     }
-    cell.textLabel.text =  [_materials objectAtIndex:indexPath.row];
-    return cell;
+    
+    if(_isInAddMaterial==1){
+        cell.textLabel.text =  [_materials objectAtIndex:indexPath.row];
     }else{
-        [self.table_Material reloadData];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"identifier"];
-        }
         cell.textLabel.text =  [_steps objectAtIndex:indexPath.row];
-        return cell;
     }
+    
+    return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell *cell=  [tableView dequeueReusableCellWithIdentifier:@"identifier"];
-    NSLog(@"%@",cell);
-    NSLog(@"select");
-
-    [cell setEditing:TRUE animated:TRUE];
 }
 
 -(void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"end");
-    UITableViewCell *cell=  [tableView dequeueReusableCellWithIdentifier:@"identifier"];
-    NSLog(@"%@",cell.textLabel);
-    NSLog(@"%@",cell.detailTextLabel);
-
-    [cell setEditing:FALSE animated:FALSE];
 }
 
 -(void)doThingAfterWebJsonIsOKFromDelegate{
