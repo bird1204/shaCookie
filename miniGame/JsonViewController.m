@@ -75,8 +75,7 @@
 
 - (void)refreshTable
 {
-    NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor]UUIDString];
-    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_Device,deviceId]];
+    [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_Device,User_id]];
     [webGetter setDelegate:self];
 
     [self.tableView_Json performSelector:@selector(reloadData) withObject:nil afterDelay:2];

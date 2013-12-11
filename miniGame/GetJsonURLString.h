@@ -14,7 +14,7 @@
 
 #define GetRecipesImage @"http://54.244.225.229/shacookie/image/%@"
 
-#define GetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/getDeviceLocation.php?deviceId=%@"
+#define GetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/getDeviceLocation.php?userId=%@"
 
 #define GetJsonURLString_Recipe @"http://54.244.225.229/shacookie/useThis/getRecipeInfo.php?type=%@"
 #define GetJsonURLString_RecipeType @"http://54.244.225.229/shacookie/useThis/getRecipeTypeForSide.php"
@@ -26,6 +26,7 @@
 
 #define GetJsonURLString_Material @"http://54.244.225.229/shacookie/useThis/getMaterial.php?category=%@"
 #define GetJsonURLString_MaterialType @"http://54.244.225.229/shacookie/useThis/getMaterialTypeForSide.php"
+#define GetJsonURLString_MaterialName @"http://54.244.225.229/shacookie/useThis/getMaterialName.php"
 
 #define GetImageUrl_material @"http://54.244.225.229/shacookie/image/material/%@"
 
@@ -33,4 +34,7 @@
 #define SetJsonURLString_Like @"http://54.244.225.229/shacookie/useThis/inputLike.php?recipeId=%@&userId=%@"
 #define SetJsonURLString_Device @"http://54.244.225.229/shacookie/useThis/setCurrentLocation.php?userId=%@&type=%d&deviceId=%@&latitude=%f&longtitude=%f"
 #define SetJsonURLString_UserInventory @"http://54.244.225.229/shacookie/useThis/setUserInventory.php?userId=%@&type=%@&category=%@&name=%@&quantity=%@"
+#define SetJsonURLString_recipe @"http://54.244.225.229/shacookie/useThis/inputRecipe.php?User_id=%@&type=%@&RecipeName=%@&steps=%@&MaterialName=%@"
+//#define SetJsonURLString_recipe @"http://54.244.225.229/shacookie/useThis/inputRecipe.php?RecipeName=%@&User_id=%@"
+
 #endif

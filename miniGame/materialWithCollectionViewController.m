@@ -42,7 +42,9 @@
 {
     [super viewDidLoad];
     _isInUserMaterial=1;
-    
+    [self.image_refrigerator setHidden:YES];
+    [self.image_refrigerator setAlpha:0.3f];
+
     // Do any additional setup after loading the view from its nib.
     
     //self.collection_Material.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
@@ -87,7 +89,10 @@
 
 - (IBAction)backpage_Material:(id)sender {
     _isInUserMaterial=1;
+    [self.random_outlet setImage:[UIImage imageNamed:@"add.png"] forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"新增" forState:UIControlStateNormal];
+    [self.image_refrigerator setHidden:YES];
+
 
     webGetter = [[WebJsonDataGetter alloc]init];
     NSString *str=[NSString stringWithFormat:GetJsonURLString_Material,@"1"];
@@ -103,7 +108,9 @@
 //    
 //    [self.navigationController pushViewController:userMaterialView animated:TRUE];
     _isInUserMaterial=0;
+    [self.random_outlet setImage:[UIImage imageNamed:@"lable_btn.png"] forState:UIControlStateNormal];
     [self.random_outlet setTitle:@"開始搖" forState:UIControlStateNormal];
+    [self.image_refrigerator setHidden:NO];
 
     webGetter = [[WebJsonDataGetter alloc]init];
     [webGetter requestWithURLString:[NSString stringWithFormat:GetJsonURLString_MaterialforUserid,User_id]];
@@ -188,7 +195,6 @@
     }else{
         combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
         recipeView.getMaterial=array_Material;
-        NSLog(@" 選到的食材 ： %@",array_Material);
         [self.navigationController pushViewController:recipeView animated:TRUE];
         self.collection_Material.allowsMultipleSelection = NO;
     }
