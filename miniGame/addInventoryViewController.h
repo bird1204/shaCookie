@@ -19,16 +19,18 @@
    BOOL isBelongsToUser;
    NSMutableArray *recipeMaterial;
     NSString *recipeName;
-    NSArray *MaterialName;
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
 @property (retain, nonatomic) IBOutlet UITextField *category;
 @property (retain, nonatomic) IBOutlet UITextField *type;
-@property (nonatomic, strong) NSArray *array_Items;
-@property (nonatomic, strong) NSArray *MaterialName;
+@property (nonatomic, strong) NSArray *steak_Array;
+@property (nonatomic, strong) NSArray *fruit_Array;
+@property (nonatomic, strong) NSArray *fish_Array;
+@property (nonatomic, strong) NSArray *sauce_Array;
 @property (strong,nonatomic) NSArray *categories;
 @property (strong,nonatomic) NSArray *quantities;
+@property (nonatomic) NSUInteger *index;
 
 - (IBAction)insert:(id)sender;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname;
