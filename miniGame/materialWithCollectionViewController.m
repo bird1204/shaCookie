@@ -190,7 +190,7 @@
 
 - (IBAction)random:(id)sender {
     if (_isInUserMaterial==1) {
-        addInventoryViewController *controller=[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil];
+        addInventoryViewController *controller=[[addInventoryViewController alloc]initWithNibName:@"addInventoryViewController" bundle:nil isBelongsToUser:TRUE recipeMaterial:nil recipeName:nil isInAddMaterial:nil recipeStep:nil];
         [self.navigationController pushViewController:controller animated:TRUE];
     }else{
         combineResultsViewController *recipeView=[[combineResultsViewController alloc]initWithNibName:@"combineResultsViewController" bundle:nil ];
