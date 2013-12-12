@@ -53,6 +53,13 @@
     [super didReceiveMemoryWarning];
     _label_recipeCategories=nil;
     _label_recipeName=nil;
+    _table_Material=nil;
+    _categories=nil;
+    _materials=nil;
+    _steps=nil;
+    _recipeName=nil;
+    _isInAddMaterial=nil;
+
     // Dispose of any resources that can be recreated.
 }
 

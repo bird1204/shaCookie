@@ -12,16 +12,14 @@
 #import <CoreMotion/CoreMotion.h>
 
 
-@interface combineResultsViewController : UIViewController<WebJsonDataGetFinishDelegater>{
+@interface combineResultsViewController : UIViewController<WebJsonDataGetFinishDelegater,UIAlertViewDelegate>{
     CMMotionManager *motionManager;
-
     WebJsonDataGetter * webGetter;
+    UIAlertView *notiMessage;
 }
 @property(nonatomic,strong)NSArray *getMaterial;
-//@property(nonatomic,strong)NSString *stringRandom;
 @property(nonatomic,strong)NSArray *arrayMaterial;
 @property(nonatomic,strong)NSArray *getRecipes;
-@property(nonatomic,strong)NSString *randomRecipes;
 
 
 @end

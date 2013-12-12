@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WebJsonDataGetter.h"
 
+
 @interface addInventoryViewController : UIViewController<WebJsonDataGetFinishDelegater>{
     IBOutlet UITextField *name;
     IBOutlet UITextField *quantity;
@@ -29,6 +30,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *category;
 @property (retain, nonatomic) IBOutlet UITextField *type;
 @property (nonatomic,strong)NSString *stringWithUrl;
+@property (nonatomic, strong) NSArray *origin_Array;
 @property (nonatomic, strong) NSArray *steak_Array;
 @property (nonatomic, strong) NSArray *fruit_Array;
 @property (nonatomic, strong) NSArray *fish_Array;
