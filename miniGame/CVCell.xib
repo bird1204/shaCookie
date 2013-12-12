@@ -41,8 +41,8 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="6">
-                        <rect key="frame" x="15" y="29" width="271" height="234"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="loading.jpg" id="6">
+                        <rect key="frame" x="15" y="40" width="271" height="223"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kAA-wT-utv">
@@ -112,6 +112,7 @@
     </objects>
     <resources>
         <image name="like.png" width="66" height="20"/>
+        <image name="loading.jpg" width="600" height="307"/>
         <image name="promote.png" width="60" height="30"/>
         <image name="rank.png" width="66" height="20"/>
         <image name="share.png" width="66" height="20"/>

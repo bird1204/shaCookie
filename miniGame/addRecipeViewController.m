@@ -85,6 +85,10 @@
         
         webGetter = [[WebJsonDataGetter alloc]initWithURLString:urlString];
         [webGetter setDelegate:self];
+        
+        _materials=nil;
+        _steps=nil;
+        [_table_Material reloadData];
     }
     
 }
