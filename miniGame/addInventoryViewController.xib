@@ -70,7 +70,7 @@
                         <action selector="insert:" destination="-1" eventType="touchUpInside" id="9q6-kw-ggO"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-2l-lIQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loading.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-2l-lIQ">
                     <rect key="frame" x="41" y="296" width="111" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -81,6 +81,7 @@
         </view>
     </objects>
     <resources>
+        <image name="loading.jpg" width="600" height="307"/>
         <image name="manager.png" width="640" height="960"/>
     </resources>
 </document>
