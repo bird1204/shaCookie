@@ -17,6 +17,7 @@
 @end
 
 @implementation addInventoryViewController
+@synthesize stringWithUrl=_stringWithUrl;
 @synthesize name=_name;
 @synthesize quantity=_quantity;
 @synthesize category=_category;
@@ -161,9 +162,9 @@
                 NSLog(@"not found");
                 break;
         }
-        
+        NSData *imageUrl = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://54.244.225.229/shacookie/image/material/31.jpg"]];
+        material_image.image = [UIImage imageWithData:imageUrl];
         [self.view endEditing:TRUE];
-        
         
         return NO;
     }
@@ -184,6 +185,11 @@
         self.fruit_Array=[self arrayRecreate:webGetter.webData category:1];
         self.fish_Array=[self arrayRecreate:webGetter.webData category:2];
         self.sauce_Array=[self arrayRecreate:webGetter.webData category:3];
+        if ([_name text]==[[[webGetter.webData objectAtIndex:category] objectAtIndex:0]objectForKey:@"name"] ) {
+            NSString *imageString=[[NSString alloc]init];
+            imageString=[[[webGetter.webData objectAtIndex:category] objectAtIndex:0]objectForKey:@"image_url"];
+            NSLog(@"%@",imageString);
+        }
     }
 }
 
@@ -193,15 +199,10 @@
     NSMutableArray *objs=[[ NSMutableArray alloc]init];
     for (NSDictionary *dic in [webData objectAtIndex:category]) {
         [objs addObject:[dic objectForKey:@"name"]];
-//        NSString *urlString = [NSString stringWithFormat:@"http://54.244.225.229/shacookie/image/material/%@",[dic objectForKey:@"image_url"]];
-//        NSURL *imageUrl =[NSURL URLWithString:urlString];
-//        NSData *imageData = [NSData dataWithContentsOfURL:imageUrl];
-//        material_image.image = [UIImage imageWithData:imageData];
-//        NSLog(@"%@",urlString);
+        
     };
     return objs;
 }
-
 -(void)showPicker:(NSArray*)strings{
     NSDictionary *options =@{MMbackgroundColor: [UIColor lightTextColor],
                              MMtextColor: [UIColor blackColor],
@@ -216,7 +217,6 @@
                             completion:^(NSString *selectedString) {
                                 [_name setText:selectedString];
                             }];
-
 }
 
 @end
