@@ -17,7 +17,7 @@
 @implementation profileSideMenuViewController
 
 -(void)viewDidLoad{
-    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"",@"個人檔案",@"動態牆",@"附近好友",@"關於我們",@"新增菜色", nil];
+    self.array_PofileCategory=[[NSArray alloc]initWithObjects:@"",@"個人檔案",@"動態牆",@"附近好友",@"關於我們",@"分享好菜", nil];
     webGetter =[[WebJsonDataGetter alloc]initWithURLString:[NSString stringWithFormat:GetJsonURLString_Content,User_id]];
     [webGetter setDelegate:self];
     

@@ -98,12 +98,11 @@
     
     //get image view
 	imageView = (AsyncImageView *)[cell viewWithTag:IMAGE_VIEW_TAG];
-	
-    //cancel loading previous image for cell
-    [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
     
-    //load the image
+    
     NSString *str=[NSString stringWithFormat:GetRecipesImage,[[self.array_Items objectAtIndex:index]objectForKey:@"image_url"]];
+    [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
+    [[AsyncImageLoader sharedLoader] setLoadingTimeout:3];
     imageView.imageURL = [NSURL URLWithString:str];
     
     

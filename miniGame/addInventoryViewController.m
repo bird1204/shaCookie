@@ -7,9 +7,10 @@
 //
 
 #import "addInventoryViewController.h"
-#import "MMPickerView.h"
 #import "addRecipeViewController.h"
 #import "GetJsonURLString.h"
+#import "MMPickerView.h"
+#import "AsyncImageView.h"
 
 
 @interface addInventoryViewController ()
@@ -25,6 +26,11 @@
 @synthesize quantities=_quantities;
 @synthesize categories=_categories;
 @synthesize materials=_materials;
+@synthesize origin_Array=_origin_Array;
+@synthesize steak_Array=_steak_Array;
+@synthesize fruit_Array=_fruit_Array;
+@synthesize fish_Array=_fish_Array;
+@synthesize sauce_Array=_sauce_Array;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isBelongsToUser:(BOOL)isUser recipeMaterial:(NSMutableArray*)material recipeName:(NSString*)Rname isInAddMaterial:(int)isadd        recipeStep:(NSMutableArray *)step
@@ -64,6 +70,11 @@
     _name=nil;
     _type=nil;
     _quantity=nil;
+    _steak_Array=nil;
+    _sauce_Array=nil;
+    _fruit_Array=nil;
+    _origin_Array=nil;
+    _fish_Array=nil;
     // Dispose of any resources that can be recreated.
 }
 
@@ -90,8 +101,6 @@
             recipe.materials=[[NSMutableArray alloc]initWithArray:recipeMaterial];
             recipe.recipeName=recipeName;
             recipe.steps=recipeStep;
-            
-            NSLog(@"zzzz : %@",recipe.materials);
             [self.navigationController pushViewController:recipe animated:TRUE];
         }
         
@@ -139,25 +148,22 @@
     if (_name==textField) {
         switch ([_categories indexOfObject:[_category text]]) {
             case 0:
-                [self showPicker:self.steak_Array];
+                [self showPicker:_steak_Array category:0];
                 break;
             case 1:
-                [self showPicker:self.fruit_Array];
+                [self showPicker:_fruit_Array category:1];
                 break;
             case 2:
-                [self showPicker:self.fish_Array];
+                [self showPicker:_fish_Array category:2];
                 break;
             case 3:
-                [self showPicker:self.sauce_Array];
+                [self showPicker:_sauce_Array category:3];
                 break;
             default:
                 NSLog(@"not found");
                 break;
         }
-        NSData *imageUrl = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://54.244.225.229/shacookie/image/material/31.jpg"]];
-        material_image.image = [UIImage imageWithData:imageUrl];
         [self.view endEditing:TRUE];
-        
         return NO;
     }
     return YES;
@@ -172,30 +178,25 @@
         [self.navigationController popViewControllerAnimated:TRUE];
         webGetter=nil;
     }else{
-        self.steak_Array=[self arrayRecreate:webGetter.webData category:0];
+        _steak_Array=[self arrayRecreate:webGetter.webData category:0];
         [_name setText:[self.steak_Array objectAtIndex:0]];
-        self.fruit_Array=[self arrayRecreate:webGetter.webData category:1];
-        self.fish_Array=[self arrayRecreate:webGetter.webData category:2];
-        self.sauce_Array=[self arrayRecreate:webGetter.webData category:3];
-        if ([_name text]==[[[webGetter.webData objectAtIndex:category] objectAtIndex:0]objectForKey:@"name"] ) {
-            NSString *imageString=[[NSString alloc]init];
-            imageString=[[[webGetter.webData objectAtIndex:category] objectAtIndex:0]objectForKey:@"image_url"];
-            NSLog(@"%@",imageString);
-        }
+        _fruit_Array=[self arrayRecreate:webGetter.webData category:1];
+        _fish_Array=[self arrayRecreate:webGetter.webData category:2];
+        _sauce_Array=[self arrayRecreate:webGetter.webData category:3];
+        _origin_Array=webGetter.webData;
     }
 }
 
 
 
--(NSArray*)arrayRecreate:(NSArray*)webData category:(NSInteger)category{
+-(NSArray*)arrayRecreate:(NSArray*)webData category:(NSUInteger)category{
     NSMutableArray *objs=[[ NSMutableArray alloc]init];
     for (NSDictionary *dic in [webData objectAtIndex:category]) {
         [objs addObject:[dic objectForKey:@"name"]];
-        
     };
     return objs;
 }
--(void)showPicker:(NSArray*)strings{
+-(void)showPicker:(NSArray*)strings category:(NSUInteger)category{
     NSDictionary *options =@{MMbackgroundColor: [UIColor lightTextColor],
                              MMtextColor: [UIColor blackColor],
                              MMtoolbarColor: [UIColor lightGrayColor],
@@ -208,7 +209,33 @@
                             withOptions:options
                             completion:^(NSString *selectedString) {
                                 [_name setText:selectedString];
+                                for (NSDictionary *dic in [_origin_Array objectAtIndex:category]) {
+                                    if ([[dic allKeysForObject:selectedString] count]>0) {
+                                        [self showImageByMaterial:[dic objectForKey:@"image_url"]];
+                                    }
+                                };
                             }];
+}
+
+#define IMAGE_VIEW_TAG 99
+-(void)showImageByMaterial:(NSString*)filename{
+    //add AsyncImageView to cell
+    AsyncImageView *imageView = [[AsyncImageView alloc] initWithFrame:(CGRectMake(0.0f, 0.0f, material_image.frame.size.width, material_image.frame.size.height))];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
+    imageView.tag = IMAGE_VIEW_TAG;
+    [material_image addSubview:imageView];
+    
+    //get image view
+    imageView = (AsyncImageView *)[material_image viewWithTag:IMAGE_VIEW_TAG];
+    
+    //cancel loading previous image for cell
+    [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
+    
+    //load the image
+    
+    NSString *str=[NSString stringWithFormat:GetImageUrl_material,filename];
+    imageView.imageURL = [NSURL URLWithString:str];
 }
 
 @end
