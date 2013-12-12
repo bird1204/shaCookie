@@ -88,9 +88,6 @@
 	[self.imageFrame.layer setShadowOffset:CGSizeMake(0, 1)];
     self.imageView.userInteractionEnabled=YES;
     
-    
-
-    
     //listen tap event
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapRecognized:)];
     doubleTap.numberOfTapsRequired = 2;
