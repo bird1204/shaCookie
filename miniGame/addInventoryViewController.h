@@ -21,17 +21,19 @@
     NSMutableArray *recipeMaterial;
     NSMutableArray *recipeStep;
     NSString *recipeName;
+    NSString *stringWithUrl;
     int isInAddMaterial;
 }
 @property (retain, nonatomic) IBOutlet UITextField *name;
 @property (retain, nonatomic) IBOutlet UITextField *quantity;
 @property (retain, nonatomic) IBOutlet UITextField *category;
 @property (retain, nonatomic) IBOutlet UITextField *type;
-
+@property (nonatomic,strong)NSString *stringWithUrl;
 @property (nonatomic, strong) NSArray *steak_Array;
 @property (nonatomic, strong) NSArray *fruit_Array;
 @property (nonatomic, strong) NSArray *fish_Array;
 @property (nonatomic, strong) NSArray *sauce_Array;
+@property (nonatomic, strong) NSArray *image_Array;
 @property (strong,nonatomic) NSArray *categories;
 @property (strong,nonatomic) NSArray *quantities;
 @property (nonatomic) NSUInteger *index;
