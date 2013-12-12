@@ -66,6 +66,7 @@
     self.carousel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]];
     self.carousel.type = iCarouselTypeCoverFlow;
     self.carousel.vertical = true;
+    self.carousel.centerItemWhenSelected=true;
     
 
     // Do any additional setup after loading the view from its nib.
