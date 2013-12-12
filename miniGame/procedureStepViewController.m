@@ -72,20 +72,13 @@
 	
     //cancel loading previous image for cell
     [[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:image];
+    [[AsyncImageLoader sharedLoader] setLoadingTimeout:3];
+
     
     //load the image
     NSString *str=[NSString stringWithFormat:GetRecipesImage,[[[[self.array_Items objectAtIndex:1]objectForKey:@"step"]objectAtIndex:[self movieIndex]-1]objectForKey:@"image_url"]];
     //NSLog(@"imgae: %@",str);
     image.imageURL = [NSURL URLWithString:str];
-
-    
-    
-//    NSString *str=[NSString stringWithFormat:GetRecipesImage,[[[[self.array_Items objectAtIndex:1]objectForKey:@"step"]objectAtIndex:[self movieIndex]-1]objectForKey:@"image_url"]];
-//    NSLog(@"URL: %@",str);
-//    NSURL *url=[[NSURL alloc]initWithString:str];
-//    NSData *image=[[NSData alloc]initWithContentsOfURL:url];
-//    self.imageView.image=[UIImage imageWithData:image];
-    
 
 
     self.descriptionField.text = [[[[self.array_Items objectAtIndex:1]objectForKey:@"step"] objectAtIndex:[self movieIndex]-1]objectForKey:@"step"];
